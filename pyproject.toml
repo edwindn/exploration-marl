@@ -5,7 +5,6 @@ description = ""
 requires-python = ">=3.11"
 dependencies = [
     "gymnasium",
-    "pygame",
     "pillow",
     "cleanrl",
     "stable-baselines3[extra]",
