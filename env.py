@@ -1,6 +1,5 @@
 import gymnasium as gym
 import numpy as np
-import pygame
 from PIL import Image as PILImage
 
 
@@ -40,9 +39,6 @@ class NavEnv(gym.Env):
 
         self._goal_pos = np.array([size * 0.8, size * 0.2], dtype=np.float32)
         self._agent_pos = None
-
-        self.window = None
-        self.clock = None
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
@@ -116,11 +112,6 @@ class NavEnv(gym.Env):
         frame[ys[mask], xs[mask]] = color
 
     def _render_frame(self):
-        if self.window is None and self.render_mode == "human":
-            pygame.init()
-            self.window = pygame.display.set_mode((self.size, self.size))
-            self.clock = pygame.time.Clock()
-
         frame = self._build_frame()
 
         # Draw black box showing the agent's observation window
@@ -131,23 +122,13 @@ class NavEnv(gym.Env):
         for col in (x0, x0 + s - 1):
             frame[y0:y0 + s, col] = (0, 0, 0)
 
-        # pygame surfarray expects (width, height, 3), numpy frame is (height, width, 3)
-        surface = pygame.surfarray.make_surface(frame.transpose(1, 0, 2))
-
-        if self.render_mode == "human":
-            self.window.blit(surface, (0, 0))
-            pygame.display.flip()
-            self.clock.tick(self.metadata["render_fps"])
-        else:
-            return frame
+        return frame
 
     def render(self):
         return self._render_frame()
 
     def close(self):
-        if self.window is not None:
-            pygame.quit()
-            self.window = None
+        pass
 
 
 if __name__ == "__main__":
@@ -156,8 +137,7 @@ if __name__ == "__main__":
 
     os.makedirs("frames", exist_ok=True)
 
-    pygame.init()
-    env = NavEnv(size=200, render_mode="rgb_array")
+    env = NavEnv(size=200)
     env.reset()
 
     # Save frame 0 (initial state)
@@ -173,5 +153,4 @@ if __name__ == "__main__":
             env.reset()
 
     env.close()
-    pygame.quit()
     print("Saved 51 frames to frames/")
