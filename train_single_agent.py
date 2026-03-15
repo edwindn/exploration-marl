@@ -1,11 +1,16 @@
+import argparse
 import torch
 import torch.nn as nn
-from stable_baselines3 import PPO
+import yaml
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.env_checker import check_env
+from stable_baselines3.common.logger import configure
+import gymnasium as gym
 
 from env import NavEnv
 from agent import IMPALA
+from ppo import PPO
+from logger import WandbCallback
 
 
 class IMPALAExtractor(BaseFeaturesExtractor):
@@ -23,30 +28,83 @@ class IMPALAExtractor(BaseFeaturesExtractor):
 
 
 if __name__ == "__main__":
-    env = NavEnv(size=200, action_type="discrete")
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Train PPO agent on navigation environment")
+    parser.add_argument("--disable-wandb", action="store_true", help="Disable wandb logging")
+    args = parser.parse_args()
+
+    # Load configuration
+    with open("train_config.yaml", "r") as f:
+        config = yaml.safe_load(f)
+
+    with open("env_config.yaml", "r") as f:
+        env_config = yaml.safe_load(f)
+
+    # Create environment
+    env = NavEnv()
     check_env(env, warn=True)
 
+    # Configure policy to use IMPALA feature extractor
     policy_kwargs = dict(
         features_extractor_class=IMPALAExtractor,
-        net_arch=dict(pi=[64, 64], vf=[64, 64]),
+        net_arch=config["policy"]["net_arch"],
         activation_fn=nn.ReLU,
     )
 
+    # Initialize PPO with custom implementation from ppo.py
+    ppo_config = config["ppo"]
     model = PPO(
         policy="CnnPolicy",
         env=env,
         policy_kwargs=policy_kwargs,
-        n_steps=512,
-        batch_size=64,
-        n_epochs=10,
-        learning_rate=3e-4,
-        gamma=0.99,
-        gae_lambda=0.95,
-        clip_range=0.2,
-        ent_coef=0.01,
-        verbose=1,
+        n_steps=ppo_config["n_steps"],
+        batch_size=ppo_config["batch_size"],
+        n_epochs=ppo_config["n_epochs"],
+        learning_rate=ppo_config["learning_rate"],
+        gamma=ppo_config["gamma"],
+        gae_lambda=ppo_config["gae_lambda"],
+        clip_range=ppo_config["clip_range"],
+        ent_coef=ppo_config["ent_coef"],
+        verbose=ppo_config["verbose"],
     )
 
-    model.learn(total_timesteps=200_000)
-    model.save("ppo_nav_agent")
-    print("Training complete. Model saved to ppo_nav_agent.zip")
+    # Configure logger to disable stdout table output
+    # Only keep csv and tensorboard if needed, remove 'stdout'
+    new_logger = configure(folder=None, format_strings=["csv"])
+    model.set_logger(new_logger)
+
+    # Create wandb callback with all config for logging (if enabled)
+    callback = None
+    if not args.disable_wandb:
+        wandb_config = {
+            "algorithm": "PPO",
+            **env_config,
+            **config["ppo"],
+            **config["policy"],
+            **config["training"],
+        }
+
+        # Get GIF logging config
+        logging_config = config["logging"]
+        log_gifs = logging_config["log_gifs"]
+        gif_rollout_steps = logging_config["gif_rollout_steps"] if log_gifs else 0
+        log_gif_every_n_rollouts = logging_config["log_gif_every_n_rollouts"] if log_gifs else float('inf')
+
+        callback = WandbCallback(
+            project=logging_config["wandb_project"],
+            config=wandb_config,
+            gif_rollout_steps=gif_rollout_steps,
+            log_gif_every_n_rollouts=log_gif_every_n_rollouts,
+            verbose=logging_config["verbose"],
+        )
+
+    # Train the agent
+    print("Starting PPO training...")
+    model.learn(
+        total_timesteps=config["training"]["total_timesteps"],
+        callback=callback
+    )
+
+    # Save the trained model
+    model.save(config["training"]["save_path"])
+    print(f"Training complete. Model saved to {config['training']['save_path']}.zip")

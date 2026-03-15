@@ -1,0 +1,2110 @@
+Wandb initialized. Project: exploration-marl
+[DEBUG] Initialized episode trackers for 1 environments
+[DEBUG _on_step] timestep=1, rewards=[0.37548018], dones=[False]
+[DEBUG] Env 0: reward=0.37548017501831055, accumulated=0.37548017501831055, done=False
+[DEBUG _on_step] timestep=2, rewards=[0.37949616], dones=[False]
+[DEBUG] Env 0: reward=0.37949615716934204, accumulated=0.7549763321876526, done=False
+[DEBUG _on_step] timestep=3, rewards=[0.429452], dones=[False]
+[DEBUG] Env 0: reward=0.42945200204849243, accumulated=1.184428334236145, done=False
+[DEBUG _on_step] timestep=4, rewards=[0.42508698], dones=[False]
+[DEBUG] Env 0: reward=0.42508697509765625, accumulated=1.6095153093338013, done=False
+[DEBUG _on_step] timestep=5, rewards=[0.42508698], dones=[False]
+[DEBUG] Env 0: reward=0.42508697509765625, accumulated=2.034602165222168, done=False
+[DEBUG _on_step] timestep=6, rewards=[0.47461915], dones=[False]
+[DEBUG] Env 0: reward=0.47461915016174316, accumulated=2.509221315383911, done=False
+[DEBUG _on_step] timestep=7, rewards=[0.47461915], dones=[False]
+[DEBUG] Env 0: reward=0.47461915016174316, accumulated=2.9838404655456543, done=False
+[DEBUG _on_step] timestep=8, rewards=[0.47939938], dones=[False]
+[DEBUG] Env 0: reward=0.4793993830680847, accumulated=3.463239908218384, done=False
+[DEBUG _on_step] timestep=9, rewards=[0.429452], dones=[False]
+[DEBUG] Env 0: reward=0.42945200204849243, accumulated=3.8926918506622314, done=False
+[DEBUG _on_step] timestep=10, rewards=[0.37949616], dones=[False]
+[DEBUG] Env 0: reward=0.37949615716934204, accumulated=4.272188186645508, done=False
+[DEBUG _on_step] timestep=11, rewards=[0.37949616], dones=[False]
+[DEBUG] Env 0: reward=0.37949615716934204, accumulated=4.651684284210205, done=False
+[DEBUG _on_step] timestep=12, rewards=[0.37949616], dones=[False]
+[DEBUG] Env 0: reward=0.37949615716934204, accumulated=5.031180381774902, done=False
+[DEBUG _on_step] timestep=13, rewards=[0.429452], dones=[False]
+[DEBUG] Env 0: reward=0.42945200204849243, accumulated=5.46063232421875, done=False
+[DEBUG _on_step] timestep=14, rewards=[0.47939938], dones=[False]
+[DEBUG] Env 0: reward=0.4793993830680847, accumulated=5.9400315284729, done=False
+[DEBUG _on_step] timestep=15, rewards=[0.47939938], dones=[False]
+[DEBUG] Env 0: reward=0.4793993830680847, accumulated=6.419430732727051, done=False
+[DEBUG _on_step] timestep=16, rewards=[0.47939938], dones=[False]
+[DEBUG] Env 0: reward=0.4793993830680847, accumulated=6.898829936981201, done=False
+[DEBUG _on_step] timestep=17, rewards=[0.5293356], dones=[False]
+[DEBUG] Env 0: reward=0.529335618019104, accumulated=7.428165435791016, done=False
+[DEBUG _on_step] timestep=18, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=7.952219009399414, done=False
+[DEBUG _on_step] timestep=19, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=8.476272583007812, done=False
+[DEBUG _on_step] timestep=20, rewards=[0.57335615], dones=[False]
+[DEBUG] Env 0: reward=0.5733561515808105, accumulated=9.049629211425781, done=False
+[DEBUG _on_step] timestep=21, rewards=[0.5792566], dones=[False]
+[DEBUG] Env 0: reward=0.5792565941810608, accumulated=9.628886222839355, done=False
+[DEBUG _on_step] timestep=22, rewards=[0.57335615], dones=[False]
+[DEBUG] Env 0: reward=0.5733561515808105, accumulated=10.202241897583008, done=False
+[DEBUG _on_step] timestep=23, rewards=[0.57335615], dones=[False]
+[DEBUG] Env 0: reward=0.5733561515808105, accumulated=10.775598526000977, done=False
+[DEBUG _on_step] timestep=24, rewards=[0.62247515], dones=[False]
+[DEBUG] Env 0: reward=0.6224751472473145, accumulated=11.398073196411133, done=False
+[DEBUG _on_step] timestep=25, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=12.069401741027832, done=False
+[DEBUG _on_step] timestep=26, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=12.740730285644531, done=False
+[DEBUG _on_step] timestep=27, rewards=[0.67902493], dones=[False]
+[DEBUG] Env 0: reward=0.6790249347686768, accumulated=13.419754981994629, done=False
+[DEBUG _on_step] timestep=28, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=14.148599624633789, done=False
+[DEBUG _on_step] timestep=29, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=14.87744426727295, done=False
+[DEBUG _on_step] timestep=30, rewards=[0.7785841], dones=[False]
+[DEBUG] Env 0: reward=0.7785841226577759, accumulated=15.656028747558594, done=False
+[DEBUG _on_step] timestep=31, rewards=[0.7785841], dones=[False]
+[DEBUG] Env 0: reward=0.7785841226577759, accumulated=16.434612274169922, done=False
+[DEBUG _on_step] timestep=32, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=17.202178955078125, done=False
+[DEBUG _on_step] timestep=33, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=17.921955108642578, done=False
+[DEBUG _on_step] timestep=34, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=18.59328269958496, done=False
+[DEBUG _on_step] timestep=35, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=19.264610290527344, done=False
+[DEBUG _on_step] timestep=36, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=19.935937881469727, done=False
+[DEBUG _on_step] timestep=37, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=20.65571403503418, done=False
+[DEBUG _on_step] timestep=38, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=21.375490188598633, done=False
+[DEBUG _on_step] timestep=39, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=22.10433578491211, done=False
+[DEBUG _on_step] timestep=40, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=22.833181381225586, done=False
+[DEBUG _on_step] timestep=41, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=23.55295753479004, done=False
+[DEBUG _on_step] timestep=42, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=24.281803131103516, done=False
+[DEBUG _on_step] timestep=43, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=25.010648727416992, done=False
+[DEBUG _on_step] timestep=44, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=25.730424880981445, done=False
+[DEBUG _on_step] timestep=45, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=26.459270477294922, done=False
+[DEBUG _on_step] timestep=46, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=27.179046630859375, done=False
+[DEBUG _on_step] timestep=47, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=27.898822784423828, done=False
+[DEBUG _on_step] timestep=48, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=28.61859893798828, done=False
+[DEBUG _on_step] timestep=49, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=29.347444534301758, done=False
+[DEBUG _on_step] timestep=50, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=30.076290130615234, done=False
+[DEBUG _on_step] timestep=51, rewards=[0.72884506], dones=[False]
+[DEBUG] Env 0: reward=0.7288450598716736, accumulated=30.80513572692871, done=False
+[DEBUG _on_step] timestep=52, rewards=[0.67902493], dones=[False]
+[DEBUG] Env 0: reward=0.6790249347686768, accumulated=31.484161376953125, done=False
+[DEBUG _on_step] timestep=53, rewards=[0.67902493], dones=[False]
+[DEBUG] Env 0: reward=0.6790249347686768, accumulated=32.163185119628906, done=False
+[DEBUG _on_step] timestep=54, rewards=[0.67902493], dones=[False]
+[DEBUG] Env 0: reward=0.6790249347686768, accumulated=32.84220886230469, done=False
+[DEBUG _on_step] timestep=55, rewards=[0.6713284], dones=[False]
+[DEBUG] Env 0: reward=0.6713284254074097, accumulated=33.5135383605957, done=False
+[DEBUG _on_step] timestep=56, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=34.233314514160156, done=False
+[DEBUG _on_step] timestep=57, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=34.95309066772461, done=False
+[DEBUG _on_step] timestep=58, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=35.72065734863281, done=False
+[DEBUG _on_step] timestep=59, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=36.534847259521484, done=False
+[DEBUG _on_step] timestep=60, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=37.39333724975586, done=False
+[DEBUG _on_step] timestep=61, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=38.251827239990234, done=False
+[DEBUG _on_step] timestep=62, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=39.11031723022461, done=False
+[DEBUG _on_step] timestep=63, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=39.968807220458984, done=False
+[DEBUG _on_step] timestep=64, rewards=[0.8774235], dones=[False]
+[DEBUG] Env 0: reward=0.8774235248565674, accumulated=40.846229553222656, done=False
+[DEBUG _on_step] timestep=65, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=41.77190017700195, done=False
+[DEBUG _on_step] timestep=66, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=42.669307708740234, done=False
+[DEBUG _on_step] timestep=67, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=43.566715240478516, done=False
+[DEBUG _on_step] timestep=68, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=44.4641227722168, done=False
+[DEBUG _on_step] timestep=69, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=45.38650131225586, done=False
+[DEBUG _on_step] timestep=70, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=46.30887985229492, done=False
+[DEBUG _on_step] timestep=71, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=47.27686309814453, done=False
+[DEBUG _on_step] timestep=72, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=48.24484634399414, done=False
+[DEBUG _on_step] timestep=73, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=49.21282958984375, done=False
+[DEBUG _on_step] timestep=74, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=50.13520812988281, done=False
+[DEBUG _on_step] timestep=75, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=51.057586669921875, done=False
+[DEBUG _on_step] timestep=76, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=51.97996520996094, done=False
+[DEBUG _on_step] timestep=77, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=52.87737274169922, done=False
+[DEBUG _on_step] timestep=78, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=53.79975128173828, done=False
+[DEBUG _on_step] timestep=79, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=54.76773452758789, done=False
+[DEBUG _on_step] timestep=80, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=55.69011306762695, done=False
+[DEBUG _on_step] timestep=81, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=56.612491607666016, done=False
+[DEBUG _on_step] timestep=82, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=57.53487014770508, done=False
+[DEBUG _on_step] timestep=83, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=58.43227767944336, done=False
+[DEBUG _on_step] timestep=84, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=59.32968521118164, done=False
+[DEBUG _on_step] timestep=85, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=60.22709274291992, done=False
+[DEBUG _on_step] timestep=86, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=61.15276336669922, done=False
+[DEBUG _on_step] timestep=87, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=62.078433990478516, done=False
+[DEBUG _on_step] timestep=88, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=63.00410461425781, done=False
+[DEBUG _on_step] timestep=89, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=63.92977523803711, done=False
+[DEBUG _on_step] timestep=90, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=64.8554458618164, done=False
+[DEBUG _on_step] timestep=91, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=65.75285339355469, done=False
+[DEBUG _on_step] timestep=92, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=66.65026092529297, done=False
+[DEBUG _on_step] timestep=93, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=67.57263946533203, done=False
+[DEBUG _on_step] timestep=94, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=68.47004699707031, done=False
+[DEBUG _on_step] timestep=95, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=69.39242553710938, done=False
+[DEBUG _on_step] timestep=96, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=70.28983306884766, done=False
+[DEBUG _on_step] timestep=97, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=71.21221160888672, done=False
+[DEBUG _on_step] timestep=98, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=72.1801986694336, done=False
+[DEBUG _on_step] timestep=99, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=73.10586547851562, done=False
+[DEBUG _on_step] timestep=100, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=74.0032730102539, done=False
+[DEBUG _on_step] timestep=101, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=74.86176300048828, done=False
+[DEBUG _on_step] timestep=102, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=75.75917053222656, done=False
+[DEBUG _on_step] timestep=103, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=76.65657806396484, done=False
+[DEBUG _on_step] timestep=104, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=77.55398559570312, done=False
+[DEBUG _on_step] timestep=105, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=78.4124755859375, done=False
+[DEBUG _on_step] timestep=106, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=79.27096557617188, done=False
+[DEBUG _on_step] timestep=107, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=80.08515930175781, done=False
+[DEBUG _on_step] timestep=108, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=80.89935302734375, done=False
+[DEBUG _on_step] timestep=109, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=81.66692352294922, done=False
+[DEBUG _on_step] timestep=110, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=82.48111724853516, done=False
+[DEBUG _on_step] timestep=111, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=83.24868774414062, done=False
+[DEBUG _on_step] timestep=112, rewards=[0.71977687], dones=[False]
+[DEBUG] Env 0: reward=0.7197768688201904, accumulated=83.96846771240234, done=False
+[DEBUG _on_step] timestep=113, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=84.73603820800781, done=False
+[DEBUG _on_step] timestep=114, rewards=[0.7675672], dones=[False]
+[DEBUG] Env 0: reward=0.7675672173500061, accumulated=85.50360870361328, done=False
+[DEBUG _on_step] timestep=115, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=86.31780242919922, done=False
+[DEBUG _on_step] timestep=116, rewards=[0.8281716], dones=[False]
+[DEBUG] Env 0: reward=0.8281716108322144, accumulated=87.1459732055664, done=False
+[DEBUG _on_step] timestep=117, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=87.96016693115234, done=False
+[DEBUG _on_step] timestep=118, rewards=[0.814191], dones=[False]
+[DEBUG] Env 0: reward=0.8141909837722778, accumulated=88.77436065673828, done=False
+[DEBUG _on_step] timestep=119, rewards=[0.8584903], dones=[False]
+[DEBUG] Env 0: reward=0.8584902882575989, accumulated=89.63285064697266, done=False
+[DEBUG _on_step] timestep=120, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=90.53025817871094, done=False
+[DEBUG _on_step] timestep=121, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=91.42766571044922, done=False
+[DEBUG _on_step] timestep=122, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=92.35004425048828, done=False
+[DEBUG _on_step] timestep=123, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=93.31803131103516, done=False
+[DEBUG _on_step] timestep=124, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=94.28601837158203, done=False
+[DEBUG _on_step] timestep=125, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=95.2083969116211, done=False
+[DEBUG _on_step] timestep=126, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=96.0818099975586, done=False
+[DEBUG _on_step] timestep=127, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=96.95326232910156, done=False
+[DEBUG _on_step] timestep=128, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=97.77571105957031, done=False
+[DEBUG _on_step] timestep=129, rewards=[0.7730088], dones=[False]
+[DEBUG] Env 0: reward=0.7730088233947754, accumulated=98.54872131347656, done=False
+[DEBUG _on_step] timestep=130, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=99.27208709716797, done=False
+[DEBUG _on_step] timestep=131, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=99.94570922851562, done=False
+[DEBUG _on_step] timestep=132, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=100.6132583618164, done=False
+[DEBUG _on_step] timestep=133, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=101.28080749511719, done=False
+[DEBUG _on_step] timestep=134, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=101.89933013916016, done=False
+[DEBUG _on_step] timestep=135, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=102.52379608154297, done=False
+[DEBUG _on_step] timestep=136, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=103.19818115234375, done=False
+[DEBUG _on_step] timestep=137, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=103.82264709472656, done=False
+[DEBUG _on_step] timestep=138, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=104.44116973876953, done=False
+[DEBUG _on_step] timestep=139, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=105.06563568115234, done=False
+[DEBUG _on_step] timestep=140, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=105.74002075195312, done=False
+[DEBUG _on_step] timestep=141, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=106.41363525390625, done=False
+[DEBUG _on_step] timestep=142, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=107.03743743896484, done=False
+[DEBUG _on_step] timestep=143, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=107.7110595703125, done=False
+[DEBUG _on_step] timestep=144, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=108.38544464111328, done=False
+[DEBUG _on_step] timestep=145, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=109.0099105834961, done=False
+[DEBUG _on_step] timestep=146, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=109.68429565429688, done=False
+[DEBUG _on_step] timestep=147, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=110.30876159667969, done=False
+[DEBUG _on_step] timestep=148, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=110.98314666748047, done=False
+[DEBUG _on_step] timestep=149, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=111.65676879882812, done=False
+[DEBUG _on_step] timestep=150, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=112.3311538696289, done=False
+[DEBUG _on_step] timestep=151, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=113.00477600097656, done=False
+[DEBUG _on_step] timestep=152, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=113.62857818603516, done=False
+[DEBUG _on_step] timestep=153, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=114.25304412841797, done=False
+[DEBUG _on_step] timestep=154, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=114.87684631347656, done=False
+[DEBUG _on_step] timestep=155, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=115.55046081542969, done=False
+[DEBUG _on_step] timestep=156, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=116.17426300048828, done=False
+[DEBUG _on_step] timestep=157, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=116.84788513183594, done=False
+[DEBUG _on_step] timestep=158, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=117.51318359375, done=False
+[DEBUG _on_step] timestep=159, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=118.18679809570312, done=False
+[DEBUG _on_step] timestep=160, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=118.91016387939453, done=False
+[DEBUG _on_step] timestep=161, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=119.63443756103516, done=False
+[DEBUG _on_step] timestep=162, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=120.40855407714844, done=False
+[DEBUG _on_step] timestep=163, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=121.17292022705078, done=False
+[DEBUG _on_step] timestep=164, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=121.93728637695312, done=False
+[DEBUG _on_step] timestep=165, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=122.65351867675781, done=False
+[DEBUG _on_step] timestep=166, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=123.41788482666016, done=False
+[DEBUG _on_step] timestep=167, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=124.13411712646484, done=False
+[DEBUG _on_step] timestep=168, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=124.80166625976562, done=False
+[DEBUG _on_step] timestep=169, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=125.51789855957031, done=False
+[DEBUG _on_step] timestep=170, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=126.234130859375, done=False
+[DEBUG _on_step] timestep=171, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=126.90167999267578, done=False
+[DEBUG _on_step] timestep=172, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=127.61791229248047, done=False
+[DEBUG _on_step] timestep=173, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=128.28546142578125, done=False
+[DEBUG _on_step] timestep=174, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=128.90399169921875, done=False
+[DEBUG _on_step] timestep=175, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=129.571533203125, done=False
+[DEBUG _on_step] timestep=176, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=130.2459259033203, done=False
+[DEBUG _on_step] timestep=177, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=130.87039184570312, done=False
+[DEBUG _on_step] timestep=178, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=131.4941864013672, done=False
+[DEBUG _on_step] timestep=179, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=132.11865234375, done=False
+[DEBUG _on_step] timestep=180, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=132.74244689941406, done=False
+[DEBUG _on_step] timestep=181, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=133.4160614013672, done=False
+[DEBUG _on_step] timestep=182, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=134.03985595703125, done=False
+[DEBUG _on_step] timestep=183, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=134.6564178466797, done=False
+[DEBUG _on_step] timestep=184, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=135.28021240234375, done=False
+[DEBUG _on_step] timestep=185, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=135.95382690429688, done=False
+[DEBUG _on_step] timestep=186, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=136.57762145996094, done=False
+[DEBUG _on_step] timestep=187, rewards=[0.5739425], dones=[False]
+[DEBUG] Env 0: reward=0.5739424824714661, accumulated=137.1515655517578, done=False
+[DEBUG _on_step] timestep=188, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=137.6756134033203, done=False
+[DEBUG _on_step] timestep=189, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=138.1939239501953, done=False
+[DEBUG _on_step] timestep=190, rewards=[0.50753176], dones=[False]
+[DEBUG] Env 0: reward=0.5075317621231079, accumulated=138.7014617919922, done=False
+[DEBUG _on_step] timestep=191, rewards=[0.45914423], dones=[False]
+[DEBUG] Env 0: reward=0.4591442346572876, accumulated=139.1605987548828, done=False
+[DEBUG _on_step] timestep=192, rewards=[0.445], dones=[False]
+[DEBUG] Env 0: reward=0.4449999928474426, accumulated=139.60560607910156, done=False
+[DEBUG _on_step] timestep=193, rewards=[0.45914423], dones=[False]
+[DEBUG] Env 0: reward=0.4591442346572876, accumulated=140.0647430419922, done=False
+[DEBUG _on_step] timestep=194, rewards=[0.50753176], dones=[False]
+[DEBUG] Env 0: reward=0.5075317621231079, accumulated=140.57228088378906, done=False
+[DEBUG _on_step] timestep=195, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=141.12783813476562, done=False
+[DEBUG _on_step] timestep=196, rewards=[0.6031058], dones=[False]
+[DEBUG] Env 0: reward=0.6031057834625244, accumulated=141.73094177246094, done=False
+[DEBUG _on_step] timestep=197, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=142.2864990234375, done=False
+[DEBUG _on_step] timestep=198, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=142.85403442382812, done=False
+[DEBUG _on_step] timestep=199, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=143.37234497070312, done=False
+[DEBUG _on_step] timestep=200, rewards=[0.46893972], dones=[False]
+[DEBUG] Env 0: reward=0.46893972158432007, accumulated=143.84127807617188, done=False
+[DEBUG _on_step] timestep=201, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=144.35958862304688, done=False
+[DEBUG _on_step] timestep=202, rewards=[0.50753176], dones=[False]
+[DEBUG] Env 0: reward=0.5075317621231079, accumulated=144.86712646484375, done=False
+[DEBUG _on_step] timestep=203, rewards=[0.45914423], dones=[False]
+[DEBUG] Env 0: reward=0.4591442346572876, accumulated=145.32626342773438, done=False
+[DEBUG _on_step] timestep=204, rewards=[0.46893972], dones=[False]
+[DEBUG] Env 0: reward=0.46893972158432007, accumulated=145.79519653320312, done=False
+[DEBUG _on_step] timestep=205, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=146.31350708007812, done=False
+[DEBUG _on_step] timestep=206, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=146.83755493164062, done=False
+[DEBUG _on_step] timestep=207, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=147.35586547851562, done=False
+[DEBUG _on_step] timestep=208, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=147.87991333007812, done=False
+[DEBUG _on_step] timestep=209, rewards=[0.5739425], dones=[False]
+[DEBUG] Env 0: reward=0.5739424824714661, accumulated=148.453857421875, done=False
+[DEBUG _on_step] timestep=210, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=148.9779052734375, done=False
+[DEBUG _on_step] timestep=211, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=149.4962158203125, done=False
+[DEBUG _on_step] timestep=212, rewards=[0.46893972], dones=[False]
+[DEBUG] Env 0: reward=0.46893972158432007, accumulated=149.96514892578125, done=False
+[DEBUG _on_step] timestep=213, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=150.48345947265625, done=False
+[DEBUG _on_step] timestep=214, rewards=[0.5240536], dones=[False]
+[DEBUG] Env 0: reward=0.5240535736083984, accumulated=151.00750732421875, done=False
+[DEBUG _on_step] timestep=215, rewards=[0.5739425], dones=[False]
+[DEBUG] Env 0: reward=0.5739424824714661, accumulated=151.58145141601562, done=False
+[DEBUG _on_step] timestep=216, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=152.14898681640625, done=False
+[DEBUG _on_step] timestep=217, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=152.7655487060547, done=False
+[DEBUG _on_step] timestep=218, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=153.43084716796875, done=False
+[DEBUG _on_step] timestep=219, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=154.10446166992188, done=False
+[DEBUG _on_step] timestep=220, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=154.7788543701172, done=False
+[DEBUG _on_step] timestep=221, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=155.4033203125, done=False
+[DEBUG _on_step] timestep=222, rewards=[0.57452965], dones=[False]
+[DEBUG] Env 0: reward=0.5745296478271484, accumulated=155.97784423828125, done=False
+[DEBUG _on_step] timestep=223, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=156.60231018066406, done=False
+[DEBUG _on_step] timestep=224, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=157.27670288085938, done=False
+[DEBUG _on_step] timestep=225, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=158.0009765625, done=False
+[DEBUG _on_step] timestep=226, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=158.77508544921875, done=False
+[DEBUG _on_step] timestep=227, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=159.5989532470703, done=False
+[DEBUG _on_step] timestep=228, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=160.37306213378906, done=False
+[DEBUG _on_step] timestep=229, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=161.0973358154297, done=False
+[DEBUG _on_step] timestep=230, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=161.87144470214844, done=False
+[DEBUG _on_step] timestep=231, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=162.59571838378906, done=False
+[DEBUG _on_step] timestep=232, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=163.31195068359375, done=False
+[DEBUG _on_step] timestep=233, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=164.03622436523438, done=False
+[DEBUG _on_step] timestep=234, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=164.81033325195312, done=False
+[DEBUG _on_step] timestep=235, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=165.53460693359375, done=False
+[DEBUG _on_step] timestep=236, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=166.3087158203125, done=False
+[DEBUG _on_step] timestep=237, rewards=[0.7730088], dones=[False]
+[DEBUG] Env 0: reward=0.7730088233947754, accumulated=167.08172607421875, done=False
+[DEBUG _on_step] timestep=238, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=167.8558349609375, done=False
+[DEBUG _on_step] timestep=239, rewards=[0.7730088], dones=[False]
+[DEBUG] Env 0: reward=0.7730088233947754, accumulated=168.62884521484375, done=False
+[DEBUG _on_step] timestep=240, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=169.3522186279297, done=False
+[DEBUG _on_step] timestep=241, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=170.0764923095703, done=False
+[DEBUG _on_step] timestep=242, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=170.75088500976562, done=False
+[DEBUG _on_step] timestep=243, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=171.47515869140625, done=False
+[DEBUG _on_step] timestep=244, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=172.249267578125, done=False
+[DEBUG _on_step] timestep=245, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=173.0136260986328, done=False
+[DEBUG _on_step] timestep=246, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=173.7298583984375, done=False
+[DEBUG _on_step] timestep=247, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=174.4942169189453, done=False
+[DEBUG _on_step] timestep=248, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=175.3057403564453, done=False
+[DEBUG _on_step] timestep=249, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=176.07009887695312, done=False
+[DEBUG _on_step] timestep=250, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=176.7863311767578, done=False
+[DEBUG _on_step] timestep=251, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=177.55068969726562, done=False
+[DEBUG _on_step] timestep=252, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=178.2669219970703, done=False
+[DEBUG _on_step] timestep=253, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=179.03128051757812, done=False
+[DEBUG _on_step] timestep=254, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=179.7475128173828, done=False
+[DEBUG _on_step] timestep=255, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=180.41505432128906, done=False
+[DEBUG _on_step] timestep=256, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=181.08944702148438, done=False
+[DEBUG _on_step] timestep=257, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=181.7139129638672, done=False
+[DEBUG _on_step] timestep=258, rewards=[0.57452965], dones=[False]
+[DEBUG] Env 0: reward=0.5745296478271484, accumulated=182.28843688964844, done=False
+[DEBUG _on_step] timestep=259, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=182.8577117919922, done=False
+[DEBUG _on_step] timestep=260, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=183.47622680664062, done=False
+[DEBUG _on_step] timestep=261, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=184.14376831054688, done=False
+[DEBUG _on_step] timestep=262, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=184.81130981445312, done=False
+[DEBUG _on_step] timestep=263, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=185.42984008789062, done=False
+[DEBUG _on_step] timestep=264, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=185.99911499023438, done=False
+[DEBUG _on_step] timestep=265, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=186.56838989257812, done=False
+[DEBUG _on_step] timestep=266, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=187.18692016601562, done=False
+[DEBUG _on_step] timestep=267, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=187.80545043945312, done=False
+[DEBUG _on_step] timestep=268, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=188.37472534179688, done=False
+[DEBUG _on_step] timestep=269, rewards=[0.61852264], dones=[False]
+[DEBUG] Env 0: reward=0.6185226440429688, accumulated=188.99325561523438, done=False
+[DEBUG _on_step] timestep=270, rewards=[0.624467], dones=[False]
+[DEBUG] Env 0: reward=0.6244670152664185, accumulated=189.6177215576172, done=False
+[DEBUG _on_step] timestep=271, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=190.24151611328125, done=False
+[DEBUG _on_step] timestep=272, rewards=[0.5739425], dones=[False]
+[DEBUG] Env 0: reward=0.5739424824714661, accumulated=190.81546020507812, done=False
+[DEBUG _on_step] timestep=273, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=191.38299560546875, done=False
+[DEBUG _on_step] timestep=274, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=191.90130615234375, done=False
+[DEBUG _on_step] timestep=275, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=192.46884155273438, done=False
+[DEBUG _on_step] timestep=276, rewards=[0.5739425], dones=[False]
+[DEBUG] Env 0: reward=0.5739424824714661, accumulated=193.04278564453125, done=False
+[DEBUG _on_step] timestep=277, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=193.61032104492188, done=False
+[DEBUG _on_step] timestep=278, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=194.16587829589844, done=False
+[DEBUG _on_step] timestep=279, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=194.73341369628906, done=False
+[DEBUG _on_step] timestep=280, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=195.3499755859375, done=False
+[DEBUG _on_step] timestep=281, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=195.97377014160156, done=False
+[DEBUG _on_step] timestep=282, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=196.6473846435547, done=False
+[DEBUG _on_step] timestep=283, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=197.31268310546875, done=False
+[DEBUG _on_step] timestep=284, rewards=[0.7135999], dones=[False]
+[DEBUG] Env 0: reward=0.7135999202728271, accumulated=198.02627563476562, done=False
+[DEBUG _on_step] timestep=285, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=198.6915740966797, done=False
+[DEBUG _on_step] timestep=286, rewards=[0.7135999], dones=[False]
+[DEBUG] Env 0: reward=0.7135999202728271, accumulated=199.40516662597656, done=False
+[DEBUG _on_step] timestep=287, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=200.07046508789062, done=False
+[DEBUG _on_step] timestep=288, rewards=[0.7135999], dones=[False]
+[DEBUG] Env 0: reward=0.7135999202728271, accumulated=200.7840576171875, done=False
+[DEBUG _on_step] timestep=289, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=201.44935607910156, done=False
+[DEBUG _on_step] timestep=290, rewards=[0.7135999], dones=[False]
+[DEBUG] Env 0: reward=0.7135999202728271, accumulated=202.16294860839844, done=False
+[DEBUG _on_step] timestep=291, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=202.8282470703125, done=False
+[DEBUG _on_step] timestep=292, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=203.44480895996094, done=False
+[DEBUG _on_step] timestep=293, rewards=[0.62380195], dones=[False]
+[DEBUG] Env 0: reward=0.6238019466400146, accumulated=204.068603515625, done=False
+[DEBUG _on_step] timestep=294, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=204.74221801757812, done=False
+[DEBUG _on_step] timestep=295, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=205.46559143066406, done=False
+[DEBUG _on_step] timestep=296, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=206.1392059326172, done=False
+[DEBUG _on_step] timestep=297, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=206.86257934570312, done=False
+[DEBUG _on_step] timestep=298, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=207.53619384765625, done=False
+[DEBUG _on_step] timestep=299, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=208.2595672607422, done=False
+[DEBUG _on_step] timestep=300, rewards=[0.7730088], dones=[False]
+[DEBUG] Env 0: reward=0.7730088233947754, accumulated=209.03257751464844, done=False
+[DEBUG _on_step] timestep=301, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=209.8550262451172, done=False
+[DEBUG _on_step] timestep=302, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=210.67889404296875, done=False
+[DEBUG _on_step] timestep=303, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=211.49041748046875, done=False
+[DEBUG _on_step] timestep=304, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=212.30194091796875, done=False
+[DEBUG _on_step] timestep=305, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=213.11346435546875, done=False
+[DEBUG _on_step] timestep=306, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=213.97019958496094, done=False
+[DEBUG _on_step] timestep=307, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=214.84361267089844, done=False
+[DEBUG _on_step] timestep=308, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=215.70034790039062, done=False
+[DEBUG _on_step] timestep=309, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=216.59776306152344, done=False
+[DEBUG _on_step] timestep=310, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=217.5234375, done=False
+[DEBUG _on_step] timestep=311, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=218.44911193847656, done=False
+[DEBUG _on_step] timestep=312, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=219.37478637695312, done=False
+[DEBUG _on_step] timestep=313, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=220.3004608154297, done=False
+[DEBUG _on_step] timestep=314, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=221.26844787597656, done=False
+[DEBUG _on_step] timestep=315, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=222.22940063476562, done=False
+[DEBUG _on_step] timestep=316, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=223.1455841064453, done=False
+[DEBUG _on_step] timestep=317, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=224.061767578125, done=False
+[DEBUG _on_step] timestep=318, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=224.9779510498047, done=False
+[DEBUG _on_step] timestep=319, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=225.8682861328125, done=False
+[DEBUG _on_step] timestep=320, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=226.7844696044922, done=False
+[DEBUG _on_step] timestep=321, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=227.74542236328125, done=False
+[DEBUG _on_step] timestep=322, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=228.7063751220703, done=False
+[DEBUG _on_step] timestep=323, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=229.62559509277344, done=False
+[DEBUG _on_step] timestep=324, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=230.5479736328125, done=False
+[DEBUG _on_step] timestep=325, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=231.42138671875, done=False
+[DEBUG _on_step] timestep=326, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=232.34376525878906, done=False
+[DEBUG _on_step] timestep=327, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=233.21717834472656, done=False
+[DEBUG _on_step] timestep=328, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=234.13955688476562, done=False
+[DEBUG _on_step] timestep=329, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=235.03697204589844, done=False
+[DEBUG _on_step] timestep=330, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=235.89370727539062, done=False
+[DEBUG _on_step] timestep=331, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=236.76712036132812, done=False
+[DEBUG _on_step] timestep=332, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=237.6238555908203, done=False
+[DEBUG _on_step] timestep=333, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=238.4805908203125, done=False
+[DEBUG _on_step] timestep=334, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=239.2921142578125, done=False
+[DEBUG _on_step] timestep=335, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=240.1036376953125, done=False
+[DEBUG _on_step] timestep=336, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=240.8679962158203, done=False
+[DEBUG _on_step] timestep=337, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=241.6795196533203, done=False
+[DEBUG _on_step] timestep=338, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=242.44387817382812, done=False
+[DEBUG _on_step] timestep=339, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=243.25540161132812, done=False
+[DEBUG _on_step] timestep=340, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=244.0792694091797, done=False
+[DEBUG _on_step] timestep=341, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=244.8907928466797, done=False
+[DEBUG _on_step] timestep=342, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=245.6551513671875, done=False
+[DEBUG _on_step] timestep=343, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=246.4195098876953, done=False
+[DEBUG _on_step] timestep=344, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=247.2310333251953, done=False
+[DEBUG _on_step] timestep=345, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=248.05490112304688, done=False
+[DEBUG _on_step] timestep=346, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=248.86642456054688, done=False
+[DEBUG _on_step] timestep=347, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=249.6307830810547, done=False
+[DEBUG _on_step] timestep=348, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=250.3951416015625, done=False
+[DEBUG _on_step] timestep=349, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=251.2066650390625, done=False
+[DEBUG _on_step] timestep=350, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=252.0181884765625, done=False
+[DEBUG _on_step] timestep=351, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=252.84205627441406, done=False
+[DEBUG _on_step] timestep=352, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=253.6161651611328, done=False
+[DEBUG _on_step] timestep=353, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=254.38052368164062, done=False
+[DEBUG _on_step] timestep=354, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=255.0967559814453, done=False
+[DEBUG _on_step] timestep=355, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=255.82102966308594, done=False
+[DEBUG _on_step] timestep=356, rewards=[0.6743852], dones=[False]
+[DEBUG] Env 0: reward=0.6743851900100708, accumulated=256.49542236328125, done=False
+[DEBUG _on_step] timestep=357, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=257.1629638671875, done=False
+[DEBUG _on_step] timestep=358, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=257.8791809082031, done=False
+[DEBUG _on_step] timestep=359, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=258.5467224121094, done=False
+[DEBUG _on_step] timestep=360, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=259.262939453125, done=False
+[DEBUG _on_step] timestep=361, rewards=[0.7242737], dones=[False]
+[DEBUG] Env 0: reward=0.724273681640625, accumulated=259.9872131347656, done=False
+[DEBUG _on_step] timestep=362, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=260.7613220214844, done=False
+[DEBUG _on_step] timestep=363, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=261.5851745605469, done=False
+[DEBUG _on_step] timestep=364, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=262.4585876464844, done=False
+[DEBUG _on_step] timestep=365, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=263.2824401855469, done=False
+[DEBUG _on_step] timestep=366, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=264.1558532714844, done=False
+[DEBUG _on_step] timestep=367, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=265.0273132324219, done=False
+[DEBUG _on_step] timestep=368, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=265.8497619628906, done=False
+[DEBUG _on_step] timestep=369, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=266.7212219238281, done=False
+[DEBUG _on_step] timestep=370, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=267.5436706542969, done=False
+[DEBUG _on_step] timestep=371, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=268.4151306152344, done=False
+[DEBUG _on_step] timestep=372, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=269.2375793457031, done=False
+[DEBUG _on_step] timestep=373, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=270.0614318847656, done=False
+[DEBUG _on_step] timestep=374, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=270.8729553222656, done=False
+[DEBUG _on_step] timestep=375, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=271.72967529296875, done=False
+[DEBUG _on_step] timestep=376, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=272.54119873046875, done=False
+[DEBUG _on_step] timestep=377, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=273.3055725097656, done=False
+[DEBUG _on_step] timestep=378, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=274.0699462890625, done=False
+[DEBUG _on_step] timestep=379, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=274.7861633300781, done=False
+[DEBUG _on_step] timestep=380, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=275.50238037109375, done=False
+[DEBUG _on_step] timestep=381, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=276.2667541503906, done=False
+[DEBUG _on_step] timestep=382, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=277.0408630371094, done=False
+[DEBUG _on_step] timestep=383, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=277.8647155761719, done=False
+[DEBUG _on_step] timestep=384, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=278.7381286621094, done=False
+[DEBUG _on_step] timestep=385, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=279.6605224609375, done=False
+[DEBUG _on_step] timestep=386, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=280.6285095214844, done=False
+[DEBUG _on_step] timestep=387, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=281.5541687011719, done=False
+[DEBUG _on_step] timestep=388, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=282.52215576171875, done=False
+[DEBUG _on_step] timestep=389, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=283.4445495605469, done=False
+[DEBUG _on_step] timestep=390, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=284.36376953125, done=False
+[DEBUG _on_step] timestep=391, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=285.2861633300781, done=False
+[DEBUG _on_step] timestep=392, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=286.20538330078125, done=False
+[DEBUG _on_step] timestep=393, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=287.16632080078125, done=False
+[DEBUG _on_step] timestep=394, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=288.1343078613281, done=False
+[DEBUG _on_step] timestep=395, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=289.05670166015625, done=False
+[DEBUG _on_step] timestep=396, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=289.9541015625, done=False
+[DEBUG _on_step] timestep=397, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=290.85150146484375, done=False
+[DEBUG _on_step] timestep=398, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=291.7082214355469, done=False
+[DEBUG _on_step] timestep=399, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=292.5197448730469, done=False
+[DEBUG _on_step] timestep=400, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=293.37646484375, done=False
+[DEBUG _on_step] timestep=401, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=294.27386474609375, done=False
+[DEBUG _on_step] timestep=402, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=295.1712646484375, done=False
+[DEBUG _on_step] timestep=403, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=296.096923828125, done=False
+[DEBUG _on_step] timestep=404, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=297.0649108886719, done=False
+[DEBUG _on_step] timestep=405, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=298.03289794921875, done=False
+[DEBUG _on_step] timestep=406, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=298.9552917480469, done=False
+[DEBUG _on_step] timestep=407, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=299.877685546875, done=False
+[DEBUG _on_step] timestep=408, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=300.77508544921875, done=False
+[DEBUG _on_step] timestep=409, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=301.6724853515625, done=False
+[DEBUG _on_step] timestep=410, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=302.59814453125, done=False
+[DEBUG _on_step] timestep=411, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=303.5238037109375, done=False
+[DEBUG _on_step] timestep=412, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=304.4917907714844, done=False
+[DEBUG _on_step] timestep=413, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=305.4141845703125, done=False
+[DEBUG _on_step] timestep=414, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=306.3334045410156, done=False
+[DEBUG _on_step] timestep=415, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=307.25262451171875, done=False
+[DEBUG _on_step] timestep=416, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=308.1750183105469, done=False
+[DEBUG _on_step] timestep=417, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=309.09423828125, done=False
+[DEBUG _on_step] timestep=418, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=310.0134582519531, done=False
+[DEBUG _on_step] timestep=419, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=310.9743957519531, done=False
+[DEBUG _on_step] timestep=420, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=311.89361572265625, done=False
+[DEBUG _on_step] timestep=421, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=312.8128356933594, done=False
+[DEBUG _on_step] timestep=422, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=313.7737731933594, done=False
+[DEBUG _on_step] timestep=423, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=314.74176025390625, done=False
+[DEBUG _on_step] timestep=424, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=315.6641540527344, done=False
+[DEBUG _on_step] timestep=425, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=316.5615539550781, done=False
+[DEBUG _on_step] timestep=426, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=317.4589538574219, done=False
+[DEBUG _on_step] timestep=427, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=318.3563537597656, done=False
+[DEBUG _on_step] timestep=428, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=319.2820129394531, done=False
+[DEBUG _on_step] timestep=429, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=320.1794128417969, done=False
+[DEBUG _on_step] timestep=430, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=321.0768127441406, done=False
+[DEBUG _on_step] timestep=431, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=321.9742126464844, done=False
+[DEBUG _on_step] timestep=432, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=322.8966064453125, done=False
+[DEBUG _on_step] timestep=433, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=323.8190002441406, done=False
+[DEBUG _on_step] timestep=434, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=324.74139404296875, done=False
+[DEBUG _on_step] timestep=435, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=325.6637878417969, done=False
+[DEBUG _on_step] timestep=436, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=326.63177490234375, done=False
+[DEBUG _on_step] timestep=437, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=327.55743408203125, done=False
+[DEBUG _on_step] timestep=438, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=328.454833984375, done=False
+[DEBUG _on_step] timestep=439, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=329.35223388671875, done=False
+[DEBUG _on_step] timestep=440, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=330.2496337890625, done=False
+[DEBUG _on_step] timestep=441, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=331.1720275878906, done=False
+[DEBUG _on_step] timestep=442, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=332.1400146484375, done=False
+[DEBUG _on_step] timestep=443, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=333.0624084472656, done=False
+[DEBUG _on_step] timestep=444, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=333.98480224609375, done=False
+[DEBUG _on_step] timestep=445, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=334.8822021484375, done=False
+[DEBUG _on_step] timestep=446, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=335.807861328125, done=False
+[DEBUG _on_step] timestep=447, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=336.70526123046875, done=False
+[DEBUG _on_step] timestep=448, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=337.63092041015625, done=False
+[DEBUG _on_step] timestep=449, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=338.5283203125, done=False
+[DEBUG _on_step] timestep=450, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=339.42572021484375, done=False
+[DEBUG _on_step] timestep=451, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=340.35137939453125, done=False
+[DEBUG _on_step] timestep=452, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=341.248779296875, done=False
+[DEBUG _on_step] timestep=453, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=342.14617919921875, done=False
+[DEBUG _on_step] timestep=454, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=343.07183837890625, done=False
+[DEBUG _on_step] timestep=455, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=344.0398254394531, done=False
+[DEBUG _on_step] timestep=456, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=344.96221923828125, done=False
+[DEBUG _on_step] timestep=457, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=345.859619140625, done=False
+[DEBUG _on_step] timestep=458, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=346.75701904296875, done=False
+[DEBUG _on_step] timestep=459, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=347.68267822265625, done=False
+[DEBUG _on_step] timestep=460, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=348.580078125, done=False
+[DEBUG _on_step] timestep=461, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=349.5024719238281, done=False
+[DEBUG _on_step] timestep=462, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=350.470458984375, done=False
+[DEBUG _on_step] timestep=463, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=351.3928527832031, done=False
+[DEBUG _on_step] timestep=464, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=352.36083984375, done=False
+[DEBUG _on_step] timestep=465, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=353.2864990234375, done=False
+[DEBUG _on_step] timestep=466, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=354.212158203125, done=False
+[DEBUG _on_step] timestep=467, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=355.10955810546875, done=False
+[DEBUG _on_step] timestep=468, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=356.03521728515625, done=False
+[DEBUG _on_step] timestep=469, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=356.9326171875, done=False
+[DEBUG _on_step] timestep=470, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=357.83001708984375, done=False
+[DEBUG _on_step] timestep=471, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=358.7524108886719, done=False
+[DEBUG _on_step] timestep=472, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=359.6748046875, done=False
+[DEBUG _on_step] timestep=473, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=360.57220458984375, done=False
+[DEBUG _on_step] timestep=474, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=361.4945983886719, done=False
+[DEBUG _on_step] timestep=475, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=362.46258544921875, done=False
+[DEBUG _on_step] timestep=476, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=363.4305725097656, done=False
+[DEBUG _on_step] timestep=477, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=364.3915100097656, done=False
+[DEBUG _on_step] timestep=478, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=365.3077087402344, done=False
+[DEBUG _on_step] timestep=479, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=366.19805908203125, done=False
+[DEBUG _on_step] timestep=480, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=367.1142578125, done=False
+[DEBUG _on_step] timestep=481, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=368.0751953125, done=False
+[DEBUG _on_step] timestep=482, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=369.0361328125, done=False
+[DEBUG _on_step] timestep=483, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=369.9970703125, done=False
+[DEBUG _on_step] timestep=484, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=370.9580078125, done=False
+[DEBUG _on_step] timestep=485, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=371.9259948730469, done=False
+[DEBUG _on_step] timestep=486, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=372.8516540527344, done=False
+[DEBUG _on_step] timestep=487, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=373.7490539550781, done=False
+[DEBUG _on_step] timestep=488, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=374.6464538574219, done=False
+[DEBUG _on_step] timestep=489, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=375.5721130371094, done=False
+[DEBUG _on_step] timestep=490, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=376.4695129394531, done=False
+[DEBUG _on_step] timestep=491, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=377.3669128417969, done=False
+[DEBUG _on_step] timestep=492, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=378.2643127441406, done=False
+[DEBUG _on_step] timestep=493, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=379.18670654296875, done=False
+[DEBUG _on_step] timestep=494, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=380.0841064453125, done=False
+[DEBUG _on_step] timestep=495, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=380.98150634765625, done=False
+[DEBUG _on_step] timestep=496, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=381.90716552734375, done=False
+[DEBUG _on_step] timestep=497, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=382.8045654296875, done=False
+[DEBUG _on_step] timestep=498, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=383.70196533203125, done=False
+[DEBUG _on_step] timestep=499, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=384.599365234375, done=False
+[DEBUG _on_step] timestep=500, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=385.49676513671875, done=False
+[DEBUG _on_step] timestep=501, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=386.3941650390625, done=False
+[DEBUG _on_step] timestep=502, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=387.29156494140625, done=False
+[DEBUG _on_step] timestep=503, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=388.21722412109375, done=False
+[DEBUG _on_step] timestep=504, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=389.1146240234375, done=False
+[DEBUG _on_step] timestep=505, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=390.01202392578125, done=False
+[DEBUG _on_step] timestep=506, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=390.909423828125, done=False
+[DEBUG _on_step] timestep=507, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=391.80682373046875, done=False
+[DEBUG _on_step] timestep=508, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=392.7042236328125, done=False
+[DEBUG _on_step] timestep=509, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=393.60162353515625, done=False
+[DEBUG _on_step] timestep=510, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=394.4990234375, done=False
+[DEBUG _on_step] timestep=511, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=395.4246826171875, done=False
+[DEBUG _on_step] timestep=512, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=396.32208251953125, done=False
+
+[DEBUG _on_rollout_end] Called at timestep 512
+[DEBUG] SB3 logger metrics: []
+[DEBUG] Episode rewards collected: []
+[DEBUG] No episode rewards to log!
+[DEBUG] Final metrics to log: {'timesteps': 512}
+[DEBUG] Logged 1 metrics to wandb
+
+[DEBUG _on_step] timestep=513, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=397.24774169921875, done=False
+[DEBUG _on_step] timestep=514, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=398.17340087890625, done=False
+[DEBUG _on_step] timestep=515, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=399.09906005859375, done=False
+[DEBUG _on_step] timestep=516, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=400.02471923828125, done=False
+[DEBUG _on_step] timestep=517, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=400.95037841796875, done=False
+[DEBUG _on_step] timestep=518, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=401.8477783203125, done=False
+[DEBUG _on_step] timestep=519, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=402.74517822265625, done=False
+[DEBUG _on_step] timestep=520, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=403.642578125, done=False
+[DEBUG _on_step] timestep=521, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=404.5682373046875, done=False
+[DEBUG _on_step] timestep=522, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=405.5362243652344, done=False
+[DEBUG _on_step] timestep=523, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=406.4971618652344, done=False
+[DEBUG _on_step] timestep=524, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=407.46514892578125, done=False
+[DEBUG _on_step] timestep=525, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=408.3875427246094, done=False
+[DEBUG _on_step] timestep=526, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=409.35552978515625, done=False
+[DEBUG _on_step] timestep=527, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=410.2779235839844, done=False
+[DEBUG _on_step] timestep=528, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=411.2003173828125, done=False
+[DEBUG _on_step] timestep=529, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=412.09771728515625, done=False
+[DEBUG _on_step] timestep=530, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=413.02337646484375, done=False
+[DEBUG _on_step] timestep=531, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=413.94903564453125, done=False
+[DEBUG _on_step] timestep=532, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=414.9170227050781, done=False
+[DEBUG _on_step] timestep=533, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=415.83941650390625, done=False
+[DEBUG _on_step] timestep=534, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=416.71282958984375, done=False
+[DEBUG _on_step] timestep=535, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=417.6352233886719, done=False
+[DEBUG _on_step] timestep=536, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=418.554443359375, done=False
+[DEBUG _on_step] timestep=537, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=419.4259033203125, done=False
+[DEBUG _on_step] timestep=538, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=420.29931640625, done=False
+[DEBUG _on_step] timestep=539, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=421.1560363769531, done=False
+[DEBUG _on_step] timestep=540, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=422.01275634765625, done=False
+[DEBUG _on_step] timestep=541, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=422.91015625, done=False
+[DEBUG _on_step] timestep=542, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=423.80755615234375, done=False
+[DEBUG _on_step] timestep=543, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=424.6642761230469, done=False
+[DEBUG _on_step] timestep=544, rewards=[0.8567345], dones=[False]
+[DEBUG] Env 0: reward=0.8567345142364502, accumulated=425.52099609375, done=False
+[DEBUG _on_step] timestep=545, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=426.41839599609375, done=False
+[DEBUG _on_step] timestep=546, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=427.34405517578125, done=False
+[DEBUG _on_step] timestep=547, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=428.3120422363281, done=False
+[DEBUG _on_step] timestep=548, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=429.2377014160156, done=False
+[DEBUG _on_step] timestep=549, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=430.1633605957031, done=False
+[DEBUG _on_step] timestep=550, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=431.0607604980469, done=False
+[DEBUG _on_step] timestep=551, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=431.9581604003906, done=False
+[DEBUG _on_step] timestep=552, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=432.8838195800781, done=False
+[DEBUG _on_step] timestep=553, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=433.8094787597656, done=False
+[DEBUG _on_step] timestep=554, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=434.7774658203125, done=False
+[DEBUG _on_step] timestep=555, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=435.7454528808594, done=False
+[DEBUG _on_step] timestep=556, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=436.71343994140625, done=False
+[DEBUG _on_step] timestep=557, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=437.67437744140625, done=False
+[DEBUG _on_step] timestep=558, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=438.5935974121094, done=False
+[DEBUG _on_step] timestep=559, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=439.48394775390625, done=False
+[DEBUG _on_step] timestep=560, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=440.400146484375, done=False
+[DEBUG _on_step] timestep=561, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=441.31634521484375, done=False
+[DEBUG _on_step] timestep=562, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=442.2325439453125, done=False
+[DEBUG _on_step] timestep=563, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=443.14874267578125, done=False
+[DEBUG _on_step] timestep=564, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=444.0390930175781, done=False
+[DEBUG _on_step] timestep=565, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=444.95831298828125, done=False
+[DEBUG _on_step] timestep=566, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=445.8775329589844, done=False
+[DEBUG _on_step] timestep=567, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=446.7967529296875, done=False
+[DEBUG _on_step] timestep=568, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=447.7159729003906, done=False
+[DEBUG _on_step] timestep=569, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=448.63836669921875, done=False
+[DEBUG _on_step] timestep=570, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=449.5607604980469, done=False
+[DEBUG _on_step] timestep=571, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=450.483154296875, done=False
+[DEBUG _on_step] timestep=572, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=451.4511413574219, done=False
+[DEBUG _on_step] timestep=573, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=452.3768005371094, done=False
+[DEBUG _on_step] timestep=574, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=453.3024597167969, done=False
+[DEBUG _on_step] timestep=575, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=454.27044677734375, done=False
+[DEBUG _on_step] timestep=576, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=455.19610595703125, done=False
+[DEBUG _on_step] timestep=577, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=456.12176513671875, done=False
+[DEBUG _on_step] timestep=578, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=457.04742431640625, done=False
+[DEBUG _on_step] timestep=579, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=457.97308349609375, done=False
+[DEBUG _on_step] timestep=580, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=458.89874267578125, done=False
+[DEBUG _on_step] timestep=581, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=459.82440185546875, done=False
+[DEBUG _on_step] timestep=582, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=460.75006103515625, done=False
+[DEBUG _on_step] timestep=583, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=461.67572021484375, done=False
+[DEBUG _on_step] timestep=584, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=462.6437072753906, done=False
+[DEBUG _on_step] timestep=585, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=463.56610107421875, done=False
+[DEBUG _on_step] timestep=586, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=464.4853210449219, done=False
+[DEBUG _on_step] timestep=587, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=465.4462585449219, done=False
+[DEBUG _on_step] timestep=588, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=466.4071960449219, done=False
+[DEBUG _on_step] timestep=589, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=467.3233947753906, done=False
+[DEBUG _on_step] timestep=590, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=468.2843322753906, done=False
+[DEBUG _on_step] timestep=591, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=469.2005310058594, done=False
+[DEBUG _on_step] timestep=592, rewards=[0.86761796], dones=[False]
+[DEBUG] Env 0: reward=0.8676179647445679, accumulated=470.0681457519531, done=False
+[DEBUG _on_step] timestep=593, rewards=[0.8182722], dones=[False]
+[DEBUG] Env 0: reward=0.8182721734046936, accumulated=470.88641357421875, done=False
+[DEBUG _on_step] timestep=594, rewards=[0.86761796], dones=[False]
+[DEBUG] Env 0: reward=0.8676179647445679, accumulated=471.7540283203125, done=False
+[DEBUG _on_step] timestep=595, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=472.67022705078125, done=False
+[DEBUG _on_step] timestep=596, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=473.63116455078125, done=False
+[DEBUG _on_step] timestep=597, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=474.59210205078125, done=False
+[DEBUG _on_step] timestep=598, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=475.5113220214844, done=False
+[DEBUG _on_step] timestep=599, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=476.4305419921875, done=False
+[DEBUG _on_step] timestep=600, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=477.3497619628906, done=False
+[DEBUG _on_step] timestep=601, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=478.3106994628906, done=False
+[DEBUG _on_step] timestep=602, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=479.22991943359375, done=False
+[DEBUG _on_step] timestep=603, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=480.1523132324219, done=False
+[DEBUG _on_step] timestep=604, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=481.07470703125, done=False
+[DEBUG _on_step] timestep=605, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=481.97210693359375, done=False
+[DEBUG _on_step] timestep=606, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=482.8695068359375, done=False
+[DEBUG _on_step] timestep=607, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=483.795166015625, done=False
+[DEBUG _on_step] timestep=608, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=484.69256591796875, done=False
+[DEBUG _on_step] timestep=609, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=485.6149597167969, done=False
+[DEBUG _on_step] timestep=610, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=486.58294677734375, done=False
+[DEBUG _on_step] timestep=611, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=487.5053405761719, done=False
+[DEBUG _on_step] timestep=612, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=488.424560546875, done=False
+[DEBUG _on_step] timestep=613, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=489.3469543457031, done=False
+[DEBUG _on_step] timestep=614, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=490.31494140625, done=False
+[DEBUG _on_step] timestep=615, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=491.2373352050781, done=False
+[DEBUG _on_step] timestep=616, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=492.15655517578125, done=False
+[DEBUG _on_step] timestep=617, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=493.0789489746094, done=False
+[DEBUG _on_step] timestep=618, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=494.04693603515625, done=False
+[DEBUG _on_step] timestep=619, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=495.0149230957031, done=False
+[DEBUG _on_step] timestep=620, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=495.93731689453125, done=False
+[DEBUG _on_step] timestep=621, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=496.8565368652344, done=False
+[DEBUG _on_step] timestep=622, rewards=[0.8714504], dones=[False]
+[DEBUG] Env 0: reward=0.8714504241943359, accumulated=497.7279968261719, done=False
+[DEBUG _on_step] timestep=623, rewards=[0.85159177], dones=[False]
+[DEBUG] Env 0: reward=0.8515917658805847, accumulated=498.57958984375, done=False
+[DEBUG _on_step] timestep=624, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=499.4699401855469, done=False
+[DEBUG _on_step] timestep=625, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=500.3861389160156, done=False
+[DEBUG _on_step] timestep=626, rewards=[0.86761796], dones=[False]
+[DEBUG] Env 0: reward=0.8676179647445679, accumulated=501.2537536621094, done=False
+[DEBUG _on_step] timestep=627, rewards=[0.8499167], dones=[False]
+[DEBUG] Env 0: reward=0.8499166965484619, accumulated=502.1036682128906, done=False
+[DEBUG _on_step] timestep=628, rewards=[0.86761796], dones=[False]
+[DEBUG] Env 0: reward=0.8676179647445679, accumulated=502.9712829589844, done=False
+[DEBUG _on_step] timestep=629, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=503.8874816894531, done=False
+[DEBUG _on_step] timestep=630, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=504.8484191894531, done=False
+[DEBUG _on_step] timestep=631, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=505.76763916015625, done=False
+[DEBUG _on_step] timestep=632, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=506.6900329589844, done=False
+[DEBUG _on_step] timestep=633, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=507.65802001953125, done=False
+[DEBUG _on_step] timestep=634, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=508.6260070800781, done=False
+[DEBUG _on_step] timestep=635, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=509.593994140625, done=False
+[DEBUG _on_step] timestep=636, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=510.5619812011719, done=False
+[DEBUG _on_step] timestep=637, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=511.4876403808594, done=False
+[DEBUG _on_step] timestep=638, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=512.3850708007812, done=False
+[DEBUG _on_step] timestep=639, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=513.282470703125, done=False
+[DEBUG _on_step] timestep=640, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=514.1798706054688, done=False
+[DEBUG _on_step] timestep=641, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=515.0772705078125, done=False
+[DEBUG _on_step] timestep=642, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=515.9746704101562, done=False
+[DEBUG _on_step] timestep=643, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=516.9003295898438, done=False
+[DEBUG _on_step] timestep=644, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=517.7977294921875, done=False
+[DEBUG _on_step] timestep=645, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=518.6951293945312, done=False
+[DEBUG _on_step] timestep=646, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=519.6174926757812, done=False
+[DEBUG _on_step] timestep=647, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=520.5367431640625, done=False
+[DEBUG _on_step] timestep=648, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=521.4559936523438, done=False
+[DEBUG _on_step] timestep=649, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=522.4169311523438, done=False
+[DEBUG _on_step] timestep=650, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=523.336181640625, done=False
+[DEBUG _on_step] timestep=651, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=524.2265014648438, done=False
+[DEBUG _on_step] timestep=652, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=525.1427001953125, done=False
+[DEBUG _on_step] timestep=653, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=526.0330200195312, done=False
+[DEBUG _on_step] timestep=654, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=526.94921875, done=False
+[DEBUG _on_step] timestep=655, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=527.8654174804688, done=False
+[DEBUG _on_step] timestep=656, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=528.7816162109375, done=False
+[DEBUG _on_step] timestep=657, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=529.7425537109375, done=False
+[DEBUG _on_step] timestep=658, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=530.6618041992188, done=False
+[DEBUG _on_step] timestep=659, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=531.5521240234375, done=False
+[DEBUG _on_step] timestep=660, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=532.4424438476562, done=False
+[DEBUG _on_step] timestep=661, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=533.3616943359375, done=False
+[DEBUG _on_step] timestep=662, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=534.2809448242188, done=False
+[DEBUG _on_step] timestep=663, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=535.2001953125, done=False
+[DEBUG _on_step] timestep=664, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=536.0905151367188, done=False
+[DEBUG _on_step] timestep=665, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=536.9808349609375, done=False
+[DEBUG _on_step] timestep=666, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=537.8711547851562, done=False
+[DEBUG _on_step] timestep=667, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=538.7904052734375, done=False
+[DEBUG _on_step] timestep=668, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=539.7096557617188, done=False
+[DEBUG _on_step] timestep=669, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=540.5999755859375, done=False
+[DEBUG _on_step] timestep=670, rewards=[0.8903414], dones=[False]
+[DEBUG] Env 0: reward=0.8903414011001587, accumulated=541.4902954101562, done=False
+[DEBUG _on_step] timestep=671, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=542.4095458984375, done=False
+[DEBUG _on_step] timestep=672, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=543.3704833984375, done=False
+[DEBUG _on_step] timestep=673, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=544.2897338867188, done=False
+[DEBUG _on_step] timestep=674, rewards=[0.91922253], dones=[False]
+[DEBUG] Env 0: reward=0.9192225337028503, accumulated=545.208984375, done=False
+[DEBUG _on_step] timestep=675, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=546.169921875, done=False
+[DEBUG _on_step] timestep=676, rewards=[0.9161847], dones=[False]
+[DEBUG] Env 0: reward=0.9161847233772278, accumulated=547.0861206054688, done=False
+[DEBUG _on_step] timestep=677, rewards=[0.96094877], dones=[False]
+[DEBUG] Env 0: reward=0.9609487652778625, accumulated=548.0470581054688, done=False
+[DEBUG _on_step] timestep=678, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=549.0150146484375, done=False
+[DEBUG _on_step] timestep=679, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=549.9373779296875, done=False
+[DEBUG _on_step] timestep=680, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=550.8347778320312, done=False
+[DEBUG _on_step] timestep=681, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=551.7604370117188, done=False
+[DEBUG _on_step] timestep=682, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=552.6578369140625, done=False
+[DEBUG _on_step] timestep=683, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=553.5552368164062, done=False
+[DEBUG _on_step] timestep=684, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=554.4808959960938, done=False
+[DEBUG _on_step] timestep=685, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=555.4065551757812, done=False
+[DEBUG _on_step] timestep=686, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=556.37451171875, done=False
+[DEBUG _on_step] timestep=687, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=557.3001708984375, done=False
+[DEBUG _on_step] timestep=688, rewards=[0.8974086], dones=[False]
+[DEBUG] Env 0: reward=0.8974086046218872, accumulated=558.1975708007812, done=False
+[DEBUG _on_step] timestep=689, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=559.1199340820312, done=False
+[DEBUG _on_step] timestep=690, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=560.087890625, done=False
+[DEBUG _on_step] timestep=691, rewards=[0.92566967], dones=[False]
+[DEBUG] Env 0: reward=0.9256696701049805, accumulated=561.0135498046875, done=False
+[DEBUG _on_step] timestep=692, rewards=[0.9679844], dones=[False]
+[DEBUG] Env 0: reward=0.9679843783378601, accumulated=561.9815063476562, done=False
+[DEBUG _on_step] timestep=693, rewards=[0.92237914], dones=[False]
+[DEBUG] Env 0: reward=0.9223791360855103, accumulated=562.9038696289062, done=False
+[DEBUG _on_step] timestep=694, rewards=[0.8734101], dones=[False]
+[DEBUG] Env 0: reward=0.8734101057052612, accumulated=563.7772827148438, done=False
+[DEBUG _on_step] timestep=695, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=564.6011352539062, done=False
+[DEBUG _on_step] timestep=696, rewards=[0.7741128], dones=[False]
+[DEBUG] Env 0: reward=0.7741128206253052, accumulated=565.375244140625, done=False
+[DEBUG _on_step] timestep=697, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=566.1395874023438, done=False
+[DEBUG _on_step] timestep=698, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=566.9039306640625, done=False
+[DEBUG _on_step] timestep=699, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=567.6201782226562, done=False
+[DEBUG _on_step] timestep=700, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=568.2877197265625, done=False
+[DEBUG _on_step] timestep=701, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=568.9552612304688, done=False
+[DEBUG _on_step] timestep=702, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=569.6715087890625, done=False
+[DEBUG _on_step] timestep=703, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=570.4358520507812, done=False
+[DEBUG _on_step] timestep=704, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=571.2001953125, done=False
+[DEBUG _on_step] timestep=705, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=571.9164428710938, done=False
+[DEBUG _on_step] timestep=706, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=572.6326904296875, done=False
+[DEBUG _on_step] timestep=707, rewards=[0.667547], dones=[False]
+[DEBUG] Env 0: reward=0.6675469875335693, accumulated=573.3002319335938, done=False
+[DEBUG _on_step] timestep=708, rewards=[0.71623075], dones=[False]
+[DEBUG] Env 0: reward=0.7162307500839233, accumulated=574.0164794921875, done=False
+[DEBUG _on_step] timestep=709, rewards=[0.7643626], dones=[False]
+[DEBUG] Env 0: reward=0.7643625736236572, accumulated=574.7808227539062, done=False
+[DEBUG _on_step] timestep=710, rewards=[0.8115192], dones=[False]
+[DEBUG] Env 0: reward=0.811519205570221, accumulated=575.5923461914062, done=False
+[DEBUG _on_step] timestep=711, rewards=[0.8238609], dones=[False]
+[DEBUG] Env 0: reward=0.8238608837127686, accumulated=576.4161987304688, done=False
+[DEBUG _on_step] timestep=712, rewards=[0.8224472], dones=[False]
+[DEBUG] Env 0: reward=0.8224471807479858, accumulated=577.2386474609375, done=False
+[DEBUG _on_step] timestep=713, rewards=[0.7730088], dones=[False]
+[DEBUG] Env 0: reward=0.7730088233947754, accumulated=578.0116577148438, done=False
+[DEBUG _on_step] timestep=714, rewards=[0.72336847], dones=[False]
+[DEBUG] Env 0: reward=0.7233684659004211, accumulated=578.7350463867188, done=False
+[DEBUG _on_step] timestep=715, rewards=[0.6736183], dones=[False]
+[DEBUG] Env 0: reward=0.6736183166503906, accumulated=579.40869140625, done=False
+[DEBUG _on_step] timestep=716, rewards=[0.66529864], dones=[False]
+[DEBUG] Env 0: reward=0.6652986407279968, accumulated=580.073974609375, done=False
+[DEBUG _on_step] timestep=717, rewards=[0.64996433], dones=[False]
+[DEBUG] Env 0: reward=0.6499643325805664, accumulated=580.7239379882812, done=False
+[DEBUG _on_step] timestep=718, rewards=[0.6031058], dones=[False]
+[DEBUG] Env 0: reward=0.6031057834625244, accumulated=581.3270263671875, done=False
+[DEBUG _on_step] timestep=719, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=581.943603515625, done=False
+[DEBUG _on_step] timestep=720, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=582.5111694335938, done=False
+[DEBUG _on_step] timestep=721, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=583.0294799804688, done=False
+[DEBUG _on_step] timestep=722, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=583.5970458984375, done=False
+[DEBUG _on_step] timestep=723, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=584.1153564453125, done=False
+[DEBUG _on_step] timestep=724, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=584.6829223632812, done=False
+[DEBUG _on_step] timestep=725, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=585.2384643554688, done=False
+[DEBUG _on_step] timestep=726, rewards=[0.6031058], dones=[False]
+[DEBUG] Env 0: reward=0.6031057834625244, accumulated=585.841552734375, done=False
+[DEBUG _on_step] timestep=727, rewards=[0.61656165], dones=[False]
+[DEBUG] Env 0: reward=0.6165616512298584, accumulated=586.4581298828125, done=False
+[DEBUG _on_step] timestep=728, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=587.0256958007812, done=False
+[DEBUG _on_step] timestep=729, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=587.5440063476562, done=False
+[DEBUG _on_step] timestep=730, rewards=[0.46893972], dones=[False]
+[DEBUG] Env 0: reward=0.46893972158432007, accumulated=588.012939453125, done=False
+[DEBUG _on_step] timestep=731, rewards=[0.5183103], dones=[False]
+[DEBUG] Env 0: reward=0.5183103084564209, accumulated=588.53125, done=False
+[DEBUG _on_step] timestep=732, rewards=[0.5675361], dones=[False]
+[DEBUG] Env 0: reward=0.5675361156463623, accumulated=589.0988159179688, done=False
+[DEBUG _on_step] timestep=733, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=589.6543579101562, done=False
+[DEBUG _on_step] timestep=734, rewards=[0.6031058], dones=[False]
+[DEBUG] Env 0: reward=0.6031057834625244, accumulated=590.2574462890625, done=False
+[DEBUG _on_step] timestep=735, rewards=[0.55556214], dones=[False]
+[DEBUG] Env 0: reward=0.5555621385574341, accumulated=590.81298828125, done=False
+[DEBUG _on_step] timestep=736, rewards=[0.50753176], dones=[False]
+[DEBUG] Env 0: reward=0.5075317621231079, accumulated=591.3204956054688, done=False
+[DEBUG _on_step] timestep=737, rewards=[0.49203837], dones=[False]
+[DEBUG] Env 0: reward=0.492038369178772, accumulated=591.8125610351562, done=False
+[DEBUG _on_step] timestep=738, rewards=[0.5384537], dones=[False]
+[DEBUG] Env 0: reward=0.5384536981582642, accumulated=592.3510131835938, done=False
+[DEBUG _on_step] timestep=739, rewards=[0.49203837], dones=[False]
+[DEBUG] Env 0: reward=0.492038369178772, accumulated=592.8430786132812, done=False
+[DEBUG _on_step] timestep=740, rewards=[0.5384537], dones=[False]
+[DEBUG] Env 0: reward=0.5384536981582642, accumulated=593.3815307617188, done=False
+[DEBUG _on_step] timestep=741, rewards=[0.51675576], dones=[False]
+[DEBUG] Env 0: reward=0.5167557597160339, accumulated=593.8983154296875, done=False
+[DEBUG _on_step] timestep=742, rewards=[0.5600852], dones=[False]
+[DEBUG] Env 0: reward=0.5600851774215698, accumulated=594.4583740234375, done=False
+[DEBUG _on_step] timestep=743, rewards=[0.601848], dones=[False]
+[DEBUG] Env 0: reward=0.6018480062484741, accumulated=595.0602416992188, done=False
+[DEBUG _on_step] timestep=744, rewards=[0.6414962], dones=[False]
+[DEBUG] Env 0: reward=0.6414961814880371, accumulated=595.7017211914062, done=False
+[DEBUG _on_step] timestep=745, rewards=[0.601848], dones=[False]
+[DEBUG] Env 0: reward=0.6018480062484741, accumulated=596.3035888671875, done=False
+[DEBUG _on_step] timestep=746, rewards=[0.5600852], dones=[False]
+[DEBUG] Env 0: reward=0.5600851774215698, accumulated=596.8636474609375, done=False
+[DEBUG _on_step] timestep=747, rewards=[0.601848], dones=[False]
+[DEBUG] Env 0: reward=0.6018480062484741, accumulated=597.4655151367188, done=False
+[DEBUG _on_step] timestep=748, rewards=[0.5600852], dones=[False]
+[DEBUG] Env 0: reward=0.5600851774215698, accumulated=598.0255737304688, done=False
+[DEBUG _on_step] timestep=749, rewards=[0.53199893], dones=[False]
+[DEBUG] Env 0: reward=0.5319989323616028, accumulated=598.5575561523438, done=False
+[DEBUG _on_step] timestep=750, rewards=[0.57101864], dones=[False]
+[DEBUG] Env 0: reward=0.571018636226654, accumulated=599.1286010742188, done=False
+[DEBUG _on_step] timestep=751, rewards=[0.60753983], dones=[False]
+[DEBUG] Env 0: reward=0.6075398325920105, accumulated=599.7361450195312, done=False
+[DEBUG _on_step] timestep=752, rewards=[0.57043624], dones=[False]
+[DEBUG] Env 0: reward=0.5704362392425537, accumulated=600.3065795898438, done=False
+[DEBUG _on_step] timestep=753, rewards=[0.60753983], dones=[False]
+[DEBUG] Env 0: reward=0.6075398325920105, accumulated=600.9141235351562, done=False
+[DEBUG _on_step] timestep=754, rewards=[0.57043624], dones=[False]
+[DEBUG] Env 0: reward=0.5704362392425537, accumulated=601.4845581054688, done=False
+[DEBUG _on_step] timestep=755, rewards=[0.5309318], dones=[False]
+[DEBUG] Env 0: reward=0.5309317708015442, accumulated=602.0155029296875, done=False
+[DEBUG _on_step] timestep=756, rewards=[0.55838364], dones=[False]
+[DEBUG] Env 0: reward=0.5583836436271667, accumulated=602.5739135742188, done=False
+[DEBUG _on_step] timestep=757, rewards=[0.60059416], dones=[False]
+[DEBUG] Env 0: reward=0.600594162940979, accumulated=603.1744995117188, done=False
+[DEBUG _on_step] timestep=758, rewards=[0.55838364], dones=[False]
+[DEBUG] Env 0: reward=0.5583836436271667, accumulated=603.73291015625, done=False
+[DEBUG _on_step] timestep=759, rewards=[0.5816401], dones=[False]
+[DEBUG] Env 0: reward=0.5816401243209839, accumulated=604.3145751953125, done=False
+[DEBUG _on_step] timestep=760, rewards=[0.55838364], dones=[False]
+[DEBUG] Env 0: reward=0.5583836436271667, accumulated=604.8729858398438, done=False
+[DEBUG _on_step] timestep=761, rewards=[0.5816401], dones=[False]
+[DEBUG] Env 0: reward=0.5816401243209839, accumulated=605.4546508789062, done=False
+[DEBUG _on_step] timestep=762, rewards=[0.55838364], dones=[False]
+[DEBUG] Env 0: reward=0.5583836436271667, accumulated=606.0130615234375, done=False
+[DEBUG _on_step] timestep=763, rewards=[0.60059416], dones=[False]
+[DEBUG] Env 0: reward=0.600594162940979, accumulated=606.6136474609375, done=False
+[DEBUG _on_step] timestep=764, rewards=[0.57043624], dones=[False]
+[DEBUG] Env 0: reward=0.5704362392425537, accumulated=607.18408203125, done=False
+[DEBUG _on_step] timestep=765, rewards=[0.60059416], dones=[False]
+[DEBUG] Env 0: reward=0.600594162940979, accumulated=607.78466796875, done=False
+[DEBUG _on_step] timestep=766, rewards=[0.6407995], dones=[False]
+[DEBUG] Env 0: reward=0.6407995223999023, accumulated=608.4254760742188, done=False
+[DEBUG _on_step] timestep=767, rewards=[0.678247], dones=[False]
+[DEBUG] Env 0: reward=0.6782469749450684, accumulated=609.1036987304688, done=False
+[DEBUG _on_step] timestep=768, rewards=[0.71099305], dones=[False]
+[DEBUG] Env 0: reward=0.7109930515289307, accumulated=609.814697265625, done=False
+[DEBUG _on_step] timestep=769, rewards=[0.7382272], dones=[False]
+[DEBUG] Env 0: reward=0.7382271885871887, accumulated=610.5529174804688, done=False
+[DEBUG _on_step] timestep=770, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=611.3109741210938, done=False
+[DEBUG _on_step] timestep=771, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=612.07958984375, done=False
+[DEBUG _on_step] timestep=772, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=612.7984619140625, done=False
+[DEBUG _on_step] timestep=773, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=613.5086059570312, done=False
+[DEBUG _on_step] timestep=774, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=614.2666625976562, done=False
+[DEBUG _on_step] timestep=775, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=615.0352783203125, done=False
+[DEBUG _on_step] timestep=776, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=615.7933349609375, done=False
+[DEBUG _on_step] timestep=777, rewards=[0.805], dones=[False]
+[DEBUG] Env 0: reward=0.8050000071525574, accumulated=616.5983276367188, done=False
+[DEBUG _on_step] timestep=778, rewards=[0.8182722], dones=[False]
+[DEBUG] Env 0: reward=0.8182721734046936, accumulated=617.4166259765625, done=False
+[DEBUG _on_step] timestep=779, rewards=[0.86761796], dones=[False]
+[DEBUG] Env 0: reward=0.8676179647445679, accumulated=618.2842407226562, done=False
+[DEBUG _on_step] timestep=780, rewards=[0.8182722], dones=[False]
+[DEBUG] Env 0: reward=0.8182721734046936, accumulated=619.1025390625, done=False
+[DEBUG _on_step] timestep=781, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=619.8711547851562, done=False
+[DEBUG _on_step] timestep=782, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=620.5900268554688, done=False
+[DEBUG _on_step] timestep=783, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=621.3001708984375, done=False
+[DEBUG _on_step] timestep=784, rewards=[0.69336504], dones=[False]
+[DEBUG] Env 0: reward=0.6933650374412537, accumulated=621.9935302734375, done=False
+[DEBUG _on_step] timestep=785, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=622.7036743164062, done=False
+[DEBUG _on_step] timestep=786, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=623.4225463867188, done=False
+[DEBUG _on_step] timestep=787, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=624.1326904296875, done=False
+[DEBUG _on_step] timestep=788, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=624.8907470703125, done=False
+[DEBUG _on_step] timestep=789, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=625.6593627929688, done=False
+[DEBUG _on_step] timestep=790, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=626.3782348632812, done=False
+[DEBUG _on_step] timestep=791, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=627.1468505859375, done=False
+[DEBUG _on_step] timestep=792, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=627.9154663085938, done=False
+[DEBUG _on_step] timestep=793, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=628.6735229492188, done=False
+[DEBUG _on_step] timestep=794, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=629.442138671875, done=False
+[DEBUG _on_step] timestep=795, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=630.2001953125, done=False
+[DEBUG _on_step] timestep=796, rewards=[0.805], dones=[False]
+[DEBUG] Env 0: reward=0.8050000071525574, accumulated=631.0051879882812, done=False
+[DEBUG _on_step] timestep=797, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=631.7632446289062, done=False
+[DEBUG _on_step] timestep=798, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=632.473388671875, done=False
+[DEBUG _on_step] timestep=799, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=633.2314453125, done=False
+[DEBUG _on_step] timestep=800, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=633.989501953125, done=False
+[DEBUG _on_step] timestep=801, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=634.7581176757812, done=False
+[DEBUG _on_step] timestep=802, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=635.5267333984375, done=False
+[DEBUG _on_step] timestep=803, rewards=[0.8182722], dones=[False]
+[DEBUG] Env 0: reward=0.8182721734046936, accumulated=636.3450317382812, done=False
+[DEBUG _on_step] timestep=804, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=637.1136474609375, done=False
+[DEBUG _on_step] timestep=805, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=637.8822631835938, done=False
+[DEBUG _on_step] timestep=806, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=638.6011352539062, done=False
+[DEBUG _on_step] timestep=807, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=639.3200073242188, done=False
+[DEBUG _on_step] timestep=808, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=640.0301513671875, done=False
+[DEBUG _on_step] timestep=809, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=640.7490234375, done=False
+[DEBUG _on_step] timestep=810, rewards=[0.71888614], dones=[False]
+[DEBUG] Env 0: reward=0.718886137008667, accumulated=641.4678955078125, done=False
+[DEBUG _on_step] timestep=811, rewards=[0.7686453], dones=[False]
+[DEBUG] Env 0: reward=0.7686452865600586, accumulated=642.2365112304688, done=False
+[DEBUG _on_step] timestep=812, rewards=[0.7580806], dones=[False]
+[DEBUG] Env 0: reward=0.7580806016921997, accumulated=642.9945678710938, done=False
+[DEBUG _on_step] timestep=813, rewards=[0.7101294], dones=[False]
+[DEBUG] Env 0: reward=0.7101293802261353, accumulated=643.7047119140625, done=False
+[DEBUG _on_step] timestep=814, rewards=[0.6615846], dones=[False]
+[DEBUG] Env 0: reward=0.6615846157073975, accumulated=644.3662719726562, done=False
+[DEBUG _on_step] timestep=815, rewards=[0.6690544], dones=[False]
+[DEBUG] Env 0: reward=0.669054388999939, accumulated=645.0353393554688, done=False
+[DEBUG _on_step] timestep=816, rewards=[0.6615846], dones=[False]
+[DEBUG] Env 0: reward=0.6615846157073975, accumulated=645.6968994140625, done=False
+[DEBUG _on_step] timestep=817, rewards=[0.6690544], dones=[False]
+[DEBUG] Env 0: reward=0.669054388999939, accumulated=646.365966796875, done=False
+[DEBUG _on_step] timestep=818, rewards=[0.6615846], dones=[False]
+[DEBUG] Env 0: reward=0.6615846157073975, accumulated=647.0275268554688, done=False
+[DEBUG _on_step] timestep=819, rewards=[0.6690544], dones=[False]
+[DEBUG] Env 0: reward=0.669054388999939, accumulated=647.6965942382812, done=False
+[DEBUG _on_step] timestep=820, rewards=[0.6615846], dones=[False]
+[DEBUG] Env 0: reward=0.6615846157073975, accumulated=648.358154296875, done=False
+[DEBUG _on_step] timestep=821, rewards=[0.6126694], dones=[False]
+[DEBUG] Env 0: reward=0.6126694083213806, accumulated=648.9708251953125, done=False
+[DEBUG _on_step] timestep=822, rewards=[0.5635083], dones=[False]
+[DEBUG] Env 0: reward=0.5635082721710205, accumulated=649.5343627929688, done=False
+[DEBUG _on_step] timestep=823, rewards=[0.5635083], dones=[False]
+[DEBUG] Env 0: reward=0.5635082721710205, accumulated=650.097900390625, done=False
+[DEBUG _on_step] timestep=824, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=650.6671752929688, done=False
+[DEBUG _on_step] timestep=825, rewards=[0.5635083], dones=[False]
+[DEBUG] Env 0: reward=0.5635082721710205, accumulated=651.230712890625, done=False
+[DEBUG _on_step] timestep=826, rewards=[0.5635083], dones=[False]
+[DEBUG] Env 0: reward=0.5635082721710205, accumulated=651.7942504882812, done=False
+[DEBUG _on_step] timestep=827, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=652.363525390625, done=False
+[DEBUG _on_step] timestep=828, rewards=[0.5635083], dones=[False]
+[DEBUG] Env 0: reward=0.5635082721710205, accumulated=652.9270629882812, done=False
+[DEBUG _on_step] timestep=829, rewards=[0.5692738], dones=[False]
+[DEBUG] Env 0: reward=0.569273829460144, accumulated=653.496337890625, done=False
+[DEBUG _on_step] timestep=830, rewards=[0.5193494], dones=[False]
+[DEBUG] Env 0: reward=0.5193493962287903, accumulated=654.0156860351562, done=False
+[DEBUG _on_step] timestep=831, rewards=[0.46941072], dones=[False]
+[DEBUG] Env 0: reward=0.4694107174873352, accumulated=654.485107421875, done=False
+[DEBUG _on_step] timestep=832, rewards=[0.46941072], dones=[False]
+[DEBUG] Env 0: reward=0.4694107174873352, accumulated=654.9545288085938, done=False
+[DEBUG _on_step] timestep=833, rewards=[0.4647197], dones=[False]
+[DEBUG] Env 0: reward=0.4647197127342224, accumulated=655.4192504882812, done=False
+[DEBUG _on_step] timestep=834, rewards=[0.45545888], dones=[False]
+[DEBUG] Env 0: reward=0.4554588794708252, accumulated=655.8746948242188, done=False
+[DEBUG _on_step] timestep=835, rewards=[0.44185573], dones=[False]
+[DEBUG] Env 0: reward=0.4418557286262512, accumulated=656.3165283203125, done=False
+[DEBUG _on_step] timestep=836, rewards=[0.3941741], dones=[False]
+[DEBUG] Env 0: reward=0.39417409896850586, accumulated=656.710693359375, done=False
+[DEBUG _on_step] timestep=837, rewards=[0.346146], dones=[False]
+[DEBUG] Env 0: reward=0.34614598751068115, accumulated=657.0568237304688, done=False
+[DEBUG _on_step] timestep=838, rewards=[0.3941741], dones=[False]
+[DEBUG] Env 0: reward=0.39417409896850586, accumulated=657.4509887695312, done=False
+[DEBUG _on_step] timestep=839, rewards=[0.37788665], dones=[False]
+[DEBUG] Env 0: reward=0.37788665294647217, accumulated=657.828857421875, done=False
+[DEBUG _on_step] timestep=840, rewards=[0.42421794], dones=[False]
+[DEBUG] Env 0: reward=0.42421793937683105, accumulated=658.2530517578125, done=False
+[DEBUG _on_step] timestep=841, rewards=[0.44185573], dones=[False]
+[DEBUG] Env 0: reward=0.4418557286262512, accumulated=658.6948852539062, done=False
+[DEBUG _on_step] timestep=842, rewards=[0.45545888], dones=[False]
+[DEBUG] Env 0: reward=0.4554588794708252, accumulated=659.1503295898438, done=False
+[DEBUG _on_step] timestep=843, rewards=[0.40668303], dones=[False]
+[DEBUG] Env 0: reward=0.4066830277442932, accumulated=659.5570068359375, done=False
+[DEBUG _on_step] timestep=844, rewards=[0.45545888], dones=[False]
+[DEBUG] Env 0: reward=0.4554588794708252, accumulated=660.012451171875, done=False
+[DEBUG _on_step] timestep=845, rewards=[0.44185573], dones=[False]
+[DEBUG] Env 0: reward=0.4418557286262512, accumulated=660.4542846679688, done=False
+[DEBUG _on_step] timestep=846, rewards=[0.45545888], dones=[False]
+[DEBUG] Env 0: reward=0.4554588794708252, accumulated=660.9097290039062, done=False
+[DEBUG _on_step] timestep=847, rewards=[0.50399095], dones=[False]
+[DEBUG] Env 0: reward=0.5039909482002258, accumulated=661.4136962890625, done=False
+[DEBUG _on_step] timestep=848, rewards=[0.51417595], dones=[False]
+[DEBUG] Env 0: reward=0.5141759514808655, accumulated=661.9278564453125, done=False
+[DEBUG _on_step] timestep=849, rewards=[0.50399095], dones=[False]
+[DEBUG] Env 0: reward=0.5039909482002258, accumulated=662.4318237304688, done=False
+[DEBUG _on_step] timestep=850, rewards=[0.51417595], dones=[False]
+[DEBUG] Env 0: reward=0.5141759514808655, accumulated=662.9459838867188, done=False
+[DEBUG _on_step] timestep=851, rewards=[0.50399095], dones=[False]
+[DEBUG] Env 0: reward=0.5039909482002258, accumulated=663.449951171875, done=False
+[DEBUG _on_step] timestep=852, rewards=[0.48909396], dones=[False]
+[DEBUG] Env 0: reward=0.48909395933151245, accumulated=663.9390258789062, done=False
+[DEBUG _on_step] timestep=853, rewards=[0.53575325], dones=[False]
+[DEBUG] Env 0: reward=0.5357532501220703, accumulated=664.4747924804688, done=False
+[DEBUG _on_step] timestep=854, rewards=[0.55219984], dones=[False]
+[DEBUG] Env 0: reward=0.5521998405456543, accumulated=665.0269775390625, done=False
+[DEBUG _on_step] timestep=855, rewards=[0.50399095], dones=[False]
+[DEBUG] Env 0: reward=0.5039909482002258, accumulated=665.5309448242188, done=False
+[DEBUG _on_step] timestep=856, rewards=[0.48909396], dones=[False]
+[DEBUG] Env 0: reward=0.48909395933151245, accumulated=666.02001953125, done=False
+[DEBUG _on_step] timestep=857, rewards=[0.50399095], dones=[False]
+[DEBUG] Env 0: reward=0.5039909482002258, accumulated=666.5239868164062, done=False
+[DEBUG _on_step] timestep=858, rewards=[0.51417595], dones=[False]
+[DEBUG] Env 0: reward=0.5141759514808655, accumulated=667.0381469726562, done=False
+[DEBUG _on_step] timestep=859, rewards=[0.5193494], dones=[False]
+[DEBUG] Env 0: reward=0.5193493962287903, accumulated=667.5574951171875, done=False
+[DEBUG _on_step] timestep=860, rewards=[0.51417595], dones=[False]
+[DEBUG] Env 0: reward=0.5141759514808655, accumulated=668.0716552734375, done=False
+[DEBUG _on_step] timestep=861, rewards=[0.5193494], dones=[False]
+[DEBUG] Env 0: reward=0.5193493962287903, accumulated=668.5910034179688, done=False
+[DEBUG _on_step] timestep=862, rewards=[0.5193494], dones=[False]
+[DEBUG] Env 0: reward=0.5193493962287903, accumulated=669.1103515625, done=False
+[DEBUG _on_step] timestep=863, rewards=[0.46941072], dones=[False]
+[DEBUG] Env 0: reward=0.4694107174873352, accumulated=669.5797729492188, done=False
+[DEBUG _on_step] timestep=864, rewards=[0.4647197], dones=[False]
+[DEBUG] Env 0: reward=0.4647197127342224, accumulated=670.0444946289062, done=False
+[DEBUG _on_step] timestep=865, rewards=[0.41517097], dones=[False]
+[DEBUG] Env 0: reward=0.41517096757888794, accumulated=670.4596557617188, done=False
+[DEBUG _on_step] timestep=866, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=670.8251953125, done=False
+[DEBUG _on_step] timestep=867, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=671.1907348632812, done=False
+[DEBUG _on_step] timestep=868, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=671.5562744140625, done=False
+[DEBUG _on_step] timestep=869, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=671.9218139648438, done=False
+[DEBUG _on_step] timestep=870, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=672.287353515625, done=False
+[DEBUG _on_step] timestep=871, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=672.6528930664062, done=False
+[DEBUG _on_step] timestep=872, rewards=[0.36950415], dones=[False]
+[DEBUG] Env 0: reward=0.3695041537284851, accumulated=673.0223999023438, done=False
+[DEBUG _on_step] timestep=873, rewards=[0.3655514], dones=[False]
+[DEBUG] Env 0: reward=0.3655514121055603, accumulated=673.387939453125, done=False
+[DEBUG _on_step] timestep=874, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=673.7088012695312, done=False
+[DEBUG _on_step] timestep=875, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=674.0296630859375, done=False
+[DEBUG _on_step] timestep=876, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=674.3505249023438, done=False
+[DEBUG _on_step] timestep=877, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=674.67138671875, done=False
+[DEBUG _on_step] timestep=878, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=674.9922485351562, done=False
+[DEBUG _on_step] timestep=879, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=675.3131103515625, done=False
+[DEBUG _on_step] timestep=880, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=675.6376342773438, done=False
+[DEBUG _on_step] timestep=881, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=675.962158203125, done=False
+[DEBUG _on_step] timestep=882, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=676.336669921875, done=False
+[DEBUG _on_step] timestep=883, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=676.711181640625, done=False
+[DEBUG _on_step] timestep=884, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=677.085693359375, done=False
+[DEBUG _on_step] timestep=885, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=677.4102172851562, done=False
+[DEBUG _on_step] timestep=886, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=677.7310791015625, done=False
+[DEBUG _on_step] timestep=887, rewards=[0.32084608], dones=[False]
+[DEBUG] Env 0: reward=0.3208460807800293, accumulated=678.0519409179688, done=False
+[DEBUG _on_step] timestep=888, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=678.37646484375, done=False
+[DEBUG _on_step] timestep=889, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=678.7009887695312, done=False
+[DEBUG _on_step] timestep=890, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=679.0755004882812, done=False
+[DEBUG _on_step] timestep=891, rewards=[0.37051606], dones=[False]
+[DEBUG] Env 0: reward=0.3705160617828369, accumulated=679.446044921875, done=False
+[DEBUG _on_step] timestep=892, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=679.8661499023438, done=False
+[DEBUG _on_step] timestep=893, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=680.2905883789062, done=False
+[DEBUG _on_step] timestep=894, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=680.6651000976562, done=False
+[DEBUG _on_step] timestep=895, rewards=[0.32453722], dones=[False]
+[DEBUG] Env 0: reward=0.3245372176170349, accumulated=680.9896240234375, done=False
+[DEBUG _on_step] timestep=896, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=681.3641357421875, done=False
+[DEBUG _on_step] timestep=897, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=681.78857421875, done=False
+[DEBUG _on_step] timestep=898, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=682.1630859375, done=False
+[DEBUG _on_step] timestep=899, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=682.5875244140625, done=False
+[DEBUG _on_step] timestep=900, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=683.011962890625, done=False
+[DEBUG _on_step] timestep=901, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=683.4364013671875, done=False
+[DEBUG _on_step] timestep=902, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=683.8109130859375, done=False
+[DEBUG _on_step] timestep=903, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=684.1854248046875, done=False
+[DEBUG _on_step] timestep=904, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=684.60986328125, done=False
+[DEBUG _on_step] timestep=905, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=685.0299682617188, done=False
+[DEBUG _on_step] timestep=906, rewards=[0.4115699], dones=[False]
+[DEBUG] Env 0: reward=0.41156989336013794, accumulated=685.4415283203125, done=False
+[DEBUG _on_step] timestep=907, rewards=[0.36262256], dones=[False]
+[DEBUG] Env 0: reward=0.36262255907058716, accumulated=685.8041381835938, done=False
+[DEBUG _on_step] timestep=908, rewards=[0.4115699], dones=[False]
+[DEBUG] Env 0: reward=0.41156989336013794, accumulated=686.2156982421875, done=False
+[DEBUG _on_step] timestep=909, rewards=[0.46032417], dones=[False]
+[DEBUG] Env 0: reward=0.46032416820526123, accumulated=686.676025390625, done=False
+[DEBUG _on_step] timestep=910, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=687.1456909179688, done=False
+[DEBUG _on_step] timestep=911, rewards=[0.46032417], dones=[False]
+[DEBUG] Env 0: reward=0.46032416820526123, accumulated=687.6060180664062, done=False
+[DEBUG _on_step] timestep=912, rewards=[0.4115699], dones=[False]
+[DEBUG] Env 0: reward=0.41156989336013794, accumulated=688.017578125, done=False
+[DEBUG _on_step] timestep=913, rewards=[0.46032417], dones=[False]
+[DEBUG] Env 0: reward=0.46032416820526123, accumulated=688.4779052734375, done=False
+[DEBUG _on_step] timestep=914, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=688.9475708007812, done=False
+[DEBUG _on_step] timestep=915, rewards=[0.46032417], dones=[False]
+[DEBUG] Env 0: reward=0.46032416820526123, accumulated=689.4078979492188, done=False
+[DEBUG _on_step] timestep=916, rewards=[0.5088279], dones=[False]
+[DEBUG] Env 0: reward=0.5088279247283936, accumulated=689.916748046875, done=False
+[DEBUG _on_step] timestep=917, rewards=[0.55699885], dones=[False]
+[DEBUG] Env 0: reward=0.5569988489151001, accumulated=690.4737548828125, done=False
+[DEBUG _on_step] timestep=918, rewards=[0.5403806], dones=[False]
+[DEBUG] Env 0: reward=0.540380597114563, accumulated=691.01416015625, done=False
+[DEBUG _on_step] timestep=919, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=691.5332641601562, done=False
+[DEBUG _on_step] timestep=920, rewards=[0.49378854], dones=[False]
+[DEBUG] Env 0: reward=0.49378854036331177, accumulated=692.0270385742188, done=False
+[DEBUG _on_step] timestep=921, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=692.546142578125, done=False
+[DEBUG _on_step] timestep=922, rewards=[0.49378854], dones=[False]
+[DEBUG] Env 0: reward=0.49378854036331177, accumulated=693.0399169921875, done=False
+[DEBUG _on_step] timestep=923, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=693.5590209960938, done=False
+[DEBUG _on_step] timestep=924, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=694.033447265625, done=False
+[DEBUG _on_step] timestep=925, rewards=[0.49378854], dones=[False]
+[DEBUG] Env 0: reward=0.49378854036331177, accumulated=694.5272216796875, done=False
+[DEBUG _on_step] timestep=926, rewards=[0.4466014], dones=[False]
+[DEBUG] Env 0: reward=0.44660139083862305, accumulated=694.9738159179688, done=False
+[DEBUG _on_step] timestep=927, rewards=[0.46032417], dones=[False]
+[DEBUG] Env 0: reward=0.46032416820526123, accumulated=695.4341430664062, done=False
+[DEBUG _on_step] timestep=928, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=695.90380859375, done=False
+[DEBUG _on_step] timestep=929, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=696.4229125976562, done=False
+[DEBUG _on_step] timestep=930, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=696.947265625, done=False
+[DEBUG _on_step] timestep=931, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=697.4216918945312, done=False
+[DEBUG _on_step] timestep=932, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=697.8961181640625, done=False
+[DEBUG _on_step] timestep=933, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=698.3705444335938, done=False
+[DEBUG _on_step] timestep=934, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=698.8402099609375, done=False
+[DEBUG _on_step] timestep=935, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=699.3146362304688, done=False
+[DEBUG _on_step] timestep=936, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=699.7890625, done=False
+[DEBUG _on_step] timestep=937, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=700.2634887695312, done=False
+[DEBUG _on_step] timestep=938, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=700.6879272460938, done=False
+[DEBUG _on_step] timestep=939, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=701.1123657226562, done=False
+[DEBUG _on_step] timestep=940, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=701.5867919921875, done=False
+[DEBUG _on_step] timestep=941, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=702.0612182617188, done=False
+[DEBUG _on_step] timestep=942, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=702.53564453125, done=False
+[DEBUG _on_step] timestep=943, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=702.9600830078125, done=False
+[DEBUG _on_step] timestep=944, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=703.384521484375, done=False
+[DEBUG _on_step] timestep=945, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=703.8046264648438, done=False
+[DEBUG _on_step] timestep=946, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=704.2290649414062, done=False
+[DEBUG _on_step] timestep=947, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=704.7034912109375, done=False
+[DEBUG _on_step] timestep=948, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=705.1779174804688, done=False
+[DEBUG _on_step] timestep=949, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=705.6475830078125, done=False
+[DEBUG _on_step] timestep=950, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=706.1220092773438, done=False
+[DEBUG _on_step] timestep=951, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=706.5916748046875, done=False
+[DEBUG _on_step] timestep=952, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=707.0661010742188, done=False
+[DEBUG _on_step] timestep=953, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=707.54052734375, done=False
+[DEBUG _on_step] timestep=954, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=708.0101928710938, done=False
+[DEBUG _on_step] timestep=955, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=708.484619140625, done=False
+[DEBUG _on_step] timestep=956, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=708.9090576171875, done=False
+[DEBUG _on_step] timestep=957, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=709.33349609375, done=False
+[DEBUG _on_step] timestep=958, rewards=[0.37450022], dones=[False]
+[DEBUG] Env 0: reward=0.37450021505355835, accumulated=709.7080078125, done=False
+[DEBUG _on_step] timestep=959, rewards=[0.37051606], dones=[False]
+[DEBUG] Env 0: reward=0.3705160617828369, accumulated=710.0785522460938, done=False
+[DEBUG _on_step] timestep=960, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=710.4986572265625, done=False
+[DEBUG _on_step] timestep=961, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=710.923095703125, done=False
+[DEBUG _on_step] timestep=962, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=711.3475341796875, done=False
+[DEBUG _on_step] timestep=963, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=711.77197265625, done=False
+[DEBUG _on_step] timestep=964, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=712.1920776367188, done=False
+[DEBUG _on_step] timestep=965, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=712.6165161132812, done=False
+[DEBUG _on_step] timestep=966, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=713.03662109375, done=False
+[DEBUG _on_step] timestep=967, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=713.4610595703125, done=False
+[DEBUG _on_step] timestep=968, rewards=[0.4201293], dones=[False]
+[DEBUG] Env 0: reward=0.42012929916381836, accumulated=713.8811645507812, done=False
+[DEBUG _on_step] timestep=969, rewards=[0.42445678], dones=[False]
+[DEBUG] Env 0: reward=0.42445677518844604, accumulated=714.3056030273438, done=False
+[DEBUG _on_step] timestep=970, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=714.780029296875, done=False
+[DEBUG _on_step] timestep=971, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=715.2544555664062, done=False
+[DEBUG _on_step] timestep=972, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=715.7288818359375, done=False
+[DEBUG _on_step] timestep=973, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=716.2033081054688, done=False
+[DEBUG _on_step] timestep=974, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=716.677734375, done=False
+[DEBUG _on_step] timestep=975, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=717.1521606445312, done=False
+[DEBUG _on_step] timestep=976, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=717.6265869140625, done=False
+[DEBUG _on_step] timestep=977, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=718.1010131835938, done=False
+[DEBUG _on_step] timestep=978, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=718.575439453125, done=False
+[DEBUG _on_step] timestep=979, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=719.0498657226562, done=False
+[DEBUG _on_step] timestep=980, rewards=[0.46966994], dones=[False]
+[DEBUG] Env 0: reward=0.4696699380874634, accumulated=719.51953125, done=False
+[DEBUG _on_step] timestep=981, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=720.0386352539062, done=False
+[DEBUG _on_step] timestep=982, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=720.56298828125, done=False
+[DEBUG _on_step] timestep=983, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=721.0873413085938, done=False
+[DEBUG _on_step] timestep=984, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=721.6116943359375, done=False
+[DEBUG _on_step] timestep=985, rewards=[0.4744051], dones=[False]
+[DEBUG] Env 0: reward=0.47440510988235474, accumulated=722.0861206054688, done=False
+[DEBUG _on_step] timestep=986, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=722.6104736328125, done=False
+[DEBUG _on_step] timestep=987, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=723.1295776367188, done=False
+[DEBUG _on_step] timestep=988, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=723.6539306640625, done=False
+[DEBUG _on_step] timestep=989, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=724.2282104492188, done=False
+[DEBUG _on_step] timestep=990, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=724.7525634765625, done=False
+[DEBUG _on_step] timestep=991, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=725.2716674804688, done=False
+[DEBUG _on_step] timestep=992, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=725.840087890625, done=False
+[DEBUG _on_step] timestep=993, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=726.3591918945312, done=False
+[DEBUG _on_step] timestep=994, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=726.883544921875, done=False
+[DEBUG _on_step] timestep=995, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=727.4026489257812, done=False
+[DEBUG _on_step] timestep=996, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=727.9710693359375, done=False
+[DEBUG _on_step] timestep=997, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=728.5453491210938, done=False
+[DEBUG _on_step] timestep=998, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=729.0697021484375, done=False
+[DEBUG _on_step] timestep=999, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=729.5888061523438, done=False
+[DEBUG _on_step] timestep=1000, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=730.1131591796875, done=False
+[DEBUG _on_step] timestep=1001, rewards=[0.52434254], dones=[False]
+[DEBUG] Env 0: reward=0.5243425369262695, accumulated=730.6375122070312, done=False
+[DEBUG _on_step] timestep=1002, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=731.2117919921875, done=False
+[DEBUG _on_step] timestep=1003, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=731.7802124023438, done=False
+[DEBUG _on_step] timestep=1004, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=732.3486328125, done=False
+[DEBUG _on_step] timestep=1005, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=732.9229125976562, done=False
+[DEBUG _on_step] timestep=1006, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=733.4971923828125, done=False
+[DEBUG _on_step] timestep=1007, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=734.0714721679688, done=False
+[DEBUG _on_step] timestep=1008, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=734.639892578125, done=False
+[DEBUG _on_step] timestep=1009, rewards=[0.51911545], dones=[False]
+[DEBUG] Env 0: reward=0.5191154479980469, accumulated=735.1589965820312, done=False
+[DEBUG _on_step] timestep=1010, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=735.7274169921875, done=False
+[DEBUG _on_step] timestep=1011, rewards=[0.61757356], dones=[False]
+[DEBUG] Env 0: reward=0.6175735592842102, accumulated=736.344970703125, done=False
+[DEBUG _on_step] timestep=1012, rewards=[0.61757356], dones=[False]
+[DEBUG] Env 0: reward=0.6175735592842102, accumulated=736.9625244140625, done=False
+[DEBUG _on_step] timestep=1013, rewards=[0.61757356], dones=[False]
+[DEBUG] Env 0: reward=0.6175735592842102, accumulated=737.580078125, done=False
+[DEBUG _on_step] timestep=1014, rewards=[0.62416756], dones=[False]
+[DEBUG] Env 0: reward=0.6241675615310669, accumulated=738.2042236328125, done=False
+[DEBUG _on_step] timestep=1015, rewards=[0.62416756], dones=[False]
+[DEBUG] Env 0: reward=0.6241675615310669, accumulated=738.828369140625, done=False
+[DEBUG _on_step] timestep=1016, rewards=[0.61757356], dones=[False]
+[DEBUG] Env 0: reward=0.6175735592842102, accumulated=739.4459228515625, done=False
+[DEBUG _on_step] timestep=1017, rewards=[0.62416756], dones=[False]
+[DEBUG] Env 0: reward=0.6241675615310669, accumulated=740.070068359375, done=False
+[DEBUG _on_step] timestep=1018, rewards=[0.62416756], dones=[False]
+[DEBUG] Env 0: reward=0.6241675615310669, accumulated=740.6942138671875, done=False
+[DEBUG _on_step] timestep=1019, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=741.2684936523438, done=False
+[DEBUG _on_step] timestep=1020, rewards=[0.57426536], dones=[False]
+[DEBUG] Env 0: reward=0.5742653608322144, accumulated=741.8427734375, done=False
+[DEBUG _on_step] timestep=1021, rewards=[0.56843305], dones=[False]
+[DEBUG] Env 0: reward=0.5684330463409424, accumulated=742.4111938476562, done=False
+[DEBUG _on_step] timestep=1022, rewards=[0.61757356], dones=[False]
+[DEBUG] Env 0: reward=0.6175735592842102, accumulated=743.0287475585938, done=False
+[DEBUG _on_step] timestep=1023, rewards=[0.62416756], dones=[False]
+[DEBUG] Env 0: reward=0.6241675615310669, accumulated=743.6528930664062, done=False
+[DEBUG _on_step] timestep=1024, rewards=[0.67403984], dones=[False]
+[DEBUG] Env 0: reward=0.6740398406982422, accumulated=744.326904296875, done=False
+
+[DEBUG _on_rollout_end] Called at timestep 1024
+[DEBUG] SB3 logger metrics: ['train/learning_rate', 'train/entropy_loss', 'train/policy_gradient_loss', 'train/value_loss', 'train/approx_kl', 'train/clip_fraction', 'train/loss', 'train/explained_variance', 'train/n_updates', 'train/clip_range']
+[DEBUG] Checking metric: train/learning_rate=0.0003
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/entropy_loss=-1.2283481162041425
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/policy_gradient_loss=0.057477771339472385
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/value_loss=661.3357615202665
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/approx_kl=0.02583770826458931
+[DEBUG]   -> FILTERED OUT
+[DEBUG] Checking metric: train/clip_fraction=0.4876953125
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/loss=3.213834524154663
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/explained_variance=-2.0824618339538574
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/n_updates=10
+[DEBUG]   -> INCLUDED
+[DEBUG] Checking metric: train/clip_range=0.2
+[DEBUG]   -> INCLUDED
+[DEBUG] Episode rewards collected: []
+[DEBUG] No episode rewards to log!
+[DEBUG] Final metrics to log: {'train/learning_rate': 0.0003, 'train/entropy_loss': np.float64(-1.2283481162041425), 'train/policy_gradient_loss': np.float64(0.057477771339472385), 'train/value_loss': np.float64(661.3357615202665), 'train/clip_fraction': np.float64(0.4876953125), 'train/loss': 3.213834524154663, 'train/explained_variance': -2.0824618339538574, 'train/n_updates': 10, 'train/clip_range': 0.2, 'timesteps': 1024}
+[DEBUG] Logged 10 metrics to wandb
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/train_single_agent.py", line 97, in <module>
+    model.learn(
+  File "/home/edn/exploration-marl/ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "/home/edn/exploration-marl/ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 697, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(action_logits=mean_actions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/distributions.py", line 288, in proba_distribution
+    self.distribution = Categorical(logits=action_logits)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/distributions/categorical.py", line 84, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/distributions/distribution.py", line 77, in __init__
+    if not torch._is_all_true(valid):
+KeyboardInterrupt

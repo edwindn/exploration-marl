@@ -1,25 +1,44 @@
 import gymnasium as gym
 import numpy as np
 from PIL import Image as PILImage
+import yaml
 
 
 class NavEnv(gym.Env):
-    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 30}
+    metadata = {"render_modes": ["human", "rgb_array"]}
 
     def __init__(self,
                  render_mode=None,
-                 action_type="discrete",
-                 size=200,
-                 reward_radius=5,         
+                 config_path="env_config.yaml",
+                 max_episode_length=100,
         ):
-        assert action_type in ("discrete", "continuous"), "action_type must be 'discrete' or 'continuous'"
+        # Load configuration from YAML
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+
+        env_config = config['env']
+        action_type = env_config['action_type']
+        size = env_config['size']
+        terminal_radius = env_config['terminal_radius']
+        reward_type = env_config['reward_type']
+        background = env_config.get('background', True)
+
+        assert action_type in ["discrete", "continuous"]
+        assert reward_type in ["dense", "sparse"]
         self.size = size
         self.render_mode = render_mode
         self.action_type = action_type
-        self.reward_radius = reward_radius
+        self.terminal_radius = terminal_radius
+        self.reward_type = reward_type
+        self.max_episode_length = max_episode_length
+        self.step_count = 0
 
-        bg = PILImage.open("background.png").convert("RGB").resize((size, size))
-        self._background = np.array(bg, dtype=np.uint8)  # shape (size, size, 3)
+        if background:
+            bg = PILImage.open("background.png").convert("RGB").resize((size, size))
+            self._background = np.array(bg, dtype=np.uint8)  # shape (size, size, 3)
+        else:
+            # White background
+            self._background = np.full((size, size, 3), 255, dtype=np.uint8)
 
         self._obs_size = 50  # cropped observation window side length
 
@@ -28,20 +47,21 @@ class NavEnv(gym.Env):
             low=0, high=255, shape=(self._obs_size, self._obs_size, 3), dtype=np.uint8
         )
         if action_type == "discrete":
-            # Actions: 0=up, 1=down, 2=left, 3=right
-            self.action_space = gym.spaces.Discrete(4)
+            # Actions: 0=stay, 1=up, 2=down, 3=left, 4=right
+            self.action_space = gym.spaces.Discrete(5)
         else:
-            # Actions: [angle (0-360 degrees clockwise from right), radius (0-10)]
+            # Actions: [dx, dy] - direct x and y displacements
             self.action_space = gym.spaces.Box(
-                low=np.array([0.0, 0.0], dtype=np.float32),
-                high=np.array([360.0, 10.0], dtype=np.float32),
+                low=np.array([-10.0, -10.0], dtype=np.float32),
+                high=np.array([10.0, 10.0], dtype=np.float32),
             )
 
-        self._goal_pos = np.array([size * 0.8, size * 0.2], dtype=np.float32)
+        self._goal_pos = np.array([size * 0.5, size * 0.5], dtype=np.float32)
         self._agent_pos = None
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
+        self.step_count = 0
 
         half = self._obs_size // 2
         self._agent_pos = self.np_random.integers(half, self.size - half, size=2).astype(np.float32)
@@ -52,32 +72,36 @@ class NavEnv(gym.Env):
         return self._get_obs(), {}
 
     def step(self, action):
+        self.step_count += 1
         half = self._obs_size // 2
         lo, hi = half, self.size - 1 - half
         if self.action_type == "discrete":
-            delta = {0: (0, -10), 1: (0, 10), 2: (-10, 0), 3: (10, 0)}[action]
+            delta = {0: (0, 0), 1: (0, -10), 2: (0, 10), 3: (-10, 0), 4: (10, 0)}[action]
             self._agent_pos = np.clip(
                 self._agent_pos + np.array(delta, dtype=np.float32),
                 lo, hi
             )
         else:
-            angle_deg, radius = float(action[0]), float(action[1])
-            # Clockwise from right: x increases rightward, y increases downward in screen coords
-            angle_rad = np.deg2rad(angle_deg)
-            dx = radius * np.cos(angle_rad)
-            dy = radius * np.sin(angle_rad)  # positive angle -> downward in screen space
+            dx, dy = float(action[0]), float(action[1])
             self._agent_pos = np.clip(
                 self._agent_pos + np.array([dx, dy], dtype=np.float32),
                 lo, hi
             )
 
         reward = self._get_reward()
-        terminated = reward == 1.0
+        terminated = False
+        truncated = self.step_count >= self.max_episode_length
 
         if self.render_mode == "human":
             self._render_frame()
 
-        return self._get_obs(), reward, terminated, False, {}
+        info = {
+            "reward": reward,
+            "step": self.step_count,
+            "done": terminated or truncated
+        }
+
+        return self._get_obs(), reward, terminated, truncated, info
 
     def _get_obs(self):
         frame = self._build_frame()
@@ -93,7 +117,12 @@ class NavEnv(gym.Env):
 
     def _get_reward(self):
         dist = self._agent_pos - self._goal_pos
-        return 1 if np.sqrt(dist[0]**2 + dist[1]**2) <= self.reward_radius else 0
+        dist = np.sqrt(dist[0]**2 + dist[1]**2)
+        if self.reward_type == "sparse":
+            reward = 1 if dist <= self.terminal_radius else 0
+        else:
+            reward = max(0, 1 - dist / self.size)
+        return float(reward)
 
     def _build_frame(self):
         frame = self._background.copy()

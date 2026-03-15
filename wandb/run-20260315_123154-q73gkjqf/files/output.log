@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/train_single_agent.py", line 97, in <module>
+    # Save the trained model
+  File "/home/edn/exploration-marl/ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "/home/edn/exploration-marl/ppo.py", line 207, in train
+    for rollout_data in self.rollout_buffer.get(self.batch_size):
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/buffers.py", line 505, in get
+    yield self._get_samples(indices[start_idx : start_idx + batch_size])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/buffers.py", line 522, in _get_samples
+    return RolloutBufferSamples(*tuple(map(self.to_torch, data)))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/buffers.py", line 139, in to_torch
+    return th.tensor(array, device=self.device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

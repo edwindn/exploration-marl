@@ -1,0 +1,20 @@
+Wandb initialized. Project: exploration-marl
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/train_single_agent.py", line 97, in <module>
+    model.learn(
+  File "/home/edn/exploration-marl/ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "/home/edn/exploration-marl/ppo.py", line 275, in train
+    loss.backward()
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py", line 357, in backward
+    grad_tensors_ = _make_grads(tensors, grad_tensors_, is_grads_batched=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py", line 203, in _make_grads
+    out_numel_is_1 = out.numel() == 1
+                     ^^^^^^^^^^^
+KeyboardInterrupt

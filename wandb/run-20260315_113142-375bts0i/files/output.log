@@ -1,0 +1,25 @@
+Wandb initialized. Project: exploration-marl
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/train_single_agent.py", line 97, in <module>
+    model.learn(
+  File "/home/edn/exploration-marl/ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "/home/edn/exploration-marl/ppo.py", line 213, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 730, in evaluate_actions
+    features = self.extract_features(obs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 672, in extract_features
+    return super().extract_features(obs, self.features_extractor if features_extractor is None else features_extractor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 130, in extract_features
+    preprocessed_obs = preprocess_obs(obs, self.observation_space, normalize_images=self.normalize_images)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/preprocessing.py", line 120, in preprocess_obs
+    return obs.float() / 255.0
+           ^^^^^^^^^^^
+KeyboardInterrupt

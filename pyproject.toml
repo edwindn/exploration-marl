@@ -6,7 +6,7 @@ requires-python = ">=3.11"
 dependencies = [
     "gymnasium",
     "pillow",
-    "cleanrl",
-    "stable-baselines3[extra]",
     "torch",
+    "pyyaml",
+    "wandb",
 ]

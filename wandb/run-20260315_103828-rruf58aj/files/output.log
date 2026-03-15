@@ -1,0 +1,246 @@
+Wandb initialized. Project: exploration-marl
+----------------------------
+| time/              |     |
+|    fps             | 58  |
+|    iterations      | 1   |
+|    time_elapsed    | 8   |
+|    total_timesteps | 512 |
+----------------------------
+----------------------------------------
+| time/                   |            |
+|    fps                  | 59         |
+|    iterations           | 2          |
+|    time_elapsed         | 17         |
+|    total_timesteps      | 1024       |
+| train/                  |            |
+|    approx_kl            | 0.16942388 |
+|    clip_fraction        | 0.689      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -1.24      |
+|    explained_variance   | -5.03      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 2.12       |
+|    n_updates            | 10         |
+|    policy_gradient_loss | 0.102      |
+|    value_loss           | 104        |
+----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 64          |
+|    iterations           | 3           |
+|    time_elapsed         | 23          |
+|    total_timesteps      | 1536        |
+| train/                  |             |
+|    approx_kl            | 0.012350717 |
+|    clip_fraction        | 0.222       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.28       |
+|    explained_variance   | -0.053      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.926       |
+|    n_updates            | 20          |
+|    policy_gradient_loss | -0.00485    |
+|    value_loss           | 11.1        |
+-----------------------------------------
+----------------------------------------
+| time/                   |            |
+|    fps                  | 67         |
+|    iterations           | 4          |
+|    time_elapsed         | 30         |
+|    total_timesteps      | 2048       |
+| train/                  |            |
+|    approx_kl            | 0.05640868 |
+|    clip_fraction        | 0.437      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -1.28      |
+|    explained_variance   | -0.105     |
+|    learning_rate        | 0.0003     |
+|    loss                 | 0.827      |
+|    n_updates            | 30         |
+|    policy_gradient_loss | 0.00888    |
+|    value_loss           | 6.75       |
+----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 68          |
+|    iterations           | 5           |
+|    time_elapsed         | 37          |
+|    total_timesteps      | 2560        |
+| train/                  |             |
+|    approx_kl            | 0.017869668 |
+|    clip_fraction        | 0.345       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.19       |
+|    explained_variance   | -0.181      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.305       |
+|    n_updates            | 40          |
+|    policy_gradient_loss | 0.00906     |
+|    value_loss           | 6.9         |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 69           |
+|    iterations           | 6            |
+|    time_elapsed         | 44           |
+|    total_timesteps      | 3072         |
+| train/                  |              |
+|    approx_kl            | 0.0043241093 |
+|    clip_fraction        | 0.186        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.32        |
+|    explained_variance   | -0.0977      |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.376        |
+|    n_updates            | 50           |
+|    policy_gradient_loss | -0.00286     |
+|    value_loss           | 5.21         |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 70          |
+|    iterations           | 7           |
+|    time_elapsed         | 50          |
+|    total_timesteps      | 3584        |
+| train/                  |             |
+|    approx_kl            | 0.010055207 |
+|    clip_fraction        | 0.194       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.26       |
+|    explained_variance   | -0.283      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.52        |
+|    n_updates            | 60          |
+|    policy_gradient_loss | -0.000524   |
+|    value_loss           | 2.49        |
+-----------------------------------------
+------------------------------------------
+| time/                   |              |
+|    fps                  | 71           |
+|    iterations           | 8            |
+|    time_elapsed         | 57           |
+|    total_timesteps      | 4096         |
+| train/                  |              |
+|    approx_kl            | 0.0052972287 |
+|    clip_fraction        | 0.18         |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.26        |
+|    explained_variance   | -0.214       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.303        |
+|    n_updates            | 70           |
+|    policy_gradient_loss | 0.000467     |
+|    value_loss           | 2.61         |
+------------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 71          |
+|    iterations           | 9           |
+|    time_elapsed         | 64          |
+|    total_timesteps      | 4608        |
+| train/                  |             |
+|    approx_kl            | 0.014381994 |
+|    clip_fraction        | 0.191       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.26       |
+|    explained_variance   | -0.443      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.304       |
+|    n_updates            | 80          |
+|    policy_gradient_loss | -0.00842    |
+|    value_loss           | 1.75        |
+-----------------------------------------
+-----------------------------------------
+| time/                   |             |
+|    fps                  | 71          |
+|    iterations           | 10          |
+|    time_elapsed         | 71          |
+|    total_timesteps      | 5120        |
+| train/                  |             |
+|    approx_kl            | 0.008618169 |
+|    clip_fraction        | 0.134       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -1.28       |
+|    explained_variance   | -0.952      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 0.138       |
+|    n_updates            | 90          |
+|    policy_gradient_loss | -0.00345    |
+|    value_loss           | 0.779       |
+-----------------------------------------
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/train_single_agent.py", line 78, in <module>
+    model.learn(
+  File "/home/edn/exploration-marl/ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 202, in collect_rollouts
+    actions, values, log_probs = self.policy(obs_tensor)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 645, in forward
+    features = self.extract_features(obs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 672, in extract_features
+    return super().extract_features(obs, self.features_extractor if features_extractor is None else features_extractor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 131, in extract_features
+    return features_extractor(preprocessed_obs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/train_single_agent.py", line 25, in forward
+    return self.impala(observations)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/agent.py", line 117, in forward
+    cnn_features = self.cnn(x)
+                   ^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/agent.py", line 51, in forward
+    y = self.relu(y)
+        ^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/modules/activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/nn/functional.py", line 1719, in relu
+    result = torch.relu_(input)
+             ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

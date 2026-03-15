@@ -1,0 +1,18 @@
+{"time":"2026-03-15T11:26:23.83294728Z","level":"INFO","msg":"wandb-core"}
+{"time":"2026-03-15T11:26:23.836831159Z","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-03-15T11:26:24.215808504Z","level":"INFO","msg":"stream: created new stream","id":"uuq9oy4u"}
+{"time":"2026-03-15T11:26:24.216121704Z","level":"INFO","msg":"stream: started"}
+{"time":"2026-03-15T11:26:24.216271747Z","level":"INFO","msg":"handler: started"}
+{"time":"2026-03-15T11:26:24.216321028Z","level":"INFO","msg":"writer: started","stream_id":"uuq9oy4u"}
+{"time":"2026-03-15T11:26:24.216432935Z","level":"INFO","msg":"sender: started"}
+{"time":"2026-03-15T11:26:24.782130425Z","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-03-15T11:26:24.978719487Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-15T11:26:39.870258571Z","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":0,"history_lines":1,"events_offset":0,"events_lines":2,"console_offset":1,"console_lines":2084,"uploaded_len":2}
+{"time":"2026-03-15T11:26:40.114546983Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-15T11:26:40.738523129Z","level":"INFO","msg":"stream: closing"}
+{"time":"2026-03-15T11:26:41.305219634Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-15T11:26:41.305666839Z","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":1,"history_lines":1,"console_offset":2085,"console_lines":25,"uploaded_len":3,"complete":true,"exit_code":255}
+{"time":"2026-03-15T11:26:41.539373454Z","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-15T11:26:41.539606253Z","level":"INFO","msg":"handler: closed"}
+{"time":"2026-03-15T11:26:41.539729404Z","level":"INFO","msg":"sender: closed"}
+{"time":"2026-03-15T11:26:41.539747908Z","level":"INFO","msg":"stream: closed"}

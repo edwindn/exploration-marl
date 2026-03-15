@@ -1,0 +1,7 @@
+# Environment settings
+env:
+  size: 200 #height and width in pixels
+  action_type: discrete
+  terminal_radius: 5 #note we don't terminate episodes
+  reward_type: "dense"
+  background: true

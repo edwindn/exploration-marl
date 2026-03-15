@@ -3,35 +3,6 @@ import torch
 import torch.nn as nn
 
 
-class Agent(nn.Module):
-    def __init__(self, input_dim=64, latent_dim=64):
-        super().__init__()
-        
-        self.encoder = IMPALA()
-        self.policy_head = nn.Sequential(
-            nn.Linear(latent_dim, 64),
-            nn.ReLU(),
-            nn.Linear(64, 32),
-            nn.ReLU(),
-            nn.Linear(32, 4) # x_mean, y_mean, x_logvar, y_logvar
-        )
-        self.critic = nn.Sequential(
-            nn.Linear(latent_dim, 64),
-            nn.ReLU(),
-            nn.Linear(64, 32),
-            nn.ReLU(),
-            nn.Linear(32, 1)
-        )
-
-
-    def forward(self, x):
-        features = self.encoder(x)
-        action = self.policy_head(features)
-        value = self.critic(features)
-        return action, value
-
-
-
 class ResNetBlock(nn.Module):
     """
     Canonical IMPALA residual block:
@@ -61,7 +32,7 @@ class IMPALA(nn.Module):
     This follows the canonical IMPALA-CNN architecture while maintaining Ray RLlib compatibility.
     """
     config = {
-            "input_dims": (64, 64, 3),
+            "input_dims": (50, 50, 3),
             "cnn_filters": [(16, 3, 1), (32, 3, 1), (32, 3, 1)],
             "cnn_activation": "relu",
             "num_res_blocks": 3,
