@@ -2,6 +2,7 @@ import gymnasium as gym
 import numpy as np
 from PIL import Image as PILImage
 import yaml
+from pathlib import Path
 
 
 class NavEnv(gym.Env):
@@ -9,10 +10,12 @@ class NavEnv(gym.Env):
 
     def __init__(self,
                  render_mode=None,
-                 config_path="env_config.yaml",
+                 config_path=None,
                  max_episode_length=100,
         ):
         # Load configuration from YAML
+        if config_path is None:
+            config_path = Path(__file__).parent / "env_config.yaml"
         with open(config_path, 'r') as f:
             config = yaml.safe_load(f)
 
@@ -20,20 +23,25 @@ class NavEnv(gym.Env):
         action_type = env_config['action_type']
         size = env_config['size']
         agent_window_size = env_config['agent_window_size']
+        agent_step_size = env_config['agent_step_size']
         terminal_radius = env_config['terminal_radius']
         reward_type = env_config['reward_type']
-        background = env_config.get('background', True)
+        background = env_config['background']
 
         assert action_type in ["discrete", "continuous"]
         assert reward_type in ["dense", "sparse"]
 
         # Handle "auto" size option
         if size == "auto":
-            if not background:
-                raise ValueError("Cannot use size='auto' when background is set to False. "
+            if background is None:
+                raise ValueError("Cannot use size='auto' when background is set to null. "
                                "Auto-sizing requires a background PNG image.")
+            # Construct background path from string
+            bg_path = Path(__file__).parent / f"{background}.png"
+            if not bg_path.exists():
+                raise FileNotFoundError(f"Background image not found: {bg_path}")
             # Load the image to get its dimensions
-            bg_image = PILImage.open("background.png").convert("RGB")
+            bg_image = PILImage.open(bg_path).convert("RGB")
             width, height = bg_image.size
             if width != height:
                 raise ValueError(f"Background image must be square for auto-sizing. "
@@ -68,6 +76,30 @@ class NavEnv(gym.Env):
                            f"got type {type(agent_window_size)}")
 
         self._obs_size = obs_size
+
+        # Parse agent_step_size (can be integer pixels or percentage string like "5%")
+        if isinstance(agent_step_size, str):
+            if agent_step_size.endswith('%'):
+                try:
+                    percentage = float(agent_step_size[:-1])
+                    if percentage <= 0 or percentage > 100:
+                        raise ValueError(f"Percentage must be between 0 and 100, got {percentage}%")
+                    step_size = int(size * percentage / 100)
+                except ValueError as e:
+                    raise ValueError(f"Invalid percentage format for agent_step_size: '{agent_step_size}'. "
+                                   f"Expected format like '5%'. Error: {e}")
+            else:
+                raise ValueError(f"Invalid string format for agent_step_size: '{agent_step_size}'. "
+                               f"Expected an integer or percentage string like '5%'.")
+        elif isinstance(agent_step_size, (int, float)):
+            step_size = int(agent_step_size)
+            if step_size <= 0:
+                raise ValueError(f"agent_step_size must be positive, got {step_size}")
+        else:
+            raise ValueError(f"agent_step_size must be an integer or percentage string, "
+                           f"got type {type(agent_step_size)}")
+
+        self._step_size = step_size
         self.render_mode = render_mode
         self.action_type = action_type
         self.terminal_radius = terminal_radius
@@ -75,12 +107,16 @@ class NavEnv(gym.Env):
         self.max_episode_length = max_episode_length
         self.step_count = 0
 
-        if background:
-            bg = PILImage.open("background.png").convert("RGB").resize((size, size))
-            self._background = np.array(bg, dtype=np.uint8)  # shape (size, size, 3)
-        else:
-            # White background
+        if background is None:
+            # White background when background is null
             self._background = np.full((size, size, 3), 255, dtype=np.uint8)
+        else:
+            # Load background image from string name
+            bg_path = Path(__file__).parent / f"{background}.png"
+            if not bg_path.exists():
+                raise FileNotFoundError(f"Background image not found: {bg_path}")
+            bg = PILImage.open(bg_path).convert("RGB").resize((size, size))
+            self._background = np.array(bg, dtype=np.uint8)  # shape (size, size, 3)
 
         # Observation: crop of the frame centred on the agent
         self.observation_space = gym.spaces.Box(
@@ -116,7 +152,7 @@ class NavEnv(gym.Env):
         half = self._obs_size // 2
         lo, hi = half, self.size - 1 - half
         if self.action_type == "discrete":
-            delta = {0: (0, 0), 1: (0, -10), 2: (0, 10), 3: (-10, 0), 4: (10, 0)}[action]
+            delta = {0: (0, 0), 1: (0, -self._step_size), 2: (0, self._step_size), 3: (-self._step_size, 0), 4: (self._step_size, 0)}[action]
             self._agent_pos = np.clip(
                 self._agent_pos + np.array(delta, dtype=np.float32),
                 lo, hi

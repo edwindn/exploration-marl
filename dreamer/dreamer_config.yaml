@@ -1,0 +1,86 @@
+# Dreamer Agent Configuration
+
+# World model parameters
+recurrentSize: 200
+latentLength: 32
+latentClasses: 32
+encodedObsSize: 1024
+
+# Training hyperparameters
+worldModelLR: 0.0001
+actorLR: 0.0001
+criticLR: 0.0001
+
+batchSize: 50
+batchLength: 50
+
+# Behavior learning
+imaginationHorizon: 15
+lambda_: 0.95
+discount: 0.99
+entropyScale: 0.001
+
+# KL divergence
+betaPrior: 1.0
+betaPosterior: 1.0
+freeNats: 3.0
+
+# Gradient clipping
+gradientClip: 100.0
+gradientNormType: 2.0
+
+# Continuation prediction
+useContinuationPrediction: true
+
+# Buffer configuration
+buffer:
+  capacity: 1000000
+
+# Network configurations
+recurrentModel:
+  hiddenSize: 200
+  activation: "ELU"
+
+priorNet:
+  hiddenSize: 200
+  numLayers: 2
+  activation: "ELU"
+  uniformMix: 0.01
+
+posteriorNet:
+  hiddenSize: 200
+  numLayers: 2
+  activation: "ELU"
+  uniformMix: 0.01
+
+encoder:
+  depth: 32
+  kernelSize: 4
+  stride: 2
+  activation: "ReLU"
+
+decoder:
+  depth: 32
+  kernelSize: 5
+  stride: 2
+  activation: "ReLU"
+
+actor:
+  hiddenSize: 400
+  numLayers: 4
+  activation: "ELU"
+
+critic:
+  hiddenSize: 400
+  numLayers: 4
+  activation: "ELU"
+
+reward:
+  hiddenSize: 400
+  numLayers: 2
+  activation: "ELU"
+
+continuation:
+  hiddenSize: 400
+  numLayers: 2
+  activation: "ELU"

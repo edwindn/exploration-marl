@@ -1,0 +1,9 @@
+# Environment settings
+env:
+  size: "auto" #height and width in pixels, choose an integer or 'auto'
+  agent_window_size: "20%" #choose an integer (pixels) or a percentage, eg. "10%"
+  agent_step_size: 10 #choose integer or percentage
+  action_type: discrete
+  terminal_radius: 5 #note we don't terminate episodes, this is used for reward
+  reward_type: "sparse" #choose 'dense' or 'sparse'
+  background: "small" #specify background name or leave null

@@ -4,6 +4,7 @@
 # specific files
 /frames
 /wandb
+/node_modules
 /__pycache__
 uv.lock
 **weights**

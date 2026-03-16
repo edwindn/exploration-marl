@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import yaml
+from typing import Tuple
 
 
 class ResNetBlock(nn.Module):
@@ -27,20 +28,15 @@ class ResNetBlock(nn.Module):
 
 class IMPALA(nn.Module):
 
-    def __init__(self, config_path: str = "train_config.yaml"):
+    def __init__(self, input_dims: Tuple[int], config: dict):
         super().__init__()
 
-        with open(config_path, 'r') as f:
-            train_config = yaml.safe_load(f)
-
-        backbone_config = train_config['backbone']
-
         cfg = {
-            "input_dims": tuple(backbone_config['input_dims']),
-            "cnn_filters": [tuple(filter_config) for filter_config in backbone_config['cnn_filters']],
-            "cnn_activation": backbone_config['cnn_activation'],
-            "num_res_blocks": backbone_config['num_res_blocks'],
-            "feature_size": backbone_config['feature_size']
+            "input_dims": tuple(input_dims),
+            "cnn_filters": [tuple(filter_config) for filter_config in config['cnn_filters']],
+            "cnn_activation": config.get('cnn_activation', 'relu'),
+            "num_res_blocks": config.get('num_res_blocks', 3),
+            "feature_size": config['feature_size']
         }
         self.cfg = cfg
         cnn_layers = []
