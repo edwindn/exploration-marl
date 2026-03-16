@@ -5,8 +5,7 @@ DreamerV2 implementation from https://github.com/mazpie/mastering-urlb/blob/main
 import torch.nn as nn
 import torch
 
-import utils
-import agent.dreamer_utils as common
+import dreamer_utils as common
 from collections import OrderedDict
 import numpy as np
 
@@ -97,19 +96,19 @@ class DreamerAgent(Module):
       
       # copy parameters over
       print(f"Copying the pretrained world model")
-      utils.hard_update_params(other.wm.rssm, self.wm.rssm)
-      utils.hard_update_params(other.wm.encoder, self.wm.encoder)
-      utils.hard_update_params(other.wm.heads['decoder'], self.wm.heads['decoder'])
+      common.hard_update_params(other.wm.rssm, self.wm.rssm)
+      common.hard_update_params(other.wm.encoder, self.wm.encoder)
+      common.hard_update_params(other.wm.heads['decoder'], self.wm.heads['decoder'])
 
       if init_actor:
         print(f"Copying the pretrained actor")
-        utils.hard_update_params(other._task_behavior.actor, self._task_behavior.actor)
+        common.hard_update_params(other._task_behavior.actor, self._task_behavior.actor)
       
       if init_critic:
           print(f"Copying the pretrained critic")
-          utils.hard_update_params(other._task_behavior.critic, self._task_behavior.critic)
+          common.hard_update_params(other._task_behavior.critic, self._task_behavior.critic)
           if self.cfg.slow_target:
-              utils.hard_update_params(other._task_behavior._target_critic, self._task_behavior._target_critic)
+              common.hard_update_params(other._task_behavior._target_critic, self._task_behavior._target_critic)
       
   @torch.no_grad()
   def estimate_value(self, start, actions, horizon):
@@ -447,13 +446,13 @@ class ActorCritic(Module):
       baseline = self._target_critic(seq['feat'][:-2]).mean # .mode()
       advantage = stop_gradient(target[1:] - baseline)
       objective = policy.log_prob(stop_gradient(seq['action'][1:-1]))[:,:,None] * advantage
-      mix = utils.schedule(self.cfg.actor_grad_mix, self.tfstep)
+      mix = common.schedule(self.cfg.actor_grad_mix, self.tfstep)
       objective = mix * target[1:] + (1 - mix) * objective
       metrics['actor_grad_mix'] = mix
     else:
       raise NotImplementedError(self.cfg.actor_grad)
     ent = policy.entropy()[:,:,None]
-    ent_scale = utils.schedule(self.cfg.actor_ent, self.tfstep)
+    ent_scale = common.schedule(self.cfg.actor_ent, self.tfstep)
     objective += ent_scale * ent
     weight = stop_gradient(seq['weight'])
     actor_loss = -(weight[:-2] * objective).mean() 
