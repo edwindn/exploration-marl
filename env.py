@@ -19,13 +19,55 @@ class NavEnv(gym.Env):
         env_config = config['env']
         action_type = env_config['action_type']
         size = env_config['size']
+        agent_window_size = env_config['agent_window_size']
         terminal_radius = env_config['terminal_radius']
         reward_type = env_config['reward_type']
         background = env_config.get('background', True)
 
         assert action_type in ["discrete", "continuous"]
         assert reward_type in ["dense", "sparse"]
+
+        # Handle "auto" size option
+        if size == "auto":
+            if not background:
+                raise ValueError("Cannot use size='auto' when background is set to False. "
+                               "Auto-sizing requires a background PNG image.")
+            # Load the image to get its dimensions
+            bg_image = PILImage.open("background.png").convert("RGB")
+            width, height = bg_image.size
+            if width != height:
+                raise ValueError(f"Background image must be square for auto-sizing. "
+                               f"Got dimensions: {width}x{height}")
+            size = width
+
         self.size = size
+
+        # Parse agent_window_size (can be integer pixels or percentage string like "25%")
+        if isinstance(agent_window_size, str):
+            if agent_window_size.endswith('%'):
+                try:
+                    percentage = float(agent_window_size[:-1])
+                    if percentage <= 0 or percentage > 100:
+                        raise ValueError(f"Percentage must be between 0 and 100, got {percentage}%")
+                    obs_size = int(size * percentage / 100)
+                except ValueError as e:
+                    raise ValueError(f"Invalid percentage format for agent_window_size: '{agent_window_size}'. "
+                                   f"Expected format like '25%'. Error: {e}")
+            else:
+                raise ValueError(f"Invalid string format for agent_window_size: '{agent_window_size}'. "
+                               f"Expected an integer or percentage string like '25%'.")
+        elif isinstance(agent_window_size, (int, float)):
+            obs_size = int(agent_window_size)
+            if obs_size > size:
+                raise ValueError(f"agent_window_size ({obs_size} pixels) cannot be larger than "
+                               f"environment size ({size} pixels)")
+            if obs_size <= 0:
+                raise ValueError(f"agent_window_size must be positive, got {obs_size}")
+        else:
+            raise ValueError(f"agent_window_size must be an integer or percentage string, "
+                           f"got type {type(agent_window_size)}")
+
+        self._obs_size = obs_size
         self.render_mode = render_mode
         self.action_type = action_type
         self.terminal_radius = terminal_radius
@@ -40,9 +82,7 @@ class NavEnv(gym.Env):
             # White background
             self._background = np.full((size, size, 3), 255, dtype=np.uint8)
 
-        self._obs_size = 50  # cropped observation window side length
-
-        # Observation: 30x30 crop of the frame centred on the agent
+        # Observation: crop of the frame centred on the agent
         self.observation_space = gym.spaces.Box(
             low=0, high=255, shape=(self._obs_size, self._obs_size, 3), dtype=np.uint8
         )
@@ -110,7 +150,7 @@ class NavEnv(gym.Env):
         return frame[y0:y0 + s, x0:x0 + s]
 
     def _obs_window_origin(self):
-        """Return (x0, y0) top-left of the 50x50 observation window centred on the agent."""
+        """Return (x0, y0) top-left of the observation window centred on the agent."""
         half = self._obs_size // 2
         cx, cy = int(round(self._agent_pos[0])), int(round(self._agent_pos[1]))
         return cx - half, cy - half

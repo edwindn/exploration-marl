@@ -12,7 +12,17 @@ ppo:
   ent_coef: 0.01
   verbose: 1
 
-# Policy network architecture
+# Network architectures
+backbone:
+  input_dims: [50, 50, 3]
+  cnn_filters:
+    [16, 3, 1]
+    [32, 3, 1]
+    [32, 3, 1]
+  cnn_activation: "relu"
+  num_res_blocks: 3
+  feature_size: 64
+
 policy:
   net_arch:
     pi: [64, 64]

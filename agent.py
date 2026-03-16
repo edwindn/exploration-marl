@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
+import yaml
 
 
 class ResNetBlock(nn.Module):
@@ -25,24 +26,23 @@ class ResNetBlock(nn.Module):
 
 
 class IMPALA(nn.Module):
-    """
-    IMPALA CNN encoder with canonical conv sequences.
 
-    Each sequence: Conv3x3 -> MaxPool(stride) -> ResidualBlocks -> ReLU
-    This follows the canonical IMPALA-CNN architecture while maintaining Ray RLlib compatibility.
-    """
-    config = {
-            "input_dims": (50, 50, 3),
-            "cnn_filters": [(16, 3, 1), (32, 3, 1), (32, 3, 1)],
-            "cnn_activation": "relu",
-            "num_res_blocks": 3,
-            "feature_size": 64
-    }
-
-    def __init__(self):
+    def __init__(self, config_path: str = "train_config.yaml"):
         super().__init__()
 
-        cfg = IMPALA.config
+        with open(config_path, 'r') as f:
+            train_config = yaml.safe_load(f)
+
+        backbone_config = train_config['backbone']
+
+        cfg = {
+            "input_dims": tuple(backbone_config['input_dims']),
+            "cnn_filters": [tuple(filter_config) for filter_config in backbone_config['cnn_filters']],
+            "cnn_activation": backbone_config['cnn_activation'],
+            "num_res_blocks": backbone_config['num_res_blocks'],
+            "feature_size": backbone_config['feature_size']
+        }
+        self.cfg = cfg
         cnn_layers = []
         in_channels = cfg["input_dims"][-1]
 
@@ -72,7 +72,7 @@ class IMPALA(nn.Module):
         self._output_dims = (cfg["feature_size"],)
 
     def _calculate_cnn_output_size(self):
-        h, w, c = IMPALA.config["input_dims"]
+        h, w, c = self.cfg["input_dims"]
         with torch.no_grad():
             dummy_input = torch.zeros(1, c, h, w)
             cnn_output = self.cnn(dummy_input)

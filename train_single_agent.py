@@ -16,10 +16,14 @@ from logger import WandbCallback
 class IMPALAExtractor(BaseFeaturesExtractor):
     """Wraps the IMPALA CNN from agent.py as an SB3 feature extractor."""
 
-    def __init__(self, observation_space):
-        features_dim = IMPALA.config["feature_size"]
+    def __init__(self, observation_space, config_path: str = "train_config.yaml"):
+        # Load config to get feature_size
+        with open(config_path, 'r') as f:
+            train_config = yaml.safe_load(f)
+        features_dim = train_config['backbone']['feature_size']
+
         super().__init__(observation_space, features_dim)
-        self.impala = IMPALA()
+        self.impala = IMPALA(config_path)
 
     def forward(self, observations: torch.Tensor) -> torch.Tensor:
         # SB3 normalizes uint8 images to float32 [0,1] and transposes HWC→CHW

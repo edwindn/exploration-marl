@@ -1,5 +1,12 @@
-
+*.zip
+*.svg
 
 # specific files
 /frames
+/wandb
+/__pycache__
 uv.lock
+**weights**
+**data**
+**frames**
+**images**
