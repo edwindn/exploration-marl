@@ -1,0 +1,29 @@
+[34m[1mwandb[0m: [33mWARNING[0m `fps` argument does not affect the frame rate of the video when providing a file path or raw bytes.
+[34m[1mwandb[0m: [33mWARNING[0m `fps` argument does not affect the frame rate of the video when providing a file path or raw bytes.
+[34m[1mwandb[0m: [33mWARNING[0m `fps` argument does not affect the frame rate of the video when providing a file path or raw bytes.
+[34m[1mwandb[0m: [33mWARNING[0m `fps` argument does not affect the frame rate of the video when providing a file path or raw bytes.
+Traceback (most recent call last):
+  File "/home/edn/exploration-marl/single_agent/train_single_agent.py", line 119, in <module>
+    model.learn(
+  File "/home/edn/exploration-marl/single_agent/ppo.py", line 315, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 337, in learn
+    self.train()
+  File "/home/edn/exploration-marl/single_agent/ppo.py", line 217, in train
+    values, log_prob, entropy = self.policy.evaluate_actions(rollout_data.observations, actions)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 737, in evaluate_actions
+    distribution = self._get_action_dist_from_latent(latent_pi)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/policies.py", line 697, in _get_action_dist_from_latent
+    return self.action_dist.proba_distribution(action_logits=mean_actions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/stable_baselines3/common/distributions.py", line 288, in proba_distribution
+    self.distribution = Categorical(logits=action_logits)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/distributions/categorical.py", line 84, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home/edn/exploration-marl/.venv/lib/python3.11/site-packages/torch/distributions/distribution.py", line 77, in __init__
+    if not torch._is_all_true(valid):
+KeyboardInterrupt

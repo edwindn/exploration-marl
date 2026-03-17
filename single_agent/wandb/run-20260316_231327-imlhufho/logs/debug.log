@@ -1,0 +1,22 @@
+2026-03-16 23:13:27,858 INFO    MainThread:3922285 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-03-16 23:13:27,859 INFO    MainThread:3922285 [wandb_setup.py:_flush():81] Configure stats pid to 3922285
+2026-03-16 23:13:27,859 INFO    MainThread:3922285 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-16 23:13:27,859 INFO    MainThread:3922285 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /home/edn/exploration-marl/single_agent/wandb/run-20260316_231327-imlhufho/logs/debug.log
+2026-03-16 23:13:27,859 INFO    MainThread:3922285 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /home/edn/exploration-marl/single_agent/wandb/run-20260316_231327-imlhufho/logs/debug-internal.log
+2026-03-16 23:13:27,861 INFO    MainThread:3922285 [wandb_init.py:init():844] calling init triggers
+2026-03-16 23:13:27,861 INFO    MainThread:3922285 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'exp_name': 'ppo', 'seed': 1, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'exploration-marl', 'wandb_entity': None, 'capture_video': False, 'env_id': 'CartPole-v1', 'total_timesteps': 200000, 'learning_rate': 0.0003, 'num_envs': 1, 'num_steps': 512, 'anneal_lr': True, 'gamma': 0.98, 'gae_lambda': 0.95, 'num_minibatches': 8, 'update_epochs': 10, 'norm_adv': True, 'clip_coef': 0.2, 'clip_vloss': True, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': None, 'batch_size': 64, 'minibatch_size': 64, 'num_iterations': 390, 'algorithm': 'PPO', 'env': {'size': 200, 'agent_window_size': '20%', 'agent_step_size': 10, 'action_type': 'discrete', 'terminal_radius': 5, 'reward_type': 'dense', 'background': 'small'}, 'n_steps': 512, 'n_epochs': 10, 'clip_range': 0.2, 'verbose': 1, 'memory': None, 'horizon': 10, 'backbone': {'cnn_filters': [[16, 3, 1], [32, 3, 1], [32, 3, 1]], 'cnn_activation': 'relu', 'num_res_blocks': 3, 'feature_size': 64}, 'icm': {'cnn_filters': [[16, 3, 1], [32, 3, 1], [32, 3, 1]], 'cnn_activation': 'relu', 'num_res_blocks': 3, 'feature_size': 64}, 'save_path': 'ppo_nav_agent', '_wandb': {'code_path': 'code/single_agent/train_single_agent.py'}}
+2026-03-16 23:13:27,861 INFO    MainThread:3922285 [wandb_init.py:init():892] starting backend
+2026-03-16 23:13:28,095 INFO    MainThread:3922285 [wandb_init.py:init():895] sending inform_init request
+2026-03-16 23:13:28,102 INFO    MainThread:3922285 [wandb_init.py:init():903] backend started and connected
+2026-03-16 23:13:28,104 INFO    MainThread:3922285 [wandb_init.py:init():973] updated telemetry
+2026-03-16 23:13:28,113 INFO    MainThread:3922285 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-16 23:13:28,774 INFO    MainThread:3922285 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-16 23:13:28,925 INFO    MainThread:3922285 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-16 23:13:28,925 INFO    MainThread:3922285 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-16 23:13:28,925 INFO    MainThread:3922285 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-16 23:13:28,925 INFO    MainThread:3922285 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-16 23:13:28,928 INFO    MainThread:3922285 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-16 23:13:28,928 INFO    MainThread:3922285 [wandb_run.py:_tensorboard_callback():1614] tensorboard callback: runs/NavEnv__ppo__1__1773702805, True
+2026-03-17 00:00:35,432 INFO    wandb-AsyncioManager-main:3922285 [service_client.py:_forward_responses():134] Reached EOF.
+2026-03-17 00:00:35,433 INFO    wandb-AsyncioManager-main:3922285 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.
