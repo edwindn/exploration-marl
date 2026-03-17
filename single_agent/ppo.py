@@ -177,6 +177,7 @@ def train(env, config, impala_config, logging_config, use_wandb=False, wandb_pro
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
     # env setup - wrap custom single env in vector env
+    env = gym.wrappers.RecordEpisodeStatistics(env)
     envs = gym.vector.SyncVectorEnv([lambda: env])
     assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
 

@@ -34,6 +34,11 @@ agent:
     num_res_blocks: 3
     feature_size: 64
 
+  policy:
+    net_arch:
+      pi: [64, 64]
+      vf: [64, 64]
+
 # Training settings
 training:
   total_timesteps: 200000
@@ -43,4 +48,4 @@ training:
 logging:
   log_gifs: true
   gif_rollout_steps: 40
-  log_gif_every_n_rollouts: 1
+  log_gif_every_n_rollouts: 10
