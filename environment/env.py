@@ -166,7 +166,8 @@ class NavEnv(gym.Env):
 
         reward = self._get_reward()
         terminated = False
-        truncated = self.step_count >= self.max_episode_length
+        truncated = False
+        #truncated = self.step_count >= self.max_episode_length
 
         if self.render_mode == "human":
             self._render_frame()

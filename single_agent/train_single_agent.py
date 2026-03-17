@@ -3,8 +3,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 import yaml
-#from stable_baselines3.ppo import PPO
-from single_agent.ppo_icm_wrapper import PPO_ICM as PPO
+from stable_baselines3 import A2C
 
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.env_checker import check_env
@@ -46,7 +45,7 @@ class IMPALAExtractor(BaseFeaturesExtractor):
 
 if __name__ == "__main__":
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description="Train PPO agent on navigation environment")
+    parser = argparse.ArgumentParser(description="Train A2C agent on navigation environment")
     parser.add_argument("--disable-wandb", action="store_true", help="Disable wandb logging")
     args = parser.parse_args()
 
@@ -69,21 +68,19 @@ if __name__ == "__main__":
         activation_fn=nn.ReLU,
     )
 
-    # Initialize PPO with custom implementation from ppo.py
-    ppo_config = config["ppo"]
-    model = PPO(
+    # Initialize A2C
+    a2c_config = config["a2c"]
+    model = A2C(
         policy="CnnPolicy",
         env=env,
         policy_kwargs=policy_kwargs,
-        n_steps=ppo_config["num_train_steps"],
-        batch_size=ppo_config["batch_size"],
-        n_epochs=ppo_config["n_epochs"],
-        learning_rate=ppo_config["learning_rate"],
-        gamma=ppo_config["gamma"],
-        gae_lambda=ppo_config["gae_lambda"],
-        clip_range=ppo_config["clip_range"],
-        ent_coef=ppo_config["ent_coef"],
-        verbose=ppo_config["verbose"],
+        n_steps=a2c_config["n_steps"],
+        learning_rate=a2c_config["learning_rate"],
+        gamma=a2c_config["gamma"],
+        gae_lambda=a2c_config["gae_lambda"],
+        ent_coef=a2c_config["ent_coef"],
+        vf_coef=a2c_config["vf_coef"],
+        verbose=a2c_config["verbose"],
     )
 
     # Configure logger to disable stdout table output
@@ -95,9 +92,9 @@ if __name__ == "__main__":
     callback = None
     if not args.disable_wandb:
         wandb_config = {
-            "algorithm": "PPO",
+            "algorithm": "A2C",
             **env_config,
-            **config["ppo"],
+            **config["a2c"],
             **config["agent"]["policy"],
             **config["training"],
         }
@@ -116,7 +113,7 @@ if __name__ == "__main__":
         )
 
     # Train the agent
-    print("Starting PPO training...")
+    print("Starting A2C training...")
     model.learn(
         total_timesteps=config["training"]["total_timesteps"],
         callback=callback

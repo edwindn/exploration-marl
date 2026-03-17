@@ -141,6 +141,7 @@ class WandbCallback(BaseCallback):
         metric_filter: Optional[Callable[[str, any], bool]] = None,
         gif_rollout_steps: int = 25,
         log_gif_every_n_rollouts: int = 1,
+        reward_avg_every_n_rollouts: int = 1,
         verbose: int = 0,
     ):
         super().__init__(verbose)
@@ -151,6 +152,7 @@ class WandbCallback(BaseCallback):
         self.metric_filter = metric_filter
         self.gif_rollout_steps = gif_rollout_steps
         self.log_gif_every_n_rollouts = log_gif_every_n_rollouts
+        self.reward_avg_every_n_rollouts = reward_avg_every_n_rollouts
         self.wandb = None
 
         self.episode_rewards = []
@@ -184,22 +186,22 @@ class WandbCallback(BaseCallback):
     def _collect_inference_rollout(self) -> List[np.ndarray]:
         """
         Collect a short inference rollout using the current policy.
+        Creates a separate environment to avoid interrupting training state.
 
         :return: List of frames (numpy arrays) from the rollout
         """
-        # Get the unwrapped environment (SB3 wraps in VecEnv and Monitor)
-        env = self.training_env.envs[0]
-        # Unwrap to get the actual NavEnv instance
-        while hasattr(env, 'env'):
-            env = env.env
+        from environment.env import NavEnv
+
+        # Create a separate evaluation environment (does not affect training env)
+        eval_env = NavEnv()
 
         frames = []
-        obs, _ = self.training_env.envs[0].reset()
+        obs, _ = eval_env.reset()
 
         # Collect frames for the specified number of steps
         for _ in range(self.gif_rollout_steps):
             # Render the current state
-            frame = env._render_frame()
+            frame = eval_env._render_frame()
             frames.append(frame)
 
             # Get action from current policy (deterministic for consistency)
@@ -209,12 +211,16 @@ class WandbCallback(BaseCallback):
             if isinstance(action, np.ndarray):
                 action = action.item()
 
-            # Take step in environment
-            obs, reward, terminated, truncated, info = self.training_env.envs[0].step(action)
+            # Take step in evaluation environment
+            obs, reward, terminated, truncated, info = eval_env.step(action)
 
             # If episode ends, we still continue to show full 25 steps
             if terminated or truncated:
-                obs, _ = self.training_env.envs[0].reset()
+                obs, _ = eval_env.reset()
+
+        # Clean up evaluation environment
+        eval_env.close()
+        del eval_env
 
         return frames
 
@@ -276,23 +282,25 @@ class WandbCallback(BaseCallback):
         if self.wandb is None:
             return
 
+        self.rollout_count += 1
+
         # Get all metrics from the SB3 logger and filter them
         metrics = {}
         for key, value in self.logger.name_to_value.items():
             if self._should_log_metric(key, value):
                 metrics[key] = value
 
-        # Add custom mean reward from episodes since last logging
-        assert self.episode_rewards
-        metrics["train/mean_reward"] = np.mean(self.episode_rewards)
-        # Clear the rewards for next logging interval
-        self.episode_rewards = []
+        # Only log mean reward every reward_avg_every_n_rollouts rollouts
+        if self.rollout_count % self.reward_avg_every_n_rollouts == 0:
+            assert self.episode_rewards
+            metrics["train/mean_reward"] = np.mean(self.episode_rewards)
+            # Clear the rewards for next logging interval
+            self.episode_rewards = []
 
         # Add timestep information
         metrics["timesteps"] = self.num_timesteps
 
         # Collect and log GIF visualization at specified intervals
-        self.rollout_count += 1
         if self.rollout_count % self.log_gif_every_n_rollouts == 0:
             frames = self._collect_inference_rollout()
             gif = self._create_gif_from_frames(frames)

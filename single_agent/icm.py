@@ -6,6 +6,25 @@ import gymnasium as gym
 from agent import IMPALA
 
 
+# class TransitionModel(nn.Module):
+#     """
+#     Predicts the next state embedding given the current state and action.
+#     """
+#     def __init__(self, input_dims):
+#         self.encoder = StateEncoder(input_dims)
+
+#     def pred_act(self, s1, s2):
+#         phi1 = self.encoder(s1)
+#         phi2 = self.encoder(s2)
+#         return self.action_model(phi1, phi2) # action distribution
+
+
+# class ActionModel(nn.Module):
+#     """
+#     Predicts the action taken given two consecutive state embeddings.
+#     """
+
+
 class StateEncoder(nn.Module):
 
     def __init__(self, input_dims, config_path: str = "train_config.yaml"):
