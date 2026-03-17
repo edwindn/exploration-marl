@@ -19,6 +19,7 @@ from torch.utils.tensorboard import SummaryWriter
 from utils.networks import IMPALA
 from single_agent.agent import Agent
 from single_agent.logger import GifLoggingCallback
+from environment.env import NavEnv
 
 
 @dataclass
@@ -185,9 +186,12 @@ def train(env, config, impala_config, logging_config, use_wandb=False, wandb_pro
     agent = Agent(envs, impala_config).to(device)
     optimizer = optim.Adam(agent.parameters(), lr=args.learning_rate, eps=1e-5)
 
-    # Initialize GIF logging callback
+    # Initialize GIF logging callback with a separate environment instance
+    # This prevents the inference rollout from interfering with training state
+    gif_env = gym.wrappers.RecordEpisodeStatistics(NavEnv())
+    gif_vec_env = gym.vector.SyncVectorEnv([lambda: gif_env])
     gif_logger = GifLoggingCallback(
-        env=envs,
+        env=gif_vec_env,
         gif_rollout_steps=logging_config['gif_rollout_steps'],
         log_gif_every_n_rollouts=logging_config['log_gif_every_n_rollouts']
     )
@@ -215,7 +219,6 @@ def train(env, config, impala_config, logging_config, use_wandb=False, wandb_pro
             optimizer.param_groups[0]["lr"] = lrnow
 
         for step in range(0, args.num_steps):
-            global_step += args.num_envs
             obs[step] = next_obs
             dones[step] = next_done
 
@@ -247,12 +250,17 @@ def train(env, config, impala_config, logging_config, use_wandb=False, wandb_pro
                         terminal_value = agent.get_value(terminal_obs_tensor)
                     rewards[step][idx] += args.gamma * terminal_value
 
-            if "final_info" in infos:
-                for info in infos["final_info"]:
-                    if info and "episode" in info:
-                        print(f"global_step={global_step}, episodic_return={info['episode']['r']}")
-                        writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
-                        writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+        # Update global_step after rollout collection (not during)
+        global_step += args.num_steps * args.num_envs
+
+        # Log episode metrics after rollout (not during collection)
+        # This ensures logging happens at correct intervals (2048, 4096, etc.)
+        if "final_info" in infos:
+            for info in infos["final_info"]:
+                if info and "episode" in info:
+                    print(f"global_step={global_step}, episodic_return={info['episode']['r']}")
+                    writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
+                    writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
 
         # Compute mean reward over rollout
         rollout_mean_reward = rewards.mean().item()

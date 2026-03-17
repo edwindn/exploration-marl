@@ -8,7 +8,7 @@ from agent import IMPALA
 
 class StateEncoder(nn.Module):
 
-    def __init__(self, feature_size, input_dims, config_path: str = "train_config.yaml"):
+    def __init__(self, input_dims, config_path: str = "train_config.yaml"):
         super().__init__()
 
         # Load ICM config from train_config.yaml
@@ -25,11 +25,11 @@ class StateEncoder(nn.Module):
 
 class ICM(nn.Module):
 
-    def __init__(self, action_space, feature_size, input_dims):
+    def __init__(self, action_space, input_dims):
 
         super().__init__()
         
-        self.state_encoder = StateEncoder(feature_size, input_dims)
+        self.state_encoder = StateEncoder(input_dims)
 
         if not isinstance(action_space, gym.spaces.Discrete):
             raise ValueError(f"ICM currently only supports discrete actions, got {action_space}")
