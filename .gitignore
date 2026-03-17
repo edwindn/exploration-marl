@@ -4,16 +4,14 @@
 
 # specific files
 /frames
-/wandb
 /node_modules
-/__pycache__
-/single_agent/wandb
 uv.lock
-**__pycache__**
-**wandb/
-**wandb/*
-**runs/
-**weights**
-**data**
-**frames**
-**images**
+
+# directories to ignore anywhere in the project
+__pycache__/
+wandb/
+runs/
+weights/
+data/
+frames/
+images/
