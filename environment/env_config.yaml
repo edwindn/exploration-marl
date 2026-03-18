@@ -5,5 +5,5 @@ env:
   agent_step_size: 10 #choose integer or percentage
   action_type: discrete
   terminal_radius: 5 #note we don't terminate episodes, this is used for reward
-  reward_type: "dense" #choose 'dense' or 'sparse'
+  reward_type: "sparse" #choose 'dense' or 'sparse'
   background: "small" #specify background name or leave null

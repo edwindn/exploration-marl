@@ -284,7 +284,7 @@ class WandbCallback(BaseCallback):
 
         # Add custom mean reward from episodes since last logging
         assert self.episode_rewards
-        metrics["train/mean_reward"] = np.mean(self.episode_rewards)
+        metrics["train/mean_extrinsic_reward"] = np.mean(self.episode_rewards)
         # Clear the rewards for next logging interval
         self.episode_rewards = []
 

@@ -20,6 +20,16 @@ class StateEncoder(nn.Module):
         self._latent_size = self.encoder._output_dims[0]
 
     def forward(self, s):
+        # Preprocess observations to match SB3's preprocessing:
+        # 1. Convert uint8 to float and normalize to [0, 1]
+        # 2. Transpose from (batch, H, W, C) to (batch, C, H, W)
+        if s.dtype == torch.uint8:
+            s = s.float() / 255.0
+        # Check if we need to transpose (channels last -> channels first)
+        if s.dim() == 4 and s.shape[-1] <= 8:  # Heuristic: small last dim is likely channels
+            s = s.permute(0, 3, 1, 2)
+        elif s.dim() == 3 and s.shape[-1] <= 8:
+            s = s.permute(2, 0, 1)
         return self.encoder(s)
 
 
@@ -36,7 +46,6 @@ class ICM(nn.Module):
 
         num_action_logits = action_space.n
         self.num_action_logits = num_action_logits
-        latent_action_size = 8
         latent_state_size = self.state_encoder._latent_size
         # TODO handle continuous actions
 
@@ -55,7 +64,7 @@ class ICM(nn.Module):
         # )
 
         self.transition_model = nn.Sequential(
-            nn.Linear(latent_state_size + latent_action_size, 64),
+            nn.Linear(latent_state_size + num_action_logits, 64),
             nn.ReLU(),
             nn.Linear(64, 32),
             nn.ReLU(),
@@ -64,7 +73,7 @@ class ICM(nn.Module):
 
         self.cross_entropy = torch.nn.CrossEntropyLoss()
 
-    def _one_hot_action(a):
+    def _one_hot_action(self, a):
         return torch.nn.functional.one_hot(a, num_classes=self.num_action_logits).float()
 
     def forward(self, s1, s2, a):
@@ -78,7 +87,7 @@ class ICM(nn.Module):
         trans = torch.cat([phi1, a_oh], dim=-1)
         phi_pred = self.transition_model(trans)
 
-        forwards_loss = 0.5 * torch.sum((phi2 - phi_pred) ** 2)
+        forwards_loss = 0.5 * torch.sum((phi2 - phi_pred) ** 2, dim=-1).mean()
         inverse_loss = self.cross_entropy(a_pred, a)
 
         return phi_pred, a_pred, forwards_loss, inverse_loss

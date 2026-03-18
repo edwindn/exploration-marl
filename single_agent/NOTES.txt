@@ -1,0 +1,19 @@
+
+-> modify PPO to run a continuous rollout !!! TODO
+-> replicate ICM results with PPO
+use more complex env, eg. maze or doomviz
+icm may require lstm to work
+
+
+----------------
+
+-> convert ICM to a WM novelty reward, or incorporate WM uncertainty into agent observation space (eg. by predicting own uncertainty)
+-> extend to fully-decentralised multi agent
+
+compare reward mean time to random, vanilla ppo, and single agent novelty bonus
+
+
+-> extend mixed curiosity result to model-based multi agent
+central rssm or dynamics predictor
+agents rewarded for adding new experiences to rssm
+use rssm or agent memory for planning novel trajectories

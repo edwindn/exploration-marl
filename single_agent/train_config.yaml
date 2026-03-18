@@ -4,13 +4,19 @@
 ppo:
   num_train_steps: 2048
   batch_size: 64
-  n_epochs: 10
+  n_epochs: 1 # only train once over data to keep icm learning on-policy
   learning_rate: 3.0e-4
   gamma: 0.98
   gae_lambda: 0.95
   clip_range: 0.2
   ent_coef: 0.01
   verbose: 1
+
+  train_icm: false
+  icm_learning_rate: 3.0e-4
+  beta: 0.2
+  eta: 1.0
+  lambda: 
 
 agent:
   memory: null #choose from null, 'stacking', 'lstm'
@@ -47,5 +53,5 @@ training:
 # Logging settings
 logging:
   log_gifs: true
-  gif_rollout_steps: 40
-  log_gif_every_n_rollouts: 10
+  gif_rollout_steps: 30
+  log_gif_every_n_rollouts: 5

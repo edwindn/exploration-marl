@@ -3,18 +3,18 @@ import torch
 import torch.nn as nn
 import numpy as np
 import yaml
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 #from stable_baselines3.ppo import PPO
-from single_agent.ppo_icm_wrapper import PPO_ICM as PPO
+from single_agent.ppo_wrapper import PPO_ICM as PPO
 
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.env_checker import check_env
 from stable_baselines3.common.logger import configure
 import gymnasium as gym
-import sys
-from pathlib import Path
-
-# Add project root to Python path
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from environment.env import NavEnv
 from utils.networks import IMPALA
@@ -72,6 +72,10 @@ if __name__ == "__main__":
     # Initialize PPO with custom implementation from ppo.py
     ppo_config = config["ppo"]
     model = PPO(
+        train_icm=ppo_config["train_icm"],
+        icm_learning_rate=ppo_config["icm_learning_rate"],
+        eta=ppo_config["eta"],
+        beta=ppo_config["beta"],
         policy="CnnPolicy",
         env=env,
         policy_kwargs=policy_kwargs,
