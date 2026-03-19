@@ -2,7 +2,8 @@
 -> modify PPO to run a continuous rollout !!! TODO
 -> replicate ICM results with PPO
 use more complex env, eg. maze or doomviz
-icm may require lstm to work
+
+-> replicate coma with navigation task
 
 
 ----------------
@@ -17,3 +18,7 @@ compare reward mean time to random, vanilla ppo, and single agent novelty bonus
 central rssm or dynamics predictor
 agents rewarded for adding new experiences to rssm
 use rssm or agent memory for planning novel trajectories
+
+-------------
+
+-> long-horizon disagreement

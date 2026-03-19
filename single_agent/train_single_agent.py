@@ -18,6 +18,7 @@ import gymnasium as gym
 
 from environment.env import NavEnv
 from utils.networks import IMPALA
+from single_agent.ppo_policy_wrapper import CustomPPOPolicy
 from single_agent.logger import WandbCallback
 
 
@@ -69,14 +70,19 @@ if __name__ == "__main__":
         activation_fn=nn.ReLU,
     )
 
+    if config["ppo"]["train_icm"]:
+        policy_class = CustomPPOPolicy
+    else:
+        policy_class = "CnnPolicy"
+
     # Initialize PPO with custom implementation from ppo.py
     ppo_config = config["ppo"]
     model = PPO(
         train_icm=ppo_config["train_icm"],
-        icm_learning_rate=ppo_config["icm_learning_rate"],
         eta=ppo_config["eta"],
         beta=ppo_config["beta"],
-        policy="CnnPolicy",
+        _lambda=ppo_config["lambda"],
+        policy=policy_class,
         env=env,
         policy_kwargs=policy_kwargs,
         n_steps=ppo_config["num_train_steps"],

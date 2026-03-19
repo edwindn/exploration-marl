@@ -4,9 +4,10 @@ import numpy as np
 import torch as th
 import torch.nn.functional as F
 from gymnasium import spaces
+from itertools import chain
 
 from stable_baselines3.ppo import PPO
-from stable_baselines3.common.utils import explained_variance, obs_as_tensor
+from stable_baselines3.common.utils import explained_variance, obs_as_tensor, get_schedule_fn, update_learning_rate
 from stable_baselines3.common.buffers import RolloutBuffer
 from stable_baselines3.common.type_aliases import RolloutBufferSamples
 from stable_baselines3.common.vec_env import VecEnv, VecNormalize
@@ -106,7 +107,7 @@ class RolloutBufferWithNextObs(RolloutBuffer):
 
 class PPO_ICM(PPO):
 
-    def __init__(self, train_icm, eta, beta, icm_learning_rate, *args, **kwargs):
+    def __init__(self, train_icm, eta, beta, _lambda, *args, **kwargs):
 
         env = kwargs.get("env", None)
         assert env is not None, "must provide env to PPO module"
@@ -120,31 +121,39 @@ class PPO_ICM(PPO):
                 input_dims=inp
             )
 
-            self.icm_optim = th.optim.Adam(self.icm.parameters(), lr=icm_learning_rate)
             self.eta = eta  # unsupervised reward weighting
             self.beta = beta  # forward vs inverse loss weighting
+            self._lambda = _lambda
+
+            self.last_mean_forward_loss = None
+            self.normalize_intrinsic_reward = False
         else:
             self.icm = None
 
         super().__init__(*args, **kwargs)
 
+        if self.icm is not None:
+            self.icm.to(self.device)
+
     def _setup_model(self) -> None:
-        """Override to use custom rollout buffer."""
+        # Set rollout buffer class before calling super()._setup_model()
+        # Parent only sets it if it's None (line 119 in on_policy_algorithm.py)
+        if self.icm is not None:
+            self.rollout_buffer_class = RolloutBufferWithNextObs
+
+        # Call parent _setup_model which creates policy, rollout buffer, and policy.optimizer
         super()._setup_model()
 
-        # Replace rollout buffer with our custom one if training ICM
+        # Now create joint optimizer if using ICM (policy now exists)
         if self.icm is not None:
-            # Move ICM to the correct device
-            self.icm = self.icm.to(self.device)
+            # Combine ICM and policy parameters
+            joint_params = chain(self.icm.parameters(), self.policy.parameters())
 
-            self.rollout_buffer = RolloutBufferWithNextObs(
-                self.n_steps,
-                self.observation_space,
-                self.action_space,
-                device=self.device,
-                gamma=self.gamma,
-                gae_lambda=self.gae_lambda,
-                n_envs=self.n_envs,
+            # Create joint optimizer using same settings as policy optimizer
+            self.joint_optimizer = self.policy.optimizer_class(
+                joint_params,
+                lr=self.lr_schedule(1),  # Initial learning rate
+                **self.policy.optimizer_kwargs
             )
 
 
@@ -212,7 +221,13 @@ class PPO_ICM(PPO):
                     icm_forward_losses.append(forward_loss.cpu().item())
                     icm_inverse_losses.append(inverse_loss.cpu().item())
 
-                rewards += self.eta * forward_loss.cpu().numpy() # intrinsic reward is just derived from forwards loss
+                if rewards.shape[0] != 1:
+                    raise ValueError("Cannot  use parallel environments with current intrinsic reward computation (need to modify to per-env reward)")
+                
+                intrinsic_reward = forward_loss.cpu().numpy()
+                if self.last_mean_forward_loss is not None and self.normalize_intrinsic_reward:
+                    intrinsic_reward /= (self.last_mean_forward_loss + 1.0e-3)
+                rewards += self.eta * intrinsic_reward # intrinsic reward is just derived from forwards loss
                 total_rewards.append(rewards.mean())  # Track mean total reward per step
 
             self.num_timesteps += env.num_envs
@@ -276,6 +291,9 @@ class PPO_ICM(PPO):
         # Log ICM metrics averaged over the rollout
         if self.icm is not None:
             assert icm_forward_losses
+            assert total_rewards
+            self.last_mean_forward_loss = np.mean(icm_forward_losses)
+
             self.logger.record("train/icm_forward_loss", np.mean(icm_forward_losses))
             self.logger.record("train/icm_inverse_loss", np.mean(icm_inverse_losses))
             self.logger.record("train/mean_total_reward", np.mean(total_rewards))
@@ -292,9 +310,18 @@ class PPO_ICM(PPO):
         # Switch to train mode (this affects batch norm / dropout)
         self.policy.set_training_mode(True)
         # Update optimizer learning rate
-        self._update_learning_rate(self.policy.optimizer)
+        if self.icm is not None:
+            # Update joint optimizer learning rate
+            update_learning_rate(self.joint_optimizer, self.lr_schedule(self._current_progress_remaining))
+            self.logger.record("train/learning_rate", self.lr_schedule(self._current_progress_remaining))
+        else:
+            # Update policy optimizer learning rate (standard PPO)
+            self._update_learning_rate(self.policy.optimizer)
         # Compute current clip range
-        clip_range = self.clip_range(self._current_progress_remaining)  # type: ignore[operator]
+        if isinstance(self.clip_range, float):
+            clip_range = self.clip_range
+        else:
+            clip_range = self.clip_range(self._current_progress_remaining)  # type: ignore[operator]
         # Optional: clip range for the value function
         if self.clip_range_vf is not None:
             clip_range_vf = self.clip_range_vf(self._current_progress_remaining)  # type: ignore[operator]
@@ -342,10 +369,10 @@ class PPO_ICM(PPO):
                     #     f.write("\n\n----------------------------")
                     #     f.write(f"{phi_pred.detach().cpu().numpy()}\n")
 
-                    icm_loss = (1 - self.beta) * inverse_loss + self.beta * forwards_loss
-                    self.icm_optim.zero_grad()
-                    icm_loss.backward()
-                    self.icm_optim.step()
+                    # icm_loss = (1 - self.beta) * inverse_loss + self.beta * forwards_loss
+                    # self.icm_optim.zero_grad()
+                    # icm_loss.backward()
+                    # self.icm_optim.step()
 
                 # Logging
                 pg_losses.append(policy_loss.item())
@@ -392,11 +419,24 @@ class PPO_ICM(PPO):
                     break
 
                 # Optimization step
-                self.policy.optimizer.zero_grad()
-                loss.backward()
-                # Clip grad norm
-                th.nn.utils.clip_grad_norm_(self.policy.parameters(), self.max_grad_norm)
-                self.policy.optimizer.step()
+                if self.icm is not None:
+                    # perform joint update
+                    loss = self._lambda * loss + (1 - self.beta) * inverse_loss + self.beta * forwards_loss
+
+                    self.joint_optimizer.zero_grad()
+                    loss.backward()
+                    # Clip gradients for both policy and ICM parameters
+                    th.nn.utils.clip_grad_norm_(
+                        chain(self.policy.parameters(), self.icm.parameters()),
+                        self.max_grad_norm
+                    )
+                    self.joint_optimizer.step()
+                else:
+                    self.policy.optimizer.zero_grad()
+                    loss.backward()
+                    # Clip grad norm
+                    th.nn.utils.clip_grad_norm_(self.policy.parameters(), self.max_grad_norm)
+                    self.policy.optimizer.step()
 
             self._n_updates += 1
             if not continue_training:

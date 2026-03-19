@@ -1,9 +1,11 @@
 # Environment settings
 env:
-  size: 200 #height and width in pixels, choose an integer or 'auto'
-  agent_window_size: "20%" #choose an integer (pixels) or a percentage, eg. "10%"
-  agent_step_size: 10 #choose integer or percentage
+  size: 2000 #height and width in pixels, choose an integer or 'auto'
+  agent_window_size: "1%" #choose an integer (pixels) or a percentage, eg. "10%"
+  agent_step_size: 10 #NOTE not currently being used    -- #choose integer or percentage
   action_type: discrete
   terminal_radius: 5 #note we don't terminate episodes, this is used for reward
-  reward_type: "sparse" #choose 'dense' or 'sparse'
-  background: "small" #specify background name or leave null
+  reward_type: null #choose 'dense', 'sparse', null
+  background: "large" #specify background name or leave null
+
+  obs_type: "position" #choose 'position' or 'pixels' (not yet implemented)

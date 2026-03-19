@@ -154,6 +154,7 @@ class WandbCallback(BaseCallback):
         self.wandb = None
 
         self.episode_rewards = []
+        self.episode_visitation_percentages = []
         self.rollout_count = 0
 
     def _on_training_start(self) -> None:
@@ -178,28 +179,30 @@ class WandbCallback(BaseCallback):
         info = infos[0]
 
         self.episode_rewards.append(info["reward"])
+        if "visitation_percentage" in info:
+            self.episode_visitation_percentages.append(info["visitation_percentage"])
 
         return True
 
     def _collect_inference_rollout(self) -> List[np.ndarray]:
         """
         Collect a short inference rollout using the current policy.
+        Creates a fresh environment to avoid interfering with training state.
 
         :return: List of frames (numpy arrays) from the rollout
         """
-        # Get the unwrapped environment (SB3 wraps in VecEnv and Monitor)
-        env = self.training_env.envs[0]
-        # Unwrap to get the actual NavEnv instance
-        while hasattr(env, 'env'):
-            env = env.env
+        from environment.env import NavEnv
+
+        # Create a fresh environment instance for GIF collection
+        gif_env = NavEnv()
 
         frames = []
-        obs, _ = self.training_env.envs[0].reset()
+        obs, _ = gif_env.reset()
 
         # Collect frames for the specified number of steps
         for _ in range(self.gif_rollout_steps):
             # Render the current state
-            frame = env._render_frame()
+            frame = gif_env._render_frame()
             frames.append(frame)
 
             # Get action from current policy (deterministic for consistency)
@@ -210,11 +213,15 @@ class WandbCallback(BaseCallback):
                 action = action.item()
 
             # Take step in environment
-            obs, reward, terminated, truncated, info = self.training_env.envs[0].step(action)
+            obs, reward, terminated, truncated, info = gif_env.step(action)
 
             # If episode ends, we still continue to show full 25 steps
             if terminated or truncated:
-                obs, _ = self.training_env.envs[0].reset()
+                obs, _ = gif_env.reset()
+
+        # Clean up the temporary environment
+        gif_env.close()
+        del gif_env
 
         return frames
 
@@ -285,8 +292,14 @@ class WandbCallback(BaseCallback):
         # Add custom mean reward from episodes since last logging
         assert self.episode_rewards
         metrics["train/mean_extrinsic_reward"] = np.mean(self.episode_rewards)
-        # Clear the rewards for next logging interval
+
+        # Add visitation percentage if available
+        if self.episode_visitation_percentages:
+            metrics["train/mean_visitation_percentage"] = np.mean(self.episode_visitation_percentages)
+
+        # Clear the rewards and visitation percentages for next logging interval
         self.episode_rewards = []
+        self.episode_visitation_percentages = []
 
         # Add timestep information
         metrics["timesteps"] = self.num_timesteps

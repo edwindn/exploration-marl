@@ -29,7 +29,7 @@ class NavEnv(gym.Env):
         background = env_config['background']
 
         assert action_type in ["discrete", "continuous"]
-        assert reward_type in ["dense", "sparse"]
+        assert reward_type in ["dense", "sparse", None]
 
         # Handle "auto" size option
         if size == "auto":
@@ -75,6 +75,12 @@ class NavEnv(gym.Env):
             raise ValueError(f"agent_window_size must be an integer or percentage string, "
                            f"got type {type(agent_window_size)}")
 
+        # Round size to nearest multiple of obs_size for discrete grid alignment
+        if action_type == "discrete":
+            grid_cells = max(1, round(size / obs_size))
+            size = grid_cells * obs_size
+            self.size = size
+
         self._obs_size = obs_size
 
         # Parse agent_step_size (can be integer pixels or percentage string like "5%")
@@ -107,6 +113,8 @@ class NavEnv(gym.Env):
         self.max_episode_length = max_episode_length
         self.step_count = 0
 
+        self.explored_percentage = 0
+
         if background is None:
             # White background when background is null
             self._background = np.full((size, size, 3), 255, dtype=np.uint8)
@@ -135,12 +143,40 @@ class NavEnv(gym.Env):
         self._goal_pos = np.array([size * 0.5, size * 0.5], dtype=np.float32)
         self._agent_pos = None
 
+        # Initialize visitation tracking for discrete action mode
+        if self.action_type == "discrete":
+            self._grid_size = self.size // self._obs_size
+            self._visitation_matrix = np.zeros((self._grid_size, self._grid_size), dtype=np.int8)
+            self._current_grid_pos = None
+        else:
+            self._visitation_matrix = None
+            self._current_grid_pos = None
+
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         self.step_count = 0
 
-        half = self._obs_size // 2
-        self._agent_pos = self.np_random.integers(half, self.size - half, size=2).astype(np.float32)
+        if self.action_type == "discrete":
+            # Reset visitation matrix
+            self._visitation_matrix.fill(0)
+
+            # Choose random grid position
+            grid_x = self.np_random.integers(0, self._grid_size)
+            grid_y = self.np_random.integers(0, self._grid_size)
+            self._current_grid_pos = np.array([grid_x, grid_y], dtype=np.int32)
+
+            # Mark as visited
+            self._visitation_matrix[grid_y, grid_x] = 1
+
+            # Convert grid position to pixel position (center of grid cell)
+            half = self._obs_size // 2
+            self._agent_pos = np.array([
+                grid_x * self._obs_size + half,
+                grid_y * self._obs_size + half
+            ], dtype=np.float32)
+        else:
+            half = self._obs_size // 2
+            self._agent_pos = self.np_random.integers(half, self.size - half, size=2).astype(np.float32)
 
         if self.render_mode == "human":
             self._render_frame()
@@ -152,11 +188,22 @@ class NavEnv(gym.Env):
         half = self._obs_size // 2
         lo, hi = half, self.size - 1 - half
         if self.action_type == "discrete":
-            delta = {0: (0, 0), 1: (0, -self._step_size), 2: (0, self._step_size), 3: (-self._step_size, 0), 4: (self._step_size, 0)}[action]
-            self._agent_pos = np.clip(
-                self._agent_pos + np.array(delta, dtype=np.float32),
-                lo, hi
-            )
+            # Action deltas in grid space: 0=stay, 1=up, 2=down, 3=left, 4=right
+            grid_delta = {0: (0, 0), 1: (0, -1), 2: (0, 1), 3: (-1, 0), 4: (1, 0)}[action]
+
+            # Update grid position with boundary checks
+            new_grid_x = np.clip(self._current_grid_pos[0] + grid_delta[0], 0, self._grid_size - 1)
+            new_grid_y = np.clip(self._current_grid_pos[1] + grid_delta[1], 0, self._grid_size - 1)
+            self._current_grid_pos = np.array([new_grid_x, new_grid_y], dtype=np.int32)
+
+            # Mark as visited
+            self._visitation_matrix[new_grid_y, new_grid_x] = 1
+
+            # Update pixel position (center of grid cell)
+            self._agent_pos = np.array([
+                new_grid_x * self._obs_size + half,
+                new_grid_y * self._obs_size + half
+            ], dtype=np.float32)
         else:
             dx, dy = float(action[0]), float(action[1])
             self._agent_pos = np.clip(
@@ -166,7 +213,8 @@ class NavEnv(gym.Env):
 
         reward = self._get_reward()
         terminated = False
-        truncated = self.step_count >= self.max_episode_length
+        truncated = False
+        #truncated = self.step_count >= self.max_episode_length
 
         if self.render_mode == "human":
             self._render_frame()
@@ -176,6 +224,10 @@ class NavEnv(gym.Env):
             "step": self.step_count,
             "done": terminated or truncated
         }
+
+        # Add visitation percentage for discrete action mode
+        if self.action_type == "discrete":
+            info["visitation_percentage"] = float(np.sum(self._visitation_matrix)) / (self._grid_size ** 2)
 
         return self._get_obs(), reward, terminated, truncated, info
 
@@ -196,8 +248,10 @@ class NavEnv(gym.Env):
         dist = np.sqrt(dist[0]**2 + dist[1]**2)
         if self.reward_type == "sparse":
             reward = 1 if dist <= self.terminal_radius else 0
-        else:
+        elif self.reward_type == "dense":
             reward = max(0, 1 - dist / self.size)
+        else:
+            reward = 0
         return float(reward)
 
     def _build_frame(self):

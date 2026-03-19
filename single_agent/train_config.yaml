@@ -12,11 +12,11 @@ ppo:
   ent_coef: 0.01
   verbose: 1
 
-  train_icm: false
-  icm_learning_rate: 3.0e-4
-  beta: 0.2
-  eta: 1.0
-  lambda: 
+  train_icm: true
+  normalize_rewards: false #NOTE not being passed  #if true we normalise by the mean intrinsic reward of the last rollout
+  eta: 1.0 #loss to reward factor
+  beta: 0.005 #forwards loss weighting
+  lambda: 1.0 #original loss factor
 
 agent:
   memory: null #choose from null, 'stacking', 'lstm'
@@ -47,11 +47,11 @@ agent:
 
 # Training settings
 training:
-  total_timesteps: 200000
+  total_timesteps: 500000
   save_path: ppo_nav_agent
 
 # Logging settings
 logging:
-  log_gifs: true
+  log_gifs: false
   gif_rollout_steps: 30
   log_gif_every_n_rollouts: 5
