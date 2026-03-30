@@ -5,7 +5,7 @@ env:
   agent_step_size: 10 #NOTE not currently being used    -- #choose integer or percentage
   action_type: discrete
   terminal_radius: 5 #note we don't terminate episodes, this is used for reward
-  reward_type: null #choose 'dense', 'sparse', null
+  reward_type: null #choose 'dense', 'sparse', null, "random_uniform" (0-2), "random_gaussian" (1,0.2)
   background: "large" #specify background name or leave null
 
   obs_type: "position" #choose 'position' or 'pixels' (not yet implemented)

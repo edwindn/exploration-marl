@@ -10,4 +10,5 @@ dependencies = [
     "pyyaml",
     "wandb",
     "tyro",
+    "stable_baselines3",
 ]

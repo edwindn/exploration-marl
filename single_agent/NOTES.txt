@@ -1,8 +1,10 @@
 
--> modify PPO to run a continuous rollout !!! TODO
--> replicate ICM results with PPO
+
 use more complex env, eg. maze or doomviz
 
+! only train each model in the ensemble on a different random subset of rollout data
+! add moving normaliser to reward
+! loss collapses, encoder likely has very low var
 -> replicate coma with navigation task
 
 

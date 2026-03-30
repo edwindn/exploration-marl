@@ -2,7 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.distributions.categorical import Categorical
-from utils.networks import IMPALA
+from single_agent.networks import IMPALA
 
 
 def layer_init(layer, std=np.sqrt(2), bias_const=0.0):

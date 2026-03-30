@@ -15,7 +15,7 @@ class NavEnv(gym.Env):
         ):
         # Load configuration from YAML
         if config_path is None:
-            config_path = Path(__file__).parent / "env_config.yaml"
+            config_path = Path(__file__).parent / "nav_env_config.yaml"
         with open(config_path, 'r') as f:
             config = yaml.safe_load(f)
 
@@ -29,7 +29,7 @@ class NavEnv(gym.Env):
         background = env_config['background']
 
         assert action_type in ["discrete", "continuous"]
-        assert reward_type in ["dense", "sparse", None]
+        assert reward_type in ["dense", "sparse", None, "random_uniform", "random_gaussian"]
 
         # Handle "auto" size option
         if size == "auto":
@@ -250,6 +250,10 @@ class NavEnv(gym.Env):
             reward = 1 if dist <= self.terminal_radius else 0
         elif self.reward_type == "dense":
             reward = max(0, 1 - dist / self.size)
+        elif self.reward_type == "random_uniform":
+            reward = self.np_random.uniform(0, 2)
+        elif self.reward_type == "random_gaussian":
+            reward = self.np_random.normal(1, np.sqrt(0.2))
         else:
             reward = 0
         return float(reward)
