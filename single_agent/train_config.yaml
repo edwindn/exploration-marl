@@ -12,11 +12,14 @@ ppo:
   ent_coef: 0.01
   verbose: 1
 
-  train_icm: true
-  normalize_rewards: false #NOTE not being passed  #if true we normalise by the mean intrinsic reward of the last rollout
+  #train_icm: true
+  explore_type: "variance" #choosen from null, 'icm', 'variance'
+  num_models: 5 #used in variance mode
+  train_percent_per_module: 25
   eta: 1.0 #loss to reward factor
   beta: 0.005 #forwards loss weighting
   lambda: 1.0 #original loss factor
+  icm_layer_norm: False
 
 agent:
   memory: null #choose from null, 'stacking', 'lstm'

@@ -16,9 +16,8 @@ from stable_baselines3.common.env_checker import check_env
 from stable_baselines3.common.logger import configure
 import gymnasium as gym
 
-from environment.env import NavEnv
-from utils.networks import IMPALA
-from single_agent.ppo_policy_wrapper import CustomPPOPolicy
+from environment.nav_env import NavEnv
+from single_agent.networks import IMPALA
 from single_agent.logger import WandbCallback
 
 
@@ -56,7 +55,7 @@ if __name__ == "__main__":
     with open(root_dir / "single_agent" / "train_config.yaml", "r") as f:
         config = yaml.safe_load(f)
 
-    with open(root_dir / "environment" / "env_config.yaml", "r") as f:
+    with open(root_dir / "environment" / "nav_env_config.yaml", "r") as f:
         env_config = yaml.safe_load(f)
 
     # Create environment
@@ -70,19 +69,22 @@ if __name__ == "__main__":
         activation_fn=nn.ReLU,
     )
 
-    if config["ppo"]["train_icm"]:
-        policy_class = CustomPPOPolicy
-    else:
-        policy_class = "CnnPolicy"
+    ppo_config = config["ppo"]
+
+    explore_config = {
+        "eta": ppo_config["eta"],
+        "beta": ppo_config["beta"],
+        "lambda": ppo_config["lambda"],
+        "num_models": ppo_config["num_models"],
+        "icm_layer_norm": ppo_config["icm_layer_norm"],
+        "train_percent_per_module": ppo_config["train_percent_per_module"],
+    }
 
     # Initialize PPO with custom implementation from ppo.py
-    ppo_config = config["ppo"]
     model = PPO(
-        train_icm=ppo_config["train_icm"],
-        eta=ppo_config["eta"],
-        beta=ppo_config["beta"],
-        _lambda=ppo_config["lambda"],
-        policy=policy_class,
+        explore_type=ppo_config["explore_type"],
+        explore_config=explore_config,
+        policy="CnnPolicy",
         env=env,
         policy_kwargs=policy_kwargs,
         n_steps=ppo_config["num_train_steps"],
