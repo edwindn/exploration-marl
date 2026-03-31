@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 from tensordict import TensorDict
-
+import torch.nn as nn
 
 def soft_ce(pred, target, cfg):
 	"""Computes the cross entropy loss between predictions and soft targets."""
@@ -63,8 +63,10 @@ def two_hot(x, cfg):
 	elif cfg.num_bins == 1:
 		return symlog(x)
 	x = torch.clamp(symlog(x), cfg.vmin, cfg.vmax).squeeze(1)
-	bin_idx = torch.floor((x - cfg.vmin) / cfg.bin_size)
-	bin_offset = ((x - cfg.vmin) / cfg.bin_size - bin_idx).unsqueeze(-1)
+	bin_size = (cfg.vmax - cfg.vmin) / cfg.num_bins
+	bin_idx = torch.floor((x - cfg.vmin) / bin_size)
+	bin_idx = torch.clamp(bin_idx, 0, cfg.num_bins - 1)
+	bin_offset = ((x - cfg.vmin) / bin_size - bin_idx).unsqueeze(-1)
 	soft_two_hot = torch.zeros(x.shape[0], cfg.num_bins, device=x.device, dtype=x.dtype)
 	bin_idx = bin_idx.long()
 	soft_two_hot = soft_two_hot.scatter(1, bin_idx.unsqueeze(1), 1 - bin_offset)
@@ -129,3 +131,34 @@ def zero_(params):
 	"""Initialize parameters to zero."""
 	for p in params:
 		p.data.fill_(0)
+
+# ------ Dreamer utils
+
+
+def computeLambdaValues(rewards, values, continues, lambda_=0.95):
+    returns = torch.zeros_like(rewards)
+    bootstrap = values[:, -1]
+    for i in reversed(range(rewards.shape[-1])):
+        returns[:, i] = rewards[:, i] + continues[:, i] * ((1 - lambda_) * values[:, i] + lambda_ * bootstrap)
+        bootstrap = returns[:, i]
+    return returns
+
+
+class Moments(nn.Module):
+    def __init__( self, device, decay = 0.99, min_=1, percentileLow = 0.05, percentileHigh = 0.95):
+        super().__init__()
+        self._decay = decay
+        self._min = torch.tensor(min_)
+        self._percentileLow = percentileLow
+        self._percentileHigh = percentileHigh
+        self.register_buffer("low", torch.zeros((), dtype=torch.float32, device=device))
+        self.register_buffer("high", torch.zeros((), dtype=torch.float32, device=device))
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        x = x.detach()
+        low = torch.quantile(x, self._percentileLow)
+        high = torch.quantile(x, self._percentileHigh)
+        self.low = self._decay*self.low + (1 - self._decay)*low
+        self.high = self._decay*self.high + (1 - self._decay)*high
+        inverseScale = torch.max(self._min, self.high - self.low)
+        return self.low.detach(), inverseScale.detach()

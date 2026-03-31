@@ -1,0 +1,64 @@
+# Training Configuration for World Model + Actor-Critic
+
+# Environment settings
+obs: 'rgb'  # Observation type: 'state' or 'rgb'
+action_dim: 1  # Action space dimension
+num_actions: 5 # In the discrete case
+discrete_actions: true
+episodic: true  # Whether environment has termination states
+episode_length: 1000  # Max episode length
+
+# Multi-task settings (set multitask: false for single task)
+multitask: false
+tasks: []  # List of task names (for multitask)
+task_dim: 0  # Task embedding dimension
+action_dims: []  # Action dims per task (for multitask)
+episode_lengths: []  # Episode lengths per task (for multitask)
+
+# Training steps
+steps: 1000000  # Total training steps
+seed_steps: 10  # Random exploration steps before training/ fill the buffer
+collect_every: 10 # in absence of truncation, log observations to the buffer these many steps
+print_every: 500
+
+# World model architecture
+latent_dim: 48  # Latent state dimension
+mlp_dim: 48  # Hidden layer dimension for MLPs
+simnorm_dim: 8
+
+# Replay buffer
+buffer_size: 1000000  # Maximum buffer capacity
+batch_size: 128  # Batch size for training
+horizon: 5  # Sequence length for training
+
+# Learning rates
+lr: 0.0003  # Base learning rate
+enc_lr_scale: 0.3  # Encoder learning rate multiplier
+actor_lr: 0.0003  # Actor learning rate
+critic_lr: 0.0003  # Critic learning rate
+
+# Loss coefficients
+consistency_coef: 2.0  # Weight for consistency loss
+reward_coef: 1.0  # Weight for reward prediction loss
+termination_coef: 1.0  # Weight for termination prediction loss
+
+# Actor-Critic settings
+lambda_: 0.95  # GAE lambda for advantage estimation
+entropy_coef: 0.001  # Entropy bonus coefficient
+grad_clip_norm: 10.0  # Gradient clipping norm
+
+# Discount factor settings
+discount_denom: 1000  # Denominator for discount calculation
+discount_min: 0.95  # Minimum discount factor
+discount_max: 0.997  # Maximum discount factor
+
+# Critic values
+num_bins: 101  # Number of bins for discretized predictions (reward)
+vmin: -10
+vmax: 10
+
+# Temporal weighting
+rho: 0.5  # Temporal discount for multi-step losses
+
+# Optimization
+compile: false  # Whether to use torch.compile (requires PyTorch 2.0+)

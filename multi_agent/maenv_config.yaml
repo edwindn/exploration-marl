@@ -1,7 +1,8 @@
 # Multi-agent environment settings
 env:
-  grid_size: 20         # Number of grid cells (e.g., 20x20 grid)
+  grid_size: 10         # Number of grid cells (e.g., 20x20 grid)
   cell_size: 30         # Size of each cell in pixels
   obs_size: 3           # Number of grid cells visible around agent (3 = 7x7 view)
+  obs_pixels: 64
   wall_fraction: 0.2    # Fraction of interior edges to be walls (0.0 to 1.0)
   cross_walls: false #NOT IMPLEMENTED   # Whether the agent can cross walls

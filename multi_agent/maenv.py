@@ -19,11 +19,13 @@ class GridEnv(gym.Env):
         grid_size = env_config['grid_size']  # Number of grid cells (e.g., 10x10)
         cell_size = env_config['cell_size']  # Size of each cell in pixels
         obs_size = env_config['obs_size']    # Number of grid cells visible around agent
+        obs_pixels = env_config['obs_pixels']  # Downsampled observation size in pixels
         wall_fraction = env_config['wall_fraction']  # Fraction of edges to be walls
 
         self.grid_size = grid_size
         self.cell_size = cell_size
         self.obs_size = obs_size
+        self.obs_pixels = obs_pixels
         self.wall_fraction = wall_fraction
         self.render_mode = render_mode
 
@@ -35,8 +37,10 @@ class GridEnv(gym.Env):
         # 'v' means vertical edge to the right of cell (x, y)
         self._walls = set()
 
-        # Observation space: square centered on agent (obs_size x obs_size grid cells)
-        obs_pixels = (2 * obs_size + 1) * cell_size
+        # Goal position (grid coordinates)
+        self._goal_pos = None
+
+        # Observation space: downsampled to obs_pixels x obs_pixels
         self.observation_space = gym.spaces.Box(
             low=0, high=255, shape=(obs_pixels, obs_pixels, 3), dtype=np.uint8
         )
@@ -51,6 +55,13 @@ class GridEnv(gym.Env):
 
         # Generate random walls
         self._generate_walls()
+
+        # Place goal randomly in the middle of the grid
+        mid_start = self.grid_size // 4
+        mid_end = 3 * self.grid_size // 4
+        goal_x = self.np_random.integers(mid_start, mid_end)
+        goal_y = self.np_random.integers(mid_start, mid_end)
+        self._goal_pos = np.array([goal_x, goal_y], dtype=np.int32)
 
         # Initialize agent randomly on the edge of the grid
         edge = self.np_random.integers(0, 4)  # 0=top, 1=bottom, 2=left, 3=right
@@ -107,11 +118,14 @@ class GridEnv(gym.Env):
 
         return self._get_obs(), reward, terminated, truncated, info
 
+    def rand_act(self):
+        return self.action_space.sample()
+
     def _get_obs(self):
         """Get agent's observation: a local view of the grid centered on the agent."""
-        # Create observation canvas with white padding
-        obs_pixels = (2 * self.obs_size + 1) * self.cell_size
-        obs = np.full((obs_pixels, obs_pixels, 3), 255, dtype=np.uint8)
+        # Create observation canvas with white padding at full resolution
+        full_obs_pixels = (2 * self.obs_size + 1) * self.cell_size
+        obs = np.full((full_obs_pixels, full_obs_pixels, 3), 255, dtype=np.uint8)
 
         agent_x, agent_y = self._agent_grid_pos
 
@@ -151,6 +165,12 @@ class GridEnv(gym.Env):
                     if (grid_x, grid_y, 'v') in self._walls:
                         obs[y0:y1, max(0, x1 - 2):x1 + 1] = (255, 0, 0)
 
+                    # Draw goal as yellow circle if visible
+                    if self._goal_pos is not None and grid_x == self._goal_pos[0] and grid_y == self._goal_pos[1]:
+                        goal_px_x = obs_cell_x * self.cell_size + self.cell_size // 2
+                        goal_px_y = obs_cell_y * self.cell_size + self.cell_size // 2
+                        self._draw_circle(obs, (goal_px_x, goal_px_y), radius=self.cell_size // 3, color=(255, 255, 0))
+
         # Draw agent as blue dot in center of its cell
         center_cell_x = self.obs_size
         center_cell_y = self.obs_size
@@ -158,6 +178,12 @@ class GridEnv(gym.Env):
         center_px_y = center_cell_y * self.cell_size + self.cell_size // 2
 
         self._draw_circle(obs, (center_px_x, center_px_y), radius=3, color=(0, 0, 255))
+
+        # Downsample observation to configured size using PIL
+        if full_obs_pixels != self.obs_pixels:
+            pil_image = PILImage.fromarray(obs)
+            pil_image = pil_image.resize((self.obs_pixels, self.obs_pixels), PILImage.LANCZOS)
+            obs = np.array(pil_image)
 
         return obs
 
@@ -280,7 +306,9 @@ class GridEnv(gym.Env):
         return False
 
     def _get_reward(self):
-        """Return zero reward for now."""
+        """Return +1 if agent is on the goal, 0 otherwise."""
+        if np.array_equal(self._agent_grid_pos, self._goal_pos):
+            return 1.0
         return 0.0
 
     def _build_frame(self):
@@ -319,6 +347,12 @@ class GridEnv(gym.Env):
                     x_start = max(0, pos_x - wall_thickness // 2)
                     x_end = min(self.pixel_size, pos_x + wall_thickness // 2 + 1)
                     frame[pos_y_start:pos_y_end, x_start:x_end] = (255, 0, 0)
+
+        # Draw goal as large yellow circle
+        if self._goal_pos is not None:
+            goal_px_x = self._goal_pos[0] * self.cell_size + self.cell_size // 2
+            goal_px_y = self._goal_pos[1] * self.cell_size + self.cell_size // 2
+            self._draw_circle(frame, (goal_px_x, goal_px_y), radius=self.cell_size // 3, color=(255, 255, 0))
 
         # Draw agent as blue dot
         agent_px_x = self._agent_grid_pos[0] * self.cell_size + self.cell_size // 2

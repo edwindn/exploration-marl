@@ -5,7 +5,7 @@ Adapted from implict model in TD-MPC2
 import torch
 import torch.nn as nn
 
-import layers, utils
+from encoder import layers, utils
 
 
 class WorldModel(nn.Module):
@@ -17,17 +17,18 @@ class WorldModel(nn.Module):
 	def __init__(self, cfg):
 		super().__init__()
 		self.cfg = cfg
+		action_dim = cfg.num_actions if cfg.discrete_actions else cfg.action_dim
 		if cfg.multitask:
 			self._task_emb = nn.Embedding(len(cfg.tasks), cfg.task_dim, max_norm=1)
 			self.register_buffer("_action_masks", torch.zeros(len(cfg.tasks), cfg.action_dim))
 			for i in range(len(cfg.tasks)):
 				self._action_masks[i, :cfg.action_dims[i]] = 1.
 		self._encoder = layers.enc(cfg)
-		self._dynamics = layers.mlp(cfg.latent_dim + cfg.action_dim + cfg.task_dim, 2*[cfg.mlp_dim], cfg.latent_dim, act=layers.SimNorm(cfg))
-		self._reward = layers.mlp(cfg.latent_dim + cfg.action_dim + cfg.task_dim, 2*[cfg.mlp_dim], max(cfg.num_bins, 1))
+		self._dynamics = layers.mlp(cfg.latent_dim + action_dim + cfg.task_dim, 2*[cfg.mlp_dim], cfg.latent_dim, act=layers.SimNorm(cfg))
+		self._reward = layers.mlp(cfg.latent_dim + action_dim + cfg.task_dim, 2*[cfg.mlp_dim], max(cfg.num_bins, 1))
 		self._termination = layers.mlp(cfg.latent_dim + cfg.task_dim, 2*[cfg.mlp_dim], 1) if cfg.episodic else None
-		self.apply(init.weight_init)
-		init.zero_([self._reward[-1].weight])
+		self.apply(utils.weight_init)
+		utils.zero_([self._reward[-1].weight])
 
 
 	def __repr__(self):

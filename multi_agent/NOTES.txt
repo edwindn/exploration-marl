@@ -1,0 +1,4 @@
+- train wm, check accuracy of dynamics/reward etc
+- try reward learning / meta learn
+- use self uncertainty to explore (may need different env)
+(use as reward, or meta learn over inputs)

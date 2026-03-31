@@ -46,6 +46,9 @@ class ShiftAug(nn.Module):
 	def forward(self, x):
 		x = x.float()
 		n, _, h, w = x.size()
+		if h != w:
+			x = x.permute(0, 3, 1, 2)
+		n, c, h, w = x.size()
 		assert h == w
 		x = F.pad(x, self.padding, 'replicate')
 		eps = 1.0 / (h + 2 * self.pad)
@@ -138,10 +141,15 @@ def conv(in_shape, num_channels, act=None):
 	Basic convolutional encoder for TD-MPC2 with raw image observations.
 	4 layers of convolution with ReLU activations, followed by a linear layer.
 	"""
-	assert in_shape[-1] == 64 # assumes rgb observations to be 64x64
+	h, w, c = in_shape
+	if h != w:
+		tmp = h
+		h = c
+		c = tmp
+	assert h == 64 # assumes rgb observations to be 64x64
 	layers = [
 		ShiftAug(), PixelPreprocess(),
-		nn.Conv2d(in_shape[0], num_channels, 7, stride=2), nn.ReLU(inplace=False),
+		nn.Conv2d(c, num_channels, 7, stride=2), nn.ReLU(inplace=False),
 		nn.Conv2d(num_channels, num_channels, 5, stride=2), nn.ReLU(inplace=False),
 		nn.Conv2d(num_channels, num_channels, 3, stride=2), nn.ReLU(inplace=False),
 		nn.Conv2d(num_channels, num_channels, 3, stride=1), nn.Flatten()]
